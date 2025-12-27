@@ -1,5 +1,5 @@
 ---
-title: 'Holiday Harvest on Soneiumを調査する'
+title: 'Holiday Harvest on Soneiumに参加してみる'
 date: 2025-12-27
 permalink: /posts/2025-12-27/Holiday-Harvest-on-Soneium/
 tags:
