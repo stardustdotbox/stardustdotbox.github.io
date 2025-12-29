@@ -24,7 +24,7 @@ Web2時代に企業にインターネットの表層が支配され、Web3でイ
 [長きに渡って続いた自由への戦い](https://museum.scenecritique.com/categories/library/defcon0/1st.htm)はWeb3時代を迎え、ついに我々の勝利という形で終結を迎えるはずだ。
 インターネットの片隅からMatrixに抗うことを此処に誓う。((*´∀`))ｹﾗｹﾗ
 
-## Web3を俯瞰する - Bitcoinが生み出したモノ - 
+## Web3を俯瞰する
 
 Nakamoto Satoshiが開発した[Bitcoin](https://bitcoin.org/files/bitcoin-paper/bitcoin_jp.pdf)により、オンライン決算は金融機関を介することなく、P2P電子通貨を用いて決算きることになり、ブロックチェインは分散台帳として機能し、電子通貨は実際に価値を持ち、誰もがインターネット上で自由に決算をしたり、流動性提供をしたり、トレードしたりして、金融機関を排して金融活動を個人で行えるようになりました。
 金融機関を排してインターネット上で経済活動を行うのはサイファーパンクの長年の悲願でありましたが、2025年12月時点でBTC価格は1300万円を超えているため、この悲願はすでに達成されているように思います。
@@ -32,16 +32,22 @@ Nakamoto Satoshiが開発した[Bitcoin](https://bitcoin.org/files/bitcoin-paper
 Ethereumはブロックチェイン上でEVMを稼働させることでWeb3に革命をもたらしました。(ブロックチェイン上で任意の状態のマシン状態を作るのは危険だと、Nakamoto Satoshiは思ってたように僕は思います。)
 [EVM](https://ethereum.org/ja/developers/docs/evm/)の発明によりブロックチェーンは分散台帳ではなく、分散型の状態マシンとなりました。 Ethereumの状態とは、全アカウントとその残高を保持するだけでなく、予め定義されたルールに従ってブロックごとに変化し、任意のマシンコードを実行できる_マシンの状態_を保持する、巨大なデータ構造です。
 
+インターネットのルールは変わりました。価値や状態は金融機関や信用情報機関に保存されるのではなく、ブロックチェイン上に保存されます。
+
 ## EthereumとPolkadotの戦い
 
-[Gavin Wood](https://gavwood.com/)はTEtherumの共同創業者であり、Solidityと初期EVMを開発した人物です。
+[Gavin Wood](https://gavwood.com/)はEtherumの共同創業者であり、Solidityと初期EVMを開発した人物です。[Web3](https://ethereum.org/ja/web3/)の提唱者でもあります。
 彼はEthereum財団を退職後、EthereumはL1がスケールできなくなり、Ethereumは崩壊するという予測の元、Layer 0として動作するpolkadotを開発しました。
 彼の予想は正しかったのでしょうか？
 2025年12月現在の状況を見ると、とてもそうは思えません。
 [DefiLlmaのチェーン一覧情報](https://defillama.com/chains)を見てみましょう。Ethereumが最も資金を集めており、Ethereum L2のBaseも資金を集めていることがわかります。
 Etherumはシャーディングという手法を編み出し、OP / zk roll up手法が開発され、Etherum L1はセキュリティの担保に比重を置き、Etherum L2でUXを提供することで、L1のスケーリング問題を解消しました。
 
-[L2beat](https://l2beat.com/)にはEthereum L2のメトリクスを参照することがきます。Web3は現在、Ethereum L2時代を迎えています。
+[L2beat](https://l2beat.com/)ではEthereum L2のメトリクスを参照することがきます。Web3は2025年12月時点ではEthereum L2の黎明期を迎えているように思えます。
+
+## Ethereumを学ぶ
+
+## Soneiumを学ぶ
 
 A data-driven personal website
 ======
