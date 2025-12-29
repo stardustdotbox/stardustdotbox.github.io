@@ -24,15 +24,16 @@ Web2時代に企業にインターネットの表層が支配され、Web3でイ
 [長きに渡って続いた自由への戦い](https://museum.scenecritique.com/categories/library/defcon0/1st.htm)はWeb3時代を迎え、ついに我々の勝利という形で終結を迎えるはずだ。
 インターネットの片隅からMatrixに抗うことを此処に誓う。((*´∀`))ｹﾗｹﾗ
 
-イカレテルのはこっちなのか、そっちなのか白黒ハッキリさせよう。
-分散化したって、どこにいたって、人は繋がっているのよ。ヽ(´ー`)ノ
+## Web3を俯瞰する - Bitcoinが生み出したモノ - 
 
-## Web3を俯瞰する
+Nakamoto Satoshiが開発した[Bitcoin](https://bitcoin.org/files/bitcoin-paper/bitcoin_jp.pdf)により、オンライン決算は金融機関を介することなく、P2P電子通貨を用いて決算きることになり、ブロックチェインは分散台帳として機能し、電子通貨は実際に価値を持ち、誰もがインターネット上で自由に決算をしたり、流動性提供をしたり、トレードしたりして、金融機関を排して金融活動を個人で行えるようになりました。
+金融機関を排してインターネット上で経済活動を行うのはサイファーパンクの長年の悲願であるが、2025年12月時点でBTC価格は1300万円を超えているため、この悲願はすでに達成されているように思います。
 
-Nakamoto Satoshiが開発した[Bitcoin](https://bitcoin.org/files/bitcoin-paper/bitcoin_jp.pdf)により、オンライン決算は金融機関を介することなく、P2P電子通貨を用いて決算きることになり、ブロックチェーン上に記録された電子通貨は実際に価値を持ち、誰もがインターネット上で自由に決算をしたり、流動性提供をしたり、トレードしたりして、金融機関を排して金融活動を個人で行えるようになった。
-金融機関を排してインターネット上で経済活動を行うのはサイファーパンクの長年の悲願であるが、2025年12月時点でBTC価格は1300万円を超えているため、この悲願はすでに達成されている。
+Ethereumはブロックチェイン上でEVMを稼働させることでWeb3に革命をもたらした。[EVM](https://ethereum.org/ja/developers/docs/evm/)の発明によりブロックチェーンは分散台帳ではなく、分散型の状態マシンとなった。 Ethereumの状態とは、全アカウントとその残高を保持するだけでなく、予め定義されたルールに従ってブロックごとに変化し、任意のマシンコードを実行できる_マシンの状態_を保持する、巨大なデータ構造です。
 
-では、Web3の実態は今どのようになっているのだろうか？ [DefiLlmaのチェーン一覧情報](https://defillama.com/chains)を見ると、Ethereumが最も資金を集めており、Ethereum L2のBaseも資金を集めている。
+## EthereumとPolkadotの戦い
+
+[DefiLlmaのチェーン一覧情報](https://defillama.com/chains)を見ると、Ethereumが最も資金を集めており、Ethereum L2のBaseも資金を集めている。
 2025年時点ではWeb3はまさに、[EVM](https://ethereum.org/ja/developers/docs/evm/)の全盛期だと言える。
 
 A data-driven personal website
