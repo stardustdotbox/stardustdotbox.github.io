@@ -34,8 +34,14 @@ Ethereumはブロックチェイン上でEVMを稼働させることでWeb3に�
 
 ## EthereumとPolkadotの戦い
 
-[DefiLlmaのチェーン一覧情報](https://defillama.com/chains)を見ると、Ethereumが最も資金を集めており、Ethereum L2のBaseも資金を集めている。
-2025年時点ではWeb3はまさに、[EVM](https://ethereum.org/ja/developers/docs/evm/)の全盛期だと言える。
+[Gavin Wood](https://gavwood.com/)はTEtherumの共同創業者であり、Solidityと初期EVMを開発した人物です。
+彼はEthereum財団を退職後、EthereumはL1がスケールできなくなり、Ethereumは崩壊するという予測の元、Layer 0として動作するpolkadotを開発しました。
+彼の予想は正しかったのでしょうか？
+2025年12月現在の状況を見ると、とてもそうは思えません。
+[DefiLlmaのチェーン一覧情報](https://defillama.com/chains)を見てみましょう。Ethereumが最も資金を集めており、Ethereum L2のBaseも資金を集めていることがわかります。
+Etherumはシャーディングという手法を編み出し、OP / zk roll up手法が開発され、Etherum L1はセキュリティの担保に比重を置き、Etherum L2でUXを提供することで、L1のスケーリング問題を解消しました。
+
+[L2beat](https://l2beat.com/)にはEthereum L2のメトリクスを参照することがきます。Web3は現在、Ethereum L2時代を迎えています。
 
 A data-driven personal website
 ======
