@@ -15,3 +15,8 @@ Stardust✨のおもちゃ箱は自分がWeb3の研究を行うのに適した�
   お使いのブラウザは動画タグをサポートしていません。
 </video>
 
+# 参考文献
+
+ * https://github.com/stardustdotbox/stardustdotbox.github.io/wiki/Pastebin_2025
+
+ 
