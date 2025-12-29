@@ -5,10 +5,8 @@ permalink: /posts/2025/12/playing-with-midjourney/
 tags:
   - Midjourney
 header:
-  image: https://github.com/user-attachments/assets/afe29c7c-247c-4ea1-b215-01eb7307b04b
+  image: https://github.com/user-attachments/assets/1c7bf711-f136-4078-acba-14654e789d0b
 ---
-
-## Midjourneyとは
 
 Midjourneyは、AI技術を活用した画像生成サービスです。テキストプロンプト（文章による指示）を入力することで、高品質な画像を生成できます。Discord上で動作するボットとして提供されており、誰でも簡単にAI画像生成を体験できます。
 
@@ -20,13 +18,15 @@ Midjourneyは2022年にリリースされ、その芸術的で美しい画像生
 - **反復的な改善**: 生成された画像を基に、バリエーションを作成したり、詳細を調整したりできる
 - **Discordベース**: Discordサーバー上で動作するため、コミュニティと交流しながら利用できる
 
-## 入会と費用
+## 費用
 
 月額10ドル程度で遊ぶことができる
 
 <img width="1408" height="422" alt="image" src="https://github.com/user-attachments/assets/4a3cd12b-fd21-4957-9505-41ce774522fb" />
 
 ## Midjourney BOTと遊ぶ
+
+MidjourneyとのやりとりはBOTとのダイレクトメッセージで行うのが主流です。
 
  * infoコマンド
 
@@ -48,6 +48,10 @@ Queued Jobs (relax): 0
 Running Jobs: None
 ```
 
+ * settingコマンド
+
+<img width="970" height="286" alt="image" src="https://github.com/user-attachments/assets/1a358419-3528-4339-977a-594b2b8475b8" />
+
 ## imagineコマンド
 
  * 既存の画像からイメージを膨らませる
@@ -59,8 +63,22 @@ Running Jobs: None
  * videoを生成する
 
 ```
-/imagine https://www.stardust.box/images/stardust.jpg Face forward --video
+/imagine stardust toy box,  Shooting star, gold coin, jewel --video
 ```
+
+## テスト作品
+
+ * 静止画
+
+<img width="868" height="868" alt="image" src="https://github.com/user-attachments/assets/1c7bf711-f136-4078-acba-14654e789d0b" />
+
+ * 動画
+
+<video controls width="100%">
+  <source src="https://github.com/user-attachments/assets/d286461e-8d17-4ba6-a341-3d4b794031d5" type="video/mp4">
+  お使いのブラウザは動画タグをサポートしていません。
+</video>
+
 
 # 参考文献
 
