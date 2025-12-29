@@ -12,6 +12,7 @@ playing with midjourney
 
 # 参考文献
 
+ * https://github.com/stardustdotbox/stardustdotbox.github.io/wiki/Pastebin_2025
  * https://www.midjourney.com/home
  * https://docs.midjourney.com/
  * https://docs.midjourney.com/hc/en-us/articles/33329261836941-Getting-Started-Guide
