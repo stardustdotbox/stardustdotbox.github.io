@@ -185,17 +185,18 @@ CursorのSSH接続越しにkali linuxにAIエージェントから指示を出�
 
 ## Googleアナリティクスで計測する
 
+### 計測用プロジェクトを作成する
+
 <img width="1355" height="369" alt="image" src="https://github.com/user-attachments/assets/52ff39c0-104f-425f-8d03-8f75c1e4867e" />
 
 <img width="887" height="571" alt="image" src="https://github.com/user-attachments/assets/08f61ff4-06dd-415d-9b6e-6240c141a901" />
 
-<img width="690" height="617" alt="image" src="https://github.com/user-attachments/assets/05382a68-e0c8-479c-bd40-8d78830ad436" />
-
-<img width="613" height="720" alt="image" src="https://github.com/user-attachments/assets/399909cb-7295-4f0b-b051-e66135dbc9fa" />
-
 <img width="1335" height="479" alt="image" src="https://github.com/user-attachments/assets/000e6bad-7189-4af6-a1b4-339b26e97491" />
 
-<img width="1326" height="901" alt="image" src="https://github.com/user-attachments/assets/412923d3-b1ad-418a-9f07-20fe9c664733" />
+### 計測できていることを確認する
+
+<img width="1688" height="929" alt="image" src="https://github.com/user-attachments/assets/21730a5f-1554-4ba3-871e-51f86508c9a1" />
+
 
 ## 参考文献
 
