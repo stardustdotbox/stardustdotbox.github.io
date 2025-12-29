@@ -5,6 +5,7 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+img_base: /images/about/
 header:
   image: stardust.jpg
 ---
@@ -13,7 +14,7 @@ header:
 此処は僕がWeb3を中心に学んだことや体験したことをおもしろおかしく記録していく個人ホームページです。
 どうぞ、末永くよろしくおねがいします。ヽ(´ー`)ノ
 
-本日2025年12月27日、Web3の世界が徐々にですが確実に拡大しているのを感じます。私たちは一度は奪われたインターネットを我々の手に取り戻すチャンスを突如手に入れました。このまたとない機会を逃してはいけないとひしひしと感じるのです。そうでしょ？アングラの諸兄よ。僕はまだ此処にいるよ。（ ´ー｀）y―┛~~
+本日2025年12月27日、Web3の世界が徐々にですが確実に拡大しているのを感じます。私たちは一度は奪われたインターネットを我々の手に取り戻すチャンスを突如手に入れました。このまたとない機会を逃してはいけないとひしひしと感じるのです。そうでしょ？アングラの諸兄達。僕はまだ此処にいるよ。（ ´ー｀）y―┛~~
 
 あなたは[The Matrix](https://thehidden-wiki.org/wiki/index.php?title=The_Matrix)いう映画を見たことがありますか？
 あの映画は現実社会に実在するバビロンシステムを抽象化し、比喩的な表現の結果として生まれた作品です。
@@ -40,14 +41,22 @@ Ethereumはブロックチェイン上でEVMを稼働させることでWeb3に�
 彼はEthereum財団を退職後、EthereumはL1がスケールできなくなり、Ethereumは崩壊するという予測の元、Layer 0として動作するpolkadotを開発しました。
 彼の予想は正しかったのでしょうか？
 2025年12月現在の状況を見ると、とてもそうは思えません。
-[DefiLlmaのチェーン一覧情報](https://defillama.com/chains)を見てみましょう。Ethereumが最も資金を集めており、Ethereum L2のBaseも資金を集めていることがわかります。
+[DefiLlmaのチェーン一覧情報](https://defillama.com/chains)を見てみましょう。
+![ブロックチェイン情報一覧]({{ page.img_base }}/chains.png)
+Ethereumが最も資金を集めており、Ethereum L2のBaseも資金を集めていることがわかります。
 Etherumはシャーディングという手法を編み出し、OP / zk roll up手法が開発され、Etherum L1はセキュリティの担保に比重を置き、Etherum L2でUXを提供することで、L1のスケーリング問題を解消しました。
 
 [L2beat](https://l2beat.com/)ではEthereum L2のメトリクスを参照することがきます。Web3は2025年12月時点ではEthereum L2の黎明期を迎えているように思えます。
 
+![alt text]({{ page.img_base }}/l2beat.png)
+
 ## Ethereumを学ぶ
 
 ## Soneiumを学ぶ
+
+## Soneiumに参加する
+
+## Web3とOG文化
 
 A data-driven personal website
 ======
