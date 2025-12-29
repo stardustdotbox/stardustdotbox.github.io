@@ -8,6 +8,8 @@ header:
   image: https://github.com/user-attachments/assets/cd41a2a9-e4ce-497c-820a-bb0287e99431
 ---
 
+{% include toc %}
+
 Stardust✨のおもちゃ箱は自分がWeb3の研究を行うのに適した環境を構築するために作った環境なんだけど、ある程度、形になったきたので今の所感について語ってみる。
 
 <video controls width="100%">
@@ -38,9 +40,145 @@ stardustdotbox.github.io. 300   IN      A       185.199.111.153
 
 <img width="720" height="111" alt="image" src="https://github.com/user-attachments/assets/02ec6617-aff1-40b0-995b-8b12e92a8691" />
 
+
+## Github Pages & Jekyllでホームページを作成する
+
+### テンプレートを利用してstardustdotbox.github.ioレポジトリを作成する
+
+以下のレポジトリにアクセスして、Github Pagesのテンプレートとして使用する
+
+ * https://github.com/academicpages/academicpages.github.io
+
+<img width="830" height="735" alt="image" src="https://github.com/user-attachments/assets/cfa47c73-9d2a-463f-aaee-ec2bcdd87e8a" />
+
+## stardust.box VPSについて
+
+Web3の開発や調査のために構築されたVPSだが、用途は多岐にわたる。ディスとリビュージョンはkali linuxを使用しているため、安定性には高くない。
+
+### スペック
+
+AWS EC2インスタンスで構築されたVPSで、2コア、4メモリで起動している。
+
+<img width="1569" height="557" alt="image" src="https://github.com/user-attachments/assets/6523ff66-3626-4692-8f9d-02798ce5c9a7" />
+
+```
+┌──(stardust✨stardust)-[~]
+└─$ inxi -CmD
+Memory:
+  System RAM: total: 4 GiB available: 3.83 GiB used: 1.14 GiB (29.9%)
+  Array-1: capacity: 4 GiB slots: 1 modules: 1 EC: Multi-bit ECC
+  Device-1: DIMM 0 type: RAM size: 4 GiB speed: N/A
+CPU:
+  Info: dual core model: Intel Xeon E5-2686 v4 bits: 64 type: MCP cache: L2: 512 KiB
+  Speed (MHz): avg: 2300 min/max: N/A cores: 1: 2300 2: 2300
+Drives:
+  Local Storage: total: 30 GiB used: 2.77 GiB (9.2%)
+┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
+└─$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Kali
+Description:    Kali GNU/Linux Rolling
+Release:        2025.4
+Codename:       kali-rolling
+```
+
+### stardustレポジトリの取得
+
+メインレポジトリであるが、Sandboxとして使用する。公開用レポジトリなので機微な情報は配置しない。
+
+```
+┌──(stardust✨stardust)-[~]
+└─$ git clone git@github.com:stardustdotbox/stardust.git
+
+┌──(stardust✨stardust)-[~]
+└─$ cd stardust
+
+┌──(stardust✨stardust)-[~/stardust]
+└─$ git config user.name "Stardust✨"
+
+┌──(stardust✨stardust)-[~/stardust]
+└─$ git config user.email "stardustdotbox@gmail.com"
+```
+
+### anyenvのインストール
+
+```
+┌──(stardust✨stardust)-[~]
+└─$ git clone https://github.com/anyenv/anyenv ~/.anyenv
+┌──(stardust✨stardust)-[~]
+└─$  echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bashrc
+┌──(stardust✨stardust)-[~]
+└─$ echo 'eval "$(anyenv init -)"' >> ~/.bashrc
+┌──(stardust✨stardust)-[~]
+└─$ exec $SHELL -l
+┌──(stardust✨stardust)-[~]
+└─$ anyenv -v
+anyenv 1.1.5-1-g5c58783
+┌──(stardust✨stardust)-[~]
+└─$ anyenv install --init
+┌──(stardust✨stardust)-[~]
+└─$ anyenv --version
+anyenv 1.1.5-1-g5c58783
+```
+
+### rbenvとruby 3.3.10のインストール
+
+```
+┌──(stardust✨stardust)-[~]
+└─$ sudo apt install -y build-essential libssl-dev libreadline-dev zlib1g-dev \
+  libyaml-dev libffi-dev libgdbm-dev libncurses5-dev libgdbm-compat-dev \
+  bison libbz2-dev
+┌──(stardust✨stardust)-[~]
+└─$ anyenv install rbenv
+┌──(stardust✨stardust)-[~]
+└─$ exec $SHELL -l
+┌──(stardust✨stardust)-[~]
+└─$ rbenv install 3.3.10
+```
+
+### stardustdotbox.github.ioレポジトリをクローンする
+
+```
+┌──(stardust✨stardust)-[~]
+└─$ git clone git@github.com:stardustdotbox/stardustdotbox.github.io.git
+┌──(stardust✨stardust)-[~]
+└─$ cd stardustdotbox.github.io/
+┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
+└─$ git config user.name "Stardust✨"
+┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
+└─$ git config user.email "stardustdotbox@gmail.com"
+```
+
+### jekyllを使用してテストサーバを立ち上げる
+
+```
+┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
+└─$ rbenv local 3.3.10
+┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
+└─$ gem install bundler jekyll
+┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
+└─$ bundle install
+┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
+└─$ bundle exec jekyll serve
+Configuration file: /home/stardust/stardustdotbox.github.io/_config.yml
+To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+            Source: /home/stardust/stardustdotbox.github.io
+       Destination: /home/stardust/stardustdotbox.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+                    done in 5.725 seconds.
+ Auto-regeneration: enabled for '/home/stardust/stardustdotbox.github.io'
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+```
+
+
+
 ## 参考文献
 
  * https://github.com/stardustdotbox/stardustdotbox.github.io/wiki/Pastebin_2025
  * https://my.box/
  * https://docs.my.box/docs/
-
+ * https://docs.github.com/ja/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll
+ * https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages
