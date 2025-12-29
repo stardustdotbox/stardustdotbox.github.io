@@ -51,6 +51,10 @@ stardustdotbox.github.io. 300   IN      A       185.199.111.153
 
 <img width="830" height="735" alt="image" src="https://github.com/user-attachments/assets/cfa47c73-9d2a-463f-aaee-ec2bcdd87e8a" />
 
+### 独自ドメイン設定をしてstardust.boxと紐づける
+
+<img width="1027" height="711" alt="image" src="https://github.com/user-attachments/assets/a73dcf26-9a80-479d-bf12-4f22a75ee561" />
+
 ## stardust.box VPSについて
 
 Web3の開発や調査のために構築されたVPSだが、用途は多岐にわたる。ディスとリビュージョンはkali linuxを使用しているため、安定性には高くない。
@@ -173,7 +177,11 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
   Server running... press ctrl-c to stop.
 ```
 
+### Cursorを使用してvpsに接続する
 
+CursorのSSH接続越しにkali linuxにAIエージェントから指示を出すのは最高の快感であるヽ(´ー`)ノ
+
+<img width="2560" height="1392" alt="image" src="https://github.com/user-attachments/assets/7902e051-3705-4f1e-91c3-e5b7deda098f" />
 
 ## 参考文献
 
