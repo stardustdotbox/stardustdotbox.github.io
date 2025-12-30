@@ -31,6 +31,9 @@ author_profile: true
 
 ## Web3全般
 
+ * [coingecko](https://www.coingecko.com/)
+ * [geckoterminal](https://www.geckoterminal.com/ja)
+ * [CoinMarketCap](https://coinmarketcap.com/ja/)
  * [THE BLOCK](https://www.theblock.co/)
  * [DeBank](https://debank.com/)
  * [ChainList](https://chainlist.org/?search=)
@@ -59,7 +62,6 @@ author_profile: true
 
 ## トレード
 
- * [CoinMarketCap](https://coinmarketcap.com/ja/)
  * [TradingView](https://jp.tradingview.com/)
  * [kiyotaka](https://kiyotaka.ai/)
  * [Crypto Trade Analyzer](https://binance.github.io/crypto-trade-analyzer/)
