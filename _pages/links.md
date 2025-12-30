@@ -23,6 +23,7 @@ author_profile: true
  * [discord](https://discord.com/)
  * [spotify](https://open.spotify.com/)
  * [telegram](https://web.telegram.org/)
+ * [note.com](https://note.com/)
 
 ## ウォレット
 
