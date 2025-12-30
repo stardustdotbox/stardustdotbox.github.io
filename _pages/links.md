@@ -8,12 +8,20 @@ author_profile: true
 
 ## Stardust✨のおもちゃ箱
 
+ * [Googleアナリティクス](https://analytics.google.com/)
  * [Markdown]({{site.uerl}}/markdown/)
  * [Pastebin_2025](https://github.com/stardustdotbox/stardustdotbox.github.io/wiki/Pastebin_2025)
 
-## Web3
+## AI
 
-### 全般
+ * [ChatGPT](https://chatgpt.com/)
+
+## SNS
+
+ * [X](https://x.com/)
+ * [discord](https://discord.com/)
+
+## Web3全般
 
  * [THE BLOCK](https://www.theblock.co/)
  * [DefiLlama](https://defillama.com/)
@@ -23,24 +31,25 @@ author_profile: true
  * [my.box](https://www.my.box/)
  * [revoke.cash](https://revoke.cash/ja)
 
-### L2全般
+## L2全般
 
+ * [l2beat.com](l2beat.com)
  * [rollup.wtf](https://rollup.wtf/)
 
-### トレード
+## トレード
 
  * [TradingView](https://jp.tradingview.com/)
 
-### CEX
+## CEX
 
  * [bitbank.cc](https://bitbank.cc/)
  * [gate.com](https://www.gate.com/)
 
-### Ethereum
+## Ethereum
 
  * [イーサリアム公式サイト](https://ethereum.org/ja/)
 
-### HyperLiquid
+## HyperLiquid
 
  * [HyperLiquid公式サイト](https://hyperfoundation.org/)
  
