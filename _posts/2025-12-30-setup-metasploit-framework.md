@@ -1,5 +1,5 @@
 ---
-title: 'stardust.boxにmetasploit frameworkをセットアップする'
+title: 'metasploit frameworkをセットアップする'
 date: 2025-12-30
 permalink: /posts/2025/12/setup-metasploit-framework/
 tags:
