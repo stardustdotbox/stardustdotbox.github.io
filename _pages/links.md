@@ -110,10 +110,11 @@ author_profile: true
 
 ## Soneium
 
+ * [Startale App](https://app.startale.com/)
+ * [Soneium Score](https://portal.soneium.org/)
  * [Soneium Network explorer](https://soneium.blockscout.com/)
  * [Soneium Minato explorer](https://soneium-minato.blockscout.com/)
  * [Soneium Guild](https://soneium.guild.xyz/)
- * [Soneium Score](https://portal.soneium.org/)
  * [sonova](https://sonova.one/)
  * [neemo](https://neemo.finance/)
  * [KYO](https://app.kyo.finance/)
