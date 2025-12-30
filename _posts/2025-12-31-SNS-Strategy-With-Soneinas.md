@@ -8,10 +8,7 @@ header:
   image: https://github.com/user-attachments/assets/f7417a4a-fbd5-4f7e-89fb-c7677f06ffa1
 ---
 
-<video controls width="100%">
-  <source src="https://github.com/user-attachments/assets/bb419eaa-9be5-4e9e-a251-f82503e3612f" type="video/mp4">
-  お使いのブラウザは動画タグをサポートしていません。
-</video>
+
 
 {% include toc %}
 
