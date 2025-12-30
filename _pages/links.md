@@ -54,6 +54,8 @@ author_profile: true
  * [Nishikigoinft](https://nishikigoinft.com/ja)
  * [Morning Ville](https://morningville.xyz/)
  * [IRC APP](https://app.idolrunwaycollection.jp/ja)
+ * [yay!](https://yay.space/)
+ * [BONSAI NFT CLUB](https://www.bonsainft.club/ja)
 
 ## トレード
 
@@ -71,6 +73,10 @@ author_profile: true
 
  * [bitbank.cc](https://bitbank.cc/)
  * [gate.com](https://www.gate.com/)
+
+## Perp
+
+ * [APEX](https://www.apex.exchange/)
 
 ## Ethereum
 
@@ -104,7 +110,16 @@ author_profile: true
 
 ## Soneium
 
- * [BONSAI NFT CLUB](https://www.bonsainft.club/ja)
+ * [Soneium Network explorer](https://soneium.blockscout.com/)
+ * [Soneium Minato explorer](https://soneium-minato.blockscout.com/)
+ * [Soneium Guild](https://soneium.guild.xyz/)
+ * [Soneium Score](https://portal.soneium.org/)
+ * [sonova](https://sonova.one/)
+ * [neemo](https://neemo.finance/)
+ * [KYO](https://app.kyo.finance/)
+ * [SAKE](https://app.sakefinance.com/)
+ * [Lootcoin](https://lootcoin.tech/)
+ * [Echoes of Cryptalia](https://play.cryptalia.quest/play)
 
 ## Sony関連
 
