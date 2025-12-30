@@ -12,6 +12,11 @@ author_profile: true
  * [Markdown]({{site.uerl}}/markdown/)
  * [Pastebin_2025](https://github.com/stardustdotbox/stardustdotbox.github.io/wiki/Pastebin_2025)
 
+## 機械翻訳
+
+ * [没入型翻訳](https://immersivetranslate.com/ja/)
+ * [Google翻訳](https://translate.google.co.jp/)
+
 ## AI
 
  * [ChatGPT](https://chatgpt.com/)
@@ -108,7 +113,7 @@ author_profile: true
  * [Astar blockchain explorer](https://astar.blockscout.com/)
  * [Astar Forum](https://forum.astar.network/)
  * [Astar Portal](https://portal.astar.network/)
- * [ddApp Staking Data](https://agent.sun-t-sarah.work/)
+ * [dApp Staking Data](https://agent.sun-t-sarah.work/)
  * [Subsquare](https://astar.subsquare.io/democracy/referenda)
 
 ## Soneium
