@@ -129,3 +129,6 @@ author_profile: true
 
  * [hacken.io](https://hacken.io/)
 
+## 日本
+
+ * [参政党](https://sanseito.jp/)
