@@ -43,18 +43,29 @@ author_profile: true
  * [revoke.cash](https://revoke.cash/ja)
  * [uniswap](https://app.uniswap.org/)
  * [dmail](https://mail.dmail.ai/inbox)
- * [Nishikigoinft](https://nishikigoinft.com/ja)
 
 ## L2全般
 
  * [l2beat.com](l2beat.com)
  * [rollup.wtf](https://rollup.wtf/)
 
+## Web3コミュニティ
+
+ * [Nishikigoinft](https://nishikigoinft.com/ja)
+ * [Morning Ville](https://morningville.xyz/)
+ * [IRC APP](https://app.idolrunwaycollection.jp/ja)
+
 ## トレード
 
  * [CoinMarketCap](https://coinmarketcap.com/ja/)
  * [TradingView](https://jp.tradingview.com/)
  * [kiyotaka](https://kiyotaka.ai/)
+ * [Crypto Trade Analyzer](https://binance.github.io/crypto-trade-analyzer/)
+
+## Botter
+
+ * [kaggle](https://www.kaggle.com/)
+ * [jupyter](https://jupyter.org/)
 
 ## CEX
 
@@ -91,6 +102,10 @@ author_profile: true
  * [ddApp Staking Data](https://agent.sun-t-sarah.work/)
  * [Subsquare](https://astar.subsquare.io/democracy/referenda)
 
+## Soneium
+
+ * [BONSAI NFT CLUB](https://www.bonsainft.club/ja)
+
 ## Sony関連
 
  * [S.BLOX](https://www.sblox.jp/ja-jp/)
@@ -99,6 +114,3 @@ author_profile: true
 
  * [hacken.io](https://hacken.io/)
 
-## Soneium
-
- * [BONSAI NFT CLUB](https://www.bonsainft.club/ja)
