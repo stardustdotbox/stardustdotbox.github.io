@@ -123,6 +123,7 @@ author_profile: true
 
 ## Sony関連
 
+ * [SNFT](https://snft.jp/)
  * [S.BLOX](https://www.sblox.jp/ja-jp/)
 
 ## Web3セキュリティ
