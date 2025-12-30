@@ -20,6 +20,12 @@ author_profile: true
 
  * [X](https://x.com/)
  * [discord](https://discord.com/)
+ * [telegram](https://web.telegram.org/)
+
+## ウォレット
+
+ * [MetaMask](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
+ * [polkadot.js](https://polkadot.js.org/)
 
 ## Web3全般
 
@@ -38,6 +44,7 @@ author_profile: true
 
 ## トレード
 
+ * [CoinMarketCap](https://coinmarketcap.com/ja/)
  * [TradingView](https://jp.tradingview.com/)
 
 ## CEX
@@ -52,4 +59,14 @@ author_profile: true
 ## HyperLiquid
 
  * [HyperLiquid公式サイト](https://hyperfoundation.org/)
- 
+
+## Monero
+
+ * [monero.herominers.com](https://monero.herominers.com/)
+
+## Polkadot
+
+ * [Polkadot Developer Interface](https://polkadot.js.org/apps/)
+ * [parachains.info](https://parachains.info/)
+ * [Polkadot Cloud Staking](https://staking.polkadot.cloud/)
+
