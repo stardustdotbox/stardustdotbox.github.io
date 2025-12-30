@@ -96,6 +96,8 @@ Python 3.12.8
 1.16JPY
 ```
 
+適当なREADMEを書いてCursorのAgentにお願いしただけで一行もプログラミングすることなく、通貨換算スクリプトが完成した。AI駆動開発時代はすごいなあヽ(´ー`)ノ
+
 ## 参考文献
 
  * [coingecko](https://www.coingecko.com/)
