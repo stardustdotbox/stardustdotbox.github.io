@@ -136,6 +136,10 @@ author_profile: true
  * [SNFT](https://snft.jp/)
  * [S.BLOX](https://www.sblox.jp/ja-jp/)
 
+## Startale関連
+
+ * [Startale公式](https://startale.com/)
+
 ## Web3セキュリティ
 
  * [hacken.io](https://hacken.io/)
