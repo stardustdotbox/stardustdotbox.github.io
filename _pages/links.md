@@ -12,6 +12,7 @@ author_profile: true
  * [Googleアナリティクス](https://analytics.google.com/)
  * [Markdown]({{site.uerl}}/markdown/)
  * [Pastebin_2025](https://github.com/stardustdotbox/stardustdotbox.github.io/wiki/Pastebin_2025)
+ * [Pastebin_2026](https://github.com/stardustdotbox/stardustdotbox.github.io/wiki/Pastebin_2026)
 
 ## 機械翻訳
 

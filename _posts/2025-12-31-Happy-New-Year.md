@@ -3,7 +3,7 @@ title: 'Happy New Year!'
 date: 2025-12-31 23:59:59
 permalink: /posts/2025/12/Happy-New-Year/
 tags:
-  - SNS
+  - Happy New Year
 header:
   image: https://github.com/user-attachments/assets/e6a5a13b-e60d-4a5a-9ec5-d722199619df
 ---
