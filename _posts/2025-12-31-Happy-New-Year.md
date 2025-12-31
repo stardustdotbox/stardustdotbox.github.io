@@ -48,7 +48,3 @@ from:stardustdotbox -filter:retweets
 ## 12月
 
  * Startale OG Starsの役割を取得する
-
-# 参考文献
-
- * https://analytics.x.com
