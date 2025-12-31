@@ -8,16 +8,16 @@ header:
   image: https://github.com/user-attachments/assets/e6a5a13b-e60d-4a5a-9ec5-d722199619df
 ---
 
+<video controls width="100%">
+  <source src="https://github.com/user-attachments/assets/3e07ab01-af74-4007-b685-af2cd86638e6" type="video/mp4">
+  お使いのブラウザは動画タグをサポートしていません。ヽ(´ー`)ノ
+</video>
+
 # Midjourney Bot
 
 ```
 /imagine Happy New Year 
 ```
-
-<video controls width="100%">
-  <source src="https://github.com/user-attachments/assets/3e07ab01-af74-4007-b685-af2cd86638e6" type="video/mp4">
-  お使いのブラウザは動画タグをサポートしていません。
-</video>
 
 # X検索クエリ
 
