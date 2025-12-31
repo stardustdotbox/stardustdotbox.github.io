@@ -48,3 +48,9 @@ from:stardustdotbox -filter:retweets
 ## 12月
 
  * Startale OG Starsの役割を取得する
+
+## 参考文献
+
+ * https://x.com/soneium/status/2004480126759977136
+
+ 
