@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "ja-JP"
-site_theme               : "mint" # the available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "air" # the available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Stardust✨のおもちゃ箱"
 title_separator          : "-"
 name                     : &name "Stardust✨"
