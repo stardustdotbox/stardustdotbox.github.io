@@ -8,6 +8,7 @@ author_profile: true
 
 ## Stardust✨のおもちゃ箱
 
+ * [Xアナリティクス](ttps://analytics.x.com)
  * [Googleアナリティクス](https://analytics.google.com/)
  * [Markdown]({{site.uerl}}/markdown/)
  * [Pastebin_2025](https://github.com/stardustdotbox/stardustdotbox.github.io/wiki/Pastebin_2025)
