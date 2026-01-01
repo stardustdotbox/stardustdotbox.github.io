@@ -29,6 +29,10 @@ from:stardustdotbox -filter:retweets
 
 # 2025年を振り返る
 
+## 4月
+
+ * Web3専用のXアカウントを作成する
+
 ## 6月
 
  * Soneium公式discordサーバに初めて[発言](https://discord.com/channels/1260952177917038725/1276808969691861043/1380246824333607053)する
