@@ -19,6 +19,13 @@ header:
 └─$ git add -A && git commit -m 'Ethereum研究日誌(1)' && git push
 ```
 
+## Etherscan
+
+ * https://etherscan.io/
+
+<img width="1414" height="808" alt="image" src="https://github.com/user-attachments/assets/b64af0f3-a567-463f-832f-8131ac1c7eb0" />
+
+
 
 ## 参考文献
 
