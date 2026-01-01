@@ -93,17 +93,6 @@ Etherscanは、Ethereumエコシステムで最も広く使用されているブ
    - テストネットワークは、**定期的にリセットされる可能性がある**
    - テストデータは消失する可能性があるため、本番環境ではないことを理解する必要がある
 
-### Sepolia ETHの取得方法
-
-1. **フォーセット（Faucet）サービス**
-   - [Sepolia Faucet](https://sepoliafaucet.com/)などのサービスから取得
-   - ウォレットアドレスを入力してテストETHをリクエスト
-   - 1日あたりの取得量に制限がある場合が多い
-
-2. **Alchemy / Infuraなどのサービス**
-   - 開発者向けサービスが提供するフォーセット
-   - アカウント登録が必要な場合がある
-
 ### 使用例
 
 - **スマートコントラクトの開発**: コントラクトをデプロイして動作確認
@@ -118,6 +107,20 @@ Etherscanは、Ethereumエコシステムで最も広く使用されているブ
 - **Sepolia**: 現在推奨されているテストネットワークの一つ
 
 Sepoliaは、Ethereum開発者にとって重要なテスト環境であり、安全に開発とテストを行うための不可欠なツールです。
+
+### Sepolia ETHの取得方法 : フォーセット（Faucet）サービス
+
+ * https://www.alchemy.com/faucets/ethereum-sepolia
+
+alchemyのSepolia Faucetサービスを利用して、0.1 Sepolia ETHを入手することができました。ヽ(´ー`)ノ
+
+<img width="1284" height="825" alt="image" src="https://github.com/user-attachments/assets/3fd3750b-9e26-4d57-b106-56da14bac573" />
+
+Sepolia Etherscanからも0.1 sepolia ETHを持っていることを確認できます。
+
+ * https://sepolia.etherscan.io/address/0x53869b88306eb505f0fc66dae482d42033f85253
+
+ <img width="1411" height="691" alt="image" src="https://github.com/user-attachments/assets/ea673575-43b0-479d-8a7a-c05166c2a7c8" />
 
 ## 更新コマンド
 
