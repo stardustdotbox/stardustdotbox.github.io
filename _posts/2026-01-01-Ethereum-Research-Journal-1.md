@@ -25,12 +25,20 @@ header:
 
 <img width="1414" height="808" alt="image" src="https://github.com/user-attachments/assets/b64af0f3-a567-463f-832f-8131ac1c7eb0" />
 
+EtherscanはEthereumネットワークで発生しているトランザクションについて調査するためのサービスです。
 
+
+## Ethereumテストネットワークであるsepolia
+
+ * https://sepolia.etherscan.io/
+
+ 
 
 ## 参考文献
 
  * https://ethereum.org/ja/
  * https://etherscan.io/
+ * https://sepolia.etherscan.io/
  * https://docs.etherscan.io/
  * https://x.com/etherscan
  * https://debank.com/profile/0x53869b88306eb505f0fc66dae482d42033f85253
