@@ -37,6 +37,10 @@ author_profile: true
  * [MetaMask](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
  * [polkadot.js](https://polkadot.js.org/)
 
+## 日本人向けWeb3サービス
+
+ * [JPYC](https://jpyc.co.jp/)
+
 ## Web3全般
 
  * [coingecko](https://www.coingecko.com/)
