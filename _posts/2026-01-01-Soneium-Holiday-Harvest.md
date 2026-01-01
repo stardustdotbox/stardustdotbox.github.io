@@ -19,12 +19,6 @@ header:
 このガイドはすべてのSoneium Holiday Harvestを網羅していません。僕がやりたいやつだけやっていますのでお気をつけくださいね。
 Arkadaの20クエスト達成するのとか、大変そうなのでスキップしてます。。。w
 
-## お祭りに参加する前のウォレット状態の確認
-
-<img width="1273" height="632" alt="image" src="https://github.com/user-attachments/assets/7a39d1d6-b79a-4351-bc8e-18ac1b7d071e" />
-
-<img width="1242" height="500" alt="image" src="https://github.com/user-attachments/assets/263f93c6-316e-46b4-84cb-be586d39d043" />
-
 ## KYO
 
 ### アナウンス
@@ -179,10 +173,9 @@ Borrow at least 10 USDC
 
 <img width="490" height="656" alt="image" src="https://github.com/user-attachments/assets/c408a34e-c164-4c5c-8125-97f7264f19dc" />
 
-### アナウンス
+## 終わり
 
- * https://x.com/soneium/status/2005532933885665691
- * https://blog.biru.gg/holiday-harvest-on-biru/
+全部のクエストには参加できなかったけど、参加しやすい奴には参加できたと思うから満足ヽ(´ー`)ノ
 
 ## ブログ更新コマンド
 
