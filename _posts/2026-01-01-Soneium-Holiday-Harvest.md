@@ -177,13 +177,6 @@ Borrow at least 10 USDC
 
 全部のクエストには参加できなかったけど、参加しやすい奴には参加できたと思うから満足ヽ(´ー`)ノ
 
-## ブログ更新コマンド
-
-```
-┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
-└─$ git add -A && git commit -m 'Soneium Holiday Harvest' && git push
-```
-
 ## 参考文献
 
  * https://startale.com/en/blog/holiday-harvest
