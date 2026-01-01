@@ -102,6 +102,19 @@ Build Timestamp: 2025-12-22T11:39:01.425730780Z (1766403541)
 Build Profile: maxperf
 ```
 
+## Ethereium Sepolia上でFoundryを使って遊んでみる
+
+### 自分の残高を取得する
+
+Foundryの**Cast**コマンドを使用して、Ethereum Sepoliaネットワーク上の残高を取得できます。
+
+#### 1. 基本的な残高取得コマンド
+
+```
+┌──(stardust✨stardust)-[~]
+└─$ cast balance 0x53869B88306EB505f0fC66DaE482D42033F85253 --rpc-url https://rpc.sepolia.org
+```
+
 ## ブログ更新コマンド
 
 ```
