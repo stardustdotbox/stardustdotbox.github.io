@@ -96,6 +96,7 @@ author_profile: true
 ## Ethereum
 
  * [イーサリアム公式サイト](https://ethereum.org/ja/)
+ * [Etherscan](https://etherscan.io/)
  * [The Ethernaut](https://ethernaut.openzeppelin.com/)
  * [CryptoZombies](https://cryptozombies.io/jp/)
 
