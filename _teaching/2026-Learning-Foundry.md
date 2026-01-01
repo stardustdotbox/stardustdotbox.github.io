@@ -27,6 +27,7 @@ tags:
    - **Forge**: スマートコントラクトのビルド、テスト、デプロイを行うツール
    - **Cast**: EVMチェーンと対話するためのCLIツール
    - **Anvil**: ローカルEthereumノード（Hardhat NetworkやGanacheに相当）
+   - **Chisel**: Solidity REPL（対話型シェル）。Solidityコードを対話的に実行・テストできる
 
 3. **開発体験**
    - シンプルで直感的なコマンドラインインターフェース
@@ -43,7 +44,6 @@ tags:
 - **Foundry**: Rustベース、**高速なテスト実行**、Solidityネイティブ
 
 Foundryは、特に**テストの実行速度**と**Solidityネイティブな開発体験**を重視する開発者に人気があります。
-
 
 ## Foundryのインストール
 
@@ -93,6 +93,13 @@ anvil Version: 1.5.1-stable
 Commit SHA: b0a9dd9ceda36f63e2326ce530c10e6916f4b8a2
 Build Timestamp: 2025-12-22T11:39:01.425730780Z (1766403541)
 Build Profile: maxperf
+
+┌──(stardust✨stardust)-[~]
+└─$ chisel --version
+chisel Version: 1.5.1-stable
+Commit SHA: b0a9dd9ceda36f63e2326ce530c10e6916f4b8a2
+Build Timestamp: 2025-12-22T11:39:01.425730780Z (1766403541)
+Build Profile: maxperf
 ```
 
 ## ブログ更新コマンド
@@ -104,3 +111,5 @@ Build Profile: maxperf
 
 ## 参考文献
 
+ * https://github.com/foundry-rs/foundry
+ * https://book.getfoundry.sh/
