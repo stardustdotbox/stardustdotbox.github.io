@@ -23,5 +23,7 @@ header:
 ## 参考文献
 
  * https://ethereum.org/ja/
- * https://debank.com/profile/0x53869b88306eb505f0fc66dae482d42033f85253
  * https://etherscan.io/
+ * https://docs.etherscan.io/
+ * https://x.com/etherscan
+ * https://debank.com/profile/0x53869b88306eb505f0fc66dae482d42033f85253
