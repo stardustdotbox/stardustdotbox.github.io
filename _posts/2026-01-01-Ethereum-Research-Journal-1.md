@@ -12,13 +12,6 @@ header:
 
 {% include toc %}
 
-## 更新コマンド
-
-```
-┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
-└─$ git add -A && git commit -m 'Ethereum研究日誌(1)' && git push
-```
-
 ## Etherscan
 
  * https://etherscan.io/
@@ -125,6 +118,13 @@ Etherscanは、Ethereumエコシステムで最も広く使用されているブ
 - **Sepolia**: 現在推奨されているテストネットワークの一つ
 
 Sepoliaは、Ethereum開発者にとって重要なテスト環境であり、安全に開発とテストを行うための不可欠なツールです。
+
+## 更新コマンド
+
+```
+┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
+└─$ git add -A && git commit -m 'Ethereum研究日誌(1)' && git push
+```
 
 ## 参考文献
 
