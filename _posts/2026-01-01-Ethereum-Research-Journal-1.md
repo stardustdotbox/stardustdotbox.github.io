@@ -122,7 +122,7 @@ Sepolia Etherscanからも0.1 sepolia ETHを持っていることを確認でき
 
  <img width="1411" height="691" alt="image" src="https://github.com/user-attachments/assets/ea673575-43b0-479d-8a7a-c05166c2a7c8" />
 
-## 更新コマンド
+## ブログ更新コマンド
 
 ```
 ┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
