@@ -112,7 +112,7 @@ Sepoliaは、Ethereum開発者にとって重要なテスト環境であり、�
 
  * https://www.alchemy.com/faucets/ethereum-sepolia
 
-alchemyのSepolia Faucetサービスを利用して、0.1 Sepolia ETHを入手することができました。ヽ(´ー`)ノ
+alchemyのSepolia Faucetサービスから0.1 Sepolia ETHを入手することができました。ヽ(´ー`)ノ
 
 <img width="1284" height="825" alt="image" src="https://github.com/user-attachments/assets/3fd3750b-9e26-4d57-b106-56da14bac573" />
 
