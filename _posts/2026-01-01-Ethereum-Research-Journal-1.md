@@ -16,9 +16,10 @@ header:
 
  * https://etherscan.io/
 
-<img width="1414" height="808" alt="image" src="https://github.com/user-attachments/assets/b64af0f3-a567-463f-832f-8131ac1c7eb0" />
-
+ 
 [Etherscan](https://etherscan.io/)は、Ethereumブロックチェーンの**ブロックエクスプローラー**（ブロックチェーン閲覧ツール）です。Ethereumネットワーク上で発生するすべてのトランザクション、スマートコントラクト、アドレス、ブロックなどの情報を検索・閲覧できるWebサービスです。
+
+<img width="1414" height="808" alt="image" src="https://github.com/user-attachments/assets/b64af0f3-a567-463f-832f-8131ac1c7eb0" />
 
 ### 主な機能
 
