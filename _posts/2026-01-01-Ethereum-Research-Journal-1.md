@@ -122,6 +122,76 @@ Sepolia Etherscanからも0.1 sepolia ETHを持っていることを確認でき
 
  <img width="1411" height="691" alt="image" src="https://github.com/user-attachments/assets/ea673575-43b0-479d-8a7a-c05166c2a7c8" />
 
+## Alchemy
+
+[Alchemy](https://www.alchemy.com/)は、**Ethereumブロックチェーン開発のためのインフラストラクチャプラットフォーム**です。開発者がEthereumアプリケーションを構築、デプロイ、運用するための包括的なツールとサービスを提供します。
+
+ * https://www.alchemy.com/
+
+### Alchemyとは
+
+Alchemyは、Ethereum開発者向けの**バックエンドインフラストラクチャサービス**です。RPCエンドポイント、API、開発ツールを提供し、開発者がブロックチェーンの複雑さを気にせずにDAppを構築できるようにします。
+
+### 主な機能
+
+1. **RPCエンドポイント**
+   - Ethereumメインネット、テストネットワーク（Sepolia、Goerli等）への高速なRPCアクセス
+   - 高い可用性と信頼性
+   - 無料プランから有料プランまで提供
+
+2. **フォーセット（Faucet）**
+   - テストネットワーク用のETHを無料で取得できるサービス
+   - Sepolia、Goerli、Polygonなどのテストネットに対応
+   - 開発・テストに必要なテストETHを簡単に入手可能
+
+3. **開発者ツール**
+   - **Alchemy SDK**: 各種プログラミング言語向けのSDK
+   - **Alchemy Notify**: トランザクションやイベントの通知サービス
+   - **Alchemy Monitor**: アプリケーションの監視とアラート
+
+4. **ブロックチェーン分析**
+   - トランザクション履歴の検索
+   - イベントログの取得
+   - アドレス情報の取得
+
+### 使用例
+
+- **RPCエンドポイントとして使用**: Foundry、Hardhat、Web3.jsなどの開発ツールから接続
+- **テストETHの取得**: Sepolia Faucetからテストネットワーク用のETHを取得
+- **DApp開発**: フロントエンドアプリケーションからブロックチェーンに接続
+- **スマートコントラクトのデプロイ**: 開発環境からコントラクトをデプロイ
+
+### 無料プラン
+
+Alchemyは**無料プラン**を提供しており、個人開発者や小規模プロジェクトでも利用可能です。無料プランでも十分なリクエスト数が提供され、開発・テスト用途には十分です。
+
+### Infuraとの比較
+
+- **Alchemy**: 開発者向けツールが豊富、高い可用性、詳細な分析機能
+- **Infura**: シンプルなRPCエンドポイント、長い実績、広く使用されている
+
+Alchemyは、Ethereum開発者にとって強力なインフラストラクチャプラットフォームであり、特に**開発者体験**と**ツールの充実度**に優れています。
+
+### Alchemyで初めてのアプリを作ってみる
+
+Alechemyでアプリプロジェクトを作成するとRPCサーバにアクセスするためのAPI KEYが発行されます。
+
+<img width="1307" height="586" alt="image" src="https://github.com/user-attachments/assets/03e47f5c-073e-4a9d-ac78-15787245e4a0" />
+
+以下はAlechemyのSepolia RPCサーバを使用して、castで自分のウォレットの残高を取得しています。
+
+```
+┌──(stardust✨stardust)-[~]
+└─$ cast balance 0x53869B88306EB505f0fC66DaE482D42033F85253 --rpc-url https://eth-sepolia.g.alchemy.com/v2/8KbQVqn8tx_cRlE0fc-Rr -e 
+0.100000000000000000
+```
+
+発行されたトランザクションのメトリクスを確認することもできます。
+
+<img width="1334" height="477" alt="image" src="https://github.com/user-attachments/assets/256a50c7-4b5e-4f27-8891-7293dd4ed997" />
+
+これでEthreum Sepoliaネットワーク上で、Foundry等のTOOLを通じてトランザクションを発行するための準備が整いました。
+
 ## 参考文献
 
  * https://ethereum.org/ja/
@@ -130,3 +200,5 @@ Sepolia Etherscanからも0.1 sepolia ETHを持っていることを確認でき
  * https://docs.etherscan.io/
  * https://x.com/etherscan
  * https://debank.com/profile/0x53869b88306eb505f0fc66dae482d42033f85253
+ * https://dashboard.alchemy.com/
+ * http://www.stardust.box/teaching/2026-01-01-Learning-Foundry/

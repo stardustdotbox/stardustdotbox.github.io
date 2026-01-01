@@ -112,7 +112,8 @@ Foundryの**Cast**コマンドを使用して、Ethereum Sepoliaネットワー�
 
 ```
 ┌──(stardust✨stardust)-[~]
-└─$ cast balance 0x53869B88306EB505f0fC66DaE482D42033F85253 --rpc-url https://rpc.sepolia.org
+└─$ cast balance 0x53869B88306EB505f0fC66DaE482D42033F85253 --rpc-url https://eth-sepolia.g.alchemy.com/v2/8KbQVqn8tx_cRlE0fc-Rr -e 
+0.100000000000000000
 ```
 
 ## ブログ更新コマンド
