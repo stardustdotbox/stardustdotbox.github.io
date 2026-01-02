@@ -59,7 +59,7 @@ Total Supply: 8,602,436,152 ASTR
 ```
 
 ```
-┌──(venv)(stardust✨stardust)-[~/coingecko]
+┌──(stardust✨stardust)-[~/coingecko]
 └─$ python3 -c "print('JPY価格:', 13601688833.18 / 8262288140)"
 JPY価格: 1.6462375316264388
 ```
