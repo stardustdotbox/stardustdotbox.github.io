@@ -69,7 +69,7 @@ JPY価格: 1.6462375316264388
  * ユーザが保有しているAstr tokenを任意でBurnしてもらってのToken価値を高める試みです。
  * Astr tokenをBurnしたユーザには、Soneium関連のtokenが配布されます。
 
-## どれだけのAstrがBurnされれば、Astr tokenの価値は向上するのか
+## Burnされるtoken数とAstr価格の関係
 
 時価総額が変わらないと仮定した場合、Burn量が増えると流通供給量が減り、価格が上昇します。
 
