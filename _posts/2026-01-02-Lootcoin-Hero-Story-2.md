@@ -446,6 +446,7 @@ LOOT
 └─$ cast call 0x9317841C2e9F6BCb44119C184152cfb1EF79034a \
   "MAX_SUPPLY()(uint256)" \
   --rpc-url $RPC_URL
+21000000000000000000000000 [2.1e25]
 ```
 
 **7. オーナーアドレスを確認**
@@ -455,6 +456,7 @@ LOOT
 └─$ cast call 0x9317841C2e9F6BCb44119C184152cfb1EF79034a \
   "owner()(address)" \
   --rpc-url $RPC_URL
+0xD33367e2aEF56D700c1918C8a79Fba54c0C9aa57
 ```
 
 **8. ミント権限を持つアドレスを確認**
@@ -464,6 +466,7 @@ LOOT
 └─$ cast call 0x9317841C2e9F6BCb44119C184152cfb1EF79034a \
   "minter()(address)" \
   --rpc-url $RPC_URL
+0x21Be1D69A77eA5882aCcD5c5319Feb7AC3854751
 ```
 
 **9. バーンされた総量を確認**
@@ -473,6 +476,7 @@ LOOT
 └─$ cast call 0x9317841C2e9F6BCb44119C184152cfb1EF79034a \
   "amtBurned()(uint256)" \
   --rpc-url $RPC_URL
+630153000000000000000000 [6.301e23]
 ```
 
 ### まとめ
@@ -700,24 +704,6 @@ LootcoinコントラクトはERC-20準拠の可能性が高いため、以下の
 - `cast interface`は、コントラクトが`public`または`external`関数を持っている場合にのみ機能します
 - プライベート関数や内部関数は表示されません
 - コントラクトがプロキシパターンを使用している場合、実装コントラクトのアドレスを指定する必要がある場合があります
-
-## メソッドの実行
-
-### nameメソッド
-
-```
-┌──(stardust✨stardust)-[~]
-└─$ cast call 0x9317841C2e9F6BCb44119C184152cfb1EF79034a "name()(string)" --rpc-url $RPC_URL
-"Lootcoin"
-```
-
-### totalSupply
-
-```
-┌──(stardust✨stardust)-[~]
-└─$ cast call 0x9317841C2e9F6BCb44119C184152cfb1EF79034a "totalSupply()(uint256)" --rpc-url $RPC_URL
-1734626106853330725891846 [1.734e24]
-```
 
 
 
