@@ -400,6 +400,225 @@ Foundryの`cast`コマンドを使用することで、トランザクション�
 3. **詳細トレース**: `cast run`で実行フローを追跡
 4. **状態確認**: `cast call`でコントラクトの状態を確認
 
+### コントラクトのメソッド一覧を取得
+
+コントラクトアドレス `0x9317841C2e9F6BCb44119C184152cfb1EF79034a` が持っているメソッドを一覧表示する方法です。
+
+#### 方法1: BlockscoutのAPIを使用（推奨）
+
+BlockscoutのAPIを使用してコントラクトのABIを取得し、メソッド一覧を表示します。
+
+```bash
+┌──(stardust✨stardust)-[~]
+└─$ curl -s "https://soneium.blockscout.com/api?module=contract&action=getabi&address=0x9317841C2e9F6BCb44119C184152cfb1EF79034a" | \
+  jq -r '.result' | \
+  jq -r '.[] | select(.type == "function") | .name + "(" + (.inputs | map(.type) | join(",")) + ")"'
+MAX_SUPPLY()
+allowance(address,address)
+amtBurned()
+approve(address,uint256)
+balanceOf(address)
+burn(uint256)
+decimals()
+mint(address,uint256)
+minter()
+name()
+owner()
+renounceOwnership()
+setMinter(address)
+symbol()
+totalSupply()
+transfer(address,uint256)
+transferFrom(address,address,uint256)
+transferOwnership(address)
+```
+
+このコマンドで、コントラクトのすべての関数シグネチャが表示されます。
+
+#### 方法2: コントラクトのバイトコードから関数セレクターを抽出
+
+バイトコードから関数セレクター（4バイト）を抽出して、4byteデータベースで関数名を検索します。
+
+```bash
+# コントラクトのバイトコードを取得
+┌──(stardust✨stardust)-[~]
+└─$ cast code 0x9317841C2e9F6BCb44119C184152cfb1EF79034a --rpc-url $RPC_URL
+0x608060405234801561000f575f80fd5b5060043610610111575f3560e01c806342966c681161009e57806395d89b411161006e57806395d89b411461023d578063a9059cbb14610245578063dd62ed3e14610258578063f2fde38b14610290578063fca3b5aa146102a3575f80fd5b806342966c68146101e957806370a08231146101fc578063715018a6146102245780638da5cb5b1461022c575f80fd5b806318160ddd116100e457806318160ddd1461019857806323b872dd146101a0578063313ce567146101b357806332cb6b0c146101c257806340c10f19146101d4575f80fd5b806306fdde03146101155780630754617214610133578063095ea7b31461015e5780630a7d242c14610181575b5f80fd5b...
+```
+
+**バイトコードから関数セレクターを抽出：**
+
+バイトコード内の`8063`で始まる4バイトの値が関数セレクターです。以下のように抽出できます：
+
+```bash
+┌──(stardust✨stardust)-[~]
+└─$ # バイトコードから関数セレクターを抽出（8063で始まる4バイトを抽出）
+BYTECODE=$(cast code 0x9317841C2e9F6BCb44119C184152cfb1EF79034a --rpc-url $RPC_URL)
+
+# 関数セレクターを抽出（8063で始まる4バイト）
+echo "$BYTECODE" | grep -oE '8063[0-9a-f]{8}' | sort -u | while read selector; do
+  # 8063を削除して4バイトのセレクターを取得
+  FUNC_SELECTOR="0x${selector:4:8}"
+  echo "Function selector: $FUNC_SELECTOR"
+  # 4byteデータベースで検索
+  cast 4byte $FUNC_SELECTOR 2>/dev/null || echo "  Not found in 4byte database"
+done
+Function selector: 0x06fdde03
+name()
+Function selector: 0x07546172
+minter()
+Function selector: 0x095ea7b3
+approve(address,uint256)
+Function selector: 0x0a7d242c
+amtBurned()
+Function selector: 0x18160ddd
+totalSupply()
+Function selector: 0x23b872dd
+transferFrom(address,address,uint256)
+Function selector: 0x313ce567
+decimals()
+Function selector: 0x32cb6b0c
+MAX_SUPPLY()
+Function selector: 0x40c10f19
+mint(address,uint256)
+cat642998653(address,uint256)
+Function selector: 0x42966c68
+burn(uint256)
+collate_propagate_storage(bytes16)
+Function selector: 0x70a08231
+balanceOf(address)
+Function selector: 0x715018a6
+renounceOwnership()
+Function selector: 0x8da5cb5b
+owner()
+Function selector: 0x95d89b41
+symbol()
+Function selector: 0xa9059cbb
+transfer(address,uint256)
+Function selector: 0xdd62ed3e
+allowance(address,address)
+Function selector: 0xf2fde38b
+transferOwnership(address)
+_SIMONdotBLACK_(int8[],uint256,address,bytes8,int96)
+Function selector: 0xfca3b5aa
+setMinter(address)
+```
+
+**実際の抽出例：**
+
+バイトコードから以下のような関数セレクターが見つかります：
+- `0x06fdde03` - name()
+- `0x07546172` - symbol()
+- `0x095ea7b3` - approve(address,uint256)
+- `0x18160ddd` - totalSupply()
+- `0x23b872dd` - transferFrom(address,address,uint256)
+- `0x313ce567` - decimals()
+- `0x40c10f19` - mint(address,uint256)
+- `0x42966c68` - burn(uint256)
+- `0x70a08231` - balanceOf(address)
+- `0x715018a6` - renounceOwnership()
+- `0x8da5cb5b` - owner()
+- `0x95d89b41` - symbol() (別の実装)
+- `0xa9059cbb` - transfer(address,uint256)
+- `0xdd62ed3e` - allowance(address,address)
+- `0xf2fde38b` - transferOwnership(address)
+- `0xfca3b5aa` - setMinter(address)
+
+**各関数セレクターを4byteデータベースで検索：**
+
+```bash
+┌──(stardust✨stardust)-[~]
+└─$ cast 4byte 0x70a08231
+balanceOf(address)
+
+┌──(stardust✨stardust)-[~]
+└─$ cast 4byte 0xa9059cbb
+transfer(address,uint256)
+
+┌──(stardust✨stardust)-[~]
+└─$ cast 4byte 0x40c10f19
+mint(address,uint256)
+```
+
+**注意事項：**
+- この方法はバイトコードに含まれる関数セレクターを抽出しますが、すべての関数が検出されるとは限りません
+- プライベート関数や内部関数はバイトコードに含まれない場合があります
+- より正確な結果を得るには、BlockscoutのAPIを使用する方法1を推奨します
+
+#### 方法3: cast interfaceを使用（ABIファイルがある場合）
+
+`cast interface`はローカルのABIファイルからインターフェースを生成するコマンドです。ABIファイルを取得してから使用します。
+
+```bash
+┌──(stardust✨stardust)-[~]
+└─$ curl -s "https://soneium.blockscout.com/api?module=contract&action=getabi&address=0x9317841C2e9F6BCb44119C184152cfb1EF79034a" | \
+  jq -r '.result' > lootcoin.abi
+
+┌──(stardust✨stardust)-[~]
+└─$ cast interface lootcoin.abi
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.4;
+
+interface Interface {
+    error ERC20InsufficientAllowance(address spender, uint256 allowance, uint256 needed);
+    error ERC20InsufficientBalance(address sender, uint256 balance, uint256 needed);
+    error ERC20InvalidApprover(address approver);
+    error ERC20InvalidReceiver(address receiver);
+    error ERC20InvalidSender(address sender);
+    error ERC20InvalidSpender(address spender);
+    error NotMinter();
+    error OwnableInvalidOwner(address owner);
+    error OwnableUnauthorizedAccount(address account);
+
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
+    event Transfer(address indexed from, address indexed to, uint256 value);
+
+    function MAX_SUPPLY() external view returns (uint256);
+    function allowance(address owner, address spender) external view returns (uint256);
+    function amtBurned() external view returns (uint256);
+    function approve(address spender, uint256 value) external returns (bool);
+    function balanceOf(address account) external view returns (uint256);
+    function burn(uint256 value) external;
+    function decimals() external view returns (uint8);
+    function mint(address to, uint256 amount) external;
+    function minter() external view returns (address);
+    function name() external view returns (string memory);
+    function owner() external view returns (address);
+    function renounceOwnership() external;
+    function setMinter(address _minter) external;
+    function symbol() external view returns (string memory);
+    function totalSupply() external view returns (uint256);
+    function transfer(address to, uint256 value) external returns (bool);
+    function transferFrom(address from, address to, uint256 value) external returns (bool);
+    function transferOwnership(address newOwner) external;
+}
+```
+
+#### 方法4: 既知の標準メソッドを確認
+
+LootcoinコントラクトはERC-20準拠の可能性が高いため、以下の標準メソッドが含まれている可能性があります：
+
+**ERC-20標準メソッド：**
+- `totalSupply()(uint256)` - 総供給量
+- `balanceOf(address)(uint256)` - 残高確認
+- `transfer(address,uint256)(bool)` - 転送
+- `transferFrom(address,address,uint256)(bool)` - 承認済み転送
+- `approve(address,uint256)(bool)` - 承認
+- `allowance(address,address)(uint256)` - 承認額確認
+
+**追加メソッド（トレースから確認）：**
+- `mint(address,uint256)` - ミント（新規発行）
+
+
+#### 注意事項
+
+- `cast interface`は、コントラクトが`public`または`external`関数を持っている場合にのみ機能します
+- プライベート関数や内部関数は表示されません
+- コントラクトがプロキシパターンを使用している場合、実装コントラクトのアドレスを指定する必要がある場合があります
+
+
+
 ## 参考文献
 
  * [Lootcoin](https://lootcoin.tech?ref=0x53869B88306EB505f0fC66DaE482D42033F85253)
