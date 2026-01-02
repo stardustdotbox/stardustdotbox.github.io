@@ -14,8 +14,8 @@ header:
 
 # Astar DiscordをBANされている人間のたわごとです。（ ´ー｀）y―┛~~
 
-僕はAstarリリース記念NFTを持っているRamzにも認められているAstar OGだと自認にしているわけですが、どういうわけか、RamzにSoneiumに招待された後に、CodyによってAstar DiscordをBANされています。
-社会性がないらしいwww
+僕はAstarリリース記念NFTを持っているし、Ramzにも認められているAstar OGだと自認にしているわけですが、どういうわけかRamzにSoneiumに招待された後にCodyによってAstar DiscordをBANされています。
+www
 それでAstar Discord BANされてて、Astarギルドにも入れないはぐれAstar OGな僕なわけですが、たくさんAstr tokenは保有してしまっているので、Astar Burndropについて考えないといけませんね。。。ﾑﾑﾑ。
 Astarは一体どうなるんだろう。そして僕はAstar discordに戻れるのだろうか((*´∀`))ｹﾗｹﾗ
 
