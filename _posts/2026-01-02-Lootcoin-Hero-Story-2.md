@@ -13,7 +13,7 @@ header:
 
 {% include toc %}
 
-大好きなdAppsであるLootcoinのHTTP通信やSoneiumチェイン上でのトランザクションを少し見てみます。
+大好きなdAppsであるLootcoinのHTTP通信やSoneiumチェイン上でのトランザクションを少し深堀してみます。Lootcoinの内部構造について知ることはおもしろいですね。ヽ(´ー`)ノ
 
 ## Lootcoinの通信を観察してみる
 
