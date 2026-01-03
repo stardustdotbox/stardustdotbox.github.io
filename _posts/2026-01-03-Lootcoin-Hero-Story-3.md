@@ -131,7 +131,7 @@ l1GasPrice           45774281
 l1GasUsed            1600
 ```
 
-# 0x21Be1D69A77eA5882aCcD5c5319Feb7AC3854751が保有するメソッド一覧を表示する
+## メソッド一覧を表示する
 
 ```
 ┌──(stardust✨stardust)-[~/Lootcoin]
@@ -227,7 +227,7 @@ withdrawErc20(address,uint256)
 withdrawLootcoin(uint256)
 ```
 
-## Lootcoinメソッドの実行
+### Lootcoinメソッドの実行
 
 ```
 ┌──(stardust✨stardust)-[~/Lootcoin]
@@ -235,7 +235,7 @@ withdrawLootcoin(uint256)
 0x0000000000000000000000009317841c2e9f6bcb44119c184152cfb1ef79034a
 ```
 
-## Owner()
+### Owner()
 
 ```
 ┌──(stardust✨stardust)-[~/Lootcoin]
@@ -243,7 +243,7 @@ withdrawLootcoin(uint256)
 0x000000000000000000000000d33367e2aef56d700c1918c8a79fba54c0c9aa57
 ```
 
-## pendingRewards(address)
+### pendingRewards(address)
 
 <img width="301" height="33" alt="image" src="https://github.com/user-attachments/assets/146756b3-ba79-49a4-8c8a-0ce70da5bf6d" />
 
@@ -256,7 +256,7 @@ withdrawLootcoin(uint256)
 8393774546159677994
 ```
 
-## playerHashrate(address)
+### playerHashrate(address)
 
 <img width="146" height="65" alt="image" src="https://github.com/user-attachments/assets/fbf08e1b-f724-483c-8727-94d64c67e916" />
 
@@ -269,7 +269,7 @@ withdrawLootcoin(uint256)
 1840
 ```
 
-## playerPoints(address)
+### playerPoints(address)
 
 <img width="229" height="63" alt="image" src="https://github.com/user-attachments/assets/fb198f21-20af-43b3-ac0f-335bfced20f0" />
 
@@ -282,7 +282,7 @@ withdrawLootcoin(uint256)
 1200
 ```
 
-## getReferrals(address)(address[])
+### getReferrals(address)(address[])
 
 ```
 ┌──(stardust✨stardust)-[~/Lootcoin]
