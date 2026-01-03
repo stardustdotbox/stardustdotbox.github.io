@@ -16,6 +16,7 @@ header:
 もはや、Lootcoinの勇者物語というか、ぼくがLootcoin dAppsについて知りたいことを勝手に調査してるだけのブログになりつつある気がしますが、いいのです。これは必要なことなのです。(確信)
 というわけでこれからはLootcoin調査用レポジトリを作成して勇者物語を進めていきます。
 
+
 ## Lootcoinレポジトリの作成
 
 ```
@@ -26,6 +27,8 @@ header:
 ## .envファイルを作成する
 
 ```
+┌──(stardust✨stardust)-[~/Lootcoin]
+└─$ cat > .env
 RPC_URL=https://rpc.soneium.org
 PRIVATE_KEY=0xあなたの秘密鍵
 ```
@@ -294,8 +297,120 @@ withdrawLootcoin(uint256)
 
  * https://soneium.blockscout.com/address/0x21Be1D69A77eA5882aCcD5c5319Feb7AC3854751?tab=read_write_contract
 
+
+## Lootcoinの一日に稼げるLOOTの表記に嘘はないのか？
+
+Soneinasコミュニティからこんな疑問が出たので、調査してみます。実はこのために色々しらべていたわけですが。。。w
+
 <img width="960" height="602" alt="image" src="https://github.com/user-attachments/assets/20ce5342-6fa0-42f0-9c52-e4e0816458fe" />
 
+ * 調査時の私の日毎に稼げる$LOOTに関する記述
+
+```
+- YOU ARE LOOTING 369.7862 $LOOT PER DAY
+```
+
+ * 一時間に一度ClaimRewardsメソッドを呼ぶスクリプトを作成
+
+```bash
+#!/bin/bash
+
+# Lootcoin claimRewards() 自動実行スクリプト
+# 1時間ごとに claimRewards() を実行し、トランザクションHASHと実施時刻を表示します
+
+# スクリプトのディレクトリに移動
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR" || exit 1
+
+# .envファイルを読み込む
+if [ ! -f .env ]; then
+    echo "エラー: .envファイルが見つかりません"
+    exit 1
+fi
+
+export $(cat .env | grep -v '^#' | xargs)
+
+# 環境変数の確認
+if [ -z "$RPC_URL" ] || [ -z "$PRIVATE_KEY" ]; then
+    echo "エラー: RPC_URL または PRIVATE_KEY が設定されていません"
+    exit 1
+fi
+
+# コントラクトアドレス
+CONTRACT_ADDRESS="0x21Be1D69A77eA5882aCcD5c5319Feb7AC3854751"
+
+# ログファイル（オプション）
+LOG_FILE="claim_rewards.log"
+
+echo "=========================================="
+echo "Lootcoin claimRewards() 自動実行スクリプト"
+echo "開始時刻: $(date '+%Y-%m-%d %H:%M:%S')"
+echo "=========================================="
+echo ""
+
+# メインループ
+while true; do
+    # 現在時刻を取得
+    TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
+    
+    echo "[$TIMESTAMP] claimRewards() を実行中..."
+    
+    # cast sendコマンドを実行し、出力を取得
+    OUTPUT=$(cast send "$CONTRACT_ADDRESS" \
+        "claimRewards()" \
+        --rpc-url "$RPC_URL" \
+        --private-key "$PRIVATE_KEY" 2>&1)
+    
+    EXIT_CODE=$?
+    
+    if [ $EXIT_CODE -eq 0 ]; then
+        # トランザクションHASHを抽出
+        TX_HASH=$(echo "$OUTPUT" | grep -oP 'transactionHash\s+\K0x[a-fA-F0-9]+' || echo "見つかりませんでした")
+        
+        echo "[$TIMESTAMP] ✓ 成功"
+        echo "  トランザクションHASH: $TX_HASH"
+        echo ""
+        
+        # ログファイルに記録（オプション）
+        if [ -n "$LOG_FILE" ]; then
+            echo "[$TIMESTAMP] トランザクションHASH: $TX_HASH" >> "$LOG_FILE"
+        fi
+    else
+        echo "[$TIMESTAMP] ✗ エラーが発生しました"
+        echo "  エラー内容:"
+        echo "$OUTPUT" | head -5
+        echo ""
+        
+        # ログファイルに記録
+        if [ -n "$LOG_FILE" ]; then
+            echo "[$TIMESTAMP] エラー: $OUTPUT" >> "$LOG_FILE"
+        fi
+    fi
+    
+    # 1時間（3600秒）待機
+    echo "次の実行まで1時間待機します..."
+    echo "----------------------------------------"
+    sleep 3600
+done
+```
+
+ * 実行してみる
+
+```
+┌──(stardust✨stardust)-[~/Lootcoin]
+└─$ ./claim_rewards.sh 
+==========================================
+Lootcoin claimRewards() 自動実行スクリプト
+開始時刻: 2026-01-04 00:48:25
+==========================================
+
+[2026-01-04 00:48:25] claimRewards() を実行中...
+[2026-01-04 00:48:25] ✓ 成功
+  トランザクションHASH: 0x51aa13206f468546a20ee222ccb1142d966d987c825fb817556ca64d30e92122
+
+次の実行まで1時間待機します...
+----------------------------------------
+```
 
 ## 参考文献
 
