@@ -298,7 +298,7 @@ withdrawLootcoin(uint256)
  * https://soneium.blockscout.com/address/0x21Be1D69A77eA5882aCcD5c5319Feb7AC3854751?tab=read_write_contract
 
 
-## Lootcoinの一日に稼げるLOOTの表記に嘘はないのか？
+## Lootcoinの一日に稼げる$LOOTの表記に嘘はないのか？
 
 Soneinasコミュニティからこんな疑問が出たので、調査してみます。実はこのために色々しらべていたわけですが。。。w
 
