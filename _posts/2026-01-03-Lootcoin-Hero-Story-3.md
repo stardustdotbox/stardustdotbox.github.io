@@ -302,7 +302,7 @@ withdrawLootcoin(uint256)
 
 Soneinasコミュニティからこんな疑問が出たので、調査してみます。実はこのために色々しらべていたわけですが。。。w
 
-<img width="960" height="602" alt="image" src="https://github.com/user-attachments/assets/20ce5342-6fa0-42f0-9c52-e4e0816458fe" />
+<img width="437" height="159" alt="image" src="https://github.com/user-attachments/assets/1c69ab99-1908-4bf2-b780-1e6ea6f34472" />
 
  * 調査時の私の日毎に稼げる$LOOTに関する記述
 
