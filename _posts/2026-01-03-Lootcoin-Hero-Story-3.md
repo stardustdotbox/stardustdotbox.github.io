@@ -410,7 +410,33 @@ Lootcoin claimRewards() 自動実行スクリプト
 
 次の実行まで1時間待機します...
 ----------------------------------------
+[2026-01-04 01:48:29] claimRewards() を実行中...
+[2026-01-04 01:48:29] ✓ 成功
+  トランザクションHASH: 0x808d873cfe7f261565713f6380a66b24d9ec8e551d33674f454b152befa3e575
 ```
+
+ * 一時間で稼げた$LOOTを確認する
+
+ <img width="847" height="112" alt="image" src="https://github.com/user-attachments/assets/8a7715c0-1960-47ad-9dd4-4cccc71501af" />
+
+ * 24時間で稼げる$LOOTを計算する
+
+```
+┌──(stardust✨stardust)-[~/Lootcoin]
+└─$ echo '8.0550934 * 24' | bc
+193.3222416
+```
+
+ * 本来369LOOT稼げるはずなのに193LOOTしか稼げない計算になる。。。
+
+```
+┌──(stardust✨stardust)-[~/Lootcoin]
+└─$ echo '193 / 369' | bc -l
+.52303523035230352303
+```
+
+つまり本来の52%しか実際にはLOOTを稼げないという計算になる。Lootmotoさん、どういうことですか？（ ´ー｀）y―┛~~
+
 
 ## 参考文献
 
