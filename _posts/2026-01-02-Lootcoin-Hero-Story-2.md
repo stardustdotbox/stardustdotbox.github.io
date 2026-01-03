@@ -160,14 +160,170 @@ Foundryの`cast`コマンドを使用して、トランザクションの詳細�
 
 ### 環境設定
 
-まず、SoneiumネットワークのRPCエンドポイントを設定します。
+FoundryでRPC URLやPRIVATE_KEYを設定する方法は複数あります。
+
+#### 方法1: foundry.tomlファイルを使用（推奨）
+
+プロジェクトのルートディレクトリに`foundry.toml`ファイルを作成し、設定を記述します。
+
+```toml
+# foundry.toml
+[rpc_endpoints]
+soneium = "https://rpc.soneium.org"
+mainnet = "https://eth.llamarpc.com"
+sepolia = "https://rpc.sepolia.org"
+
+[etherscan]
+soneium = { key = "YOUR_ETHERSCAN_API_KEY" }
+```
+
+**使用方法：**
 
 ```bash
-┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
+# foundry.tomlで設定したエンドポイントを使用
+┌──(stardust✨stardust)-[~]
+└─$ cast tx $TX_HASH --rpc-url soneium
+```
+
+**注意：** `foundry.toml`には秘密鍵を直接書き込まないでください。秘密鍵は環境変数や`.env`ファイルを使用します。
+
+#### 方法2: .envファイルを使用
+
+プロジェクトのルートディレクトリに`.env`ファイルを作成します。
+
+```bash
+# .env
+RPC_URL=https://rpc.soneium.org
+PRIVATE_KEY=0xあなたの秘密鍵
+ETHERSCAN_API_KEY=あなたのAPIキー
+```
+
+**使用方法：**
+
+```bash
+# .envファイルを読み込む
+┌──(stardust✨stardust)-[~]
+└─$ source .env
+
+# または、direnvを使用（自動的に読み込まれる）
+┌──(stardust✨stardust)-[~]
+└─$ export $(cat .env | xargs)
+```
+
+**direnvの設定（オプション）：**
+
+```bash
+# direnvをインストール
+sudo apt install direnv
+
+# .envrcファイルを作成
+echo 'dotenv' > .envrc
+direnv allow
+```
+
+#### 方法3: 環境変数を直接設定
+
+```bash
+┌──(stardust✨stardust)-[~]
 └─$ export RPC_URL=https://rpc.soneium.org
 
-┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
+┌──(stardust✨stardust)-[~]
+└─$ export PRIVATE_KEY=0xあなたの秘密鍵
+
+┌──(stardust✨stardust)-[~]
 └─$ export TX_HASH=0xa4d8aec04682dc4913b91e09e11c99994a9b6d613064d0af9b8af3a21f59bb91
+```
+
+#### 方法4: foundry.tomlと環境変数の組み合わせ
+
+`foundry.toml`でRPCエンドポイントを設定し、秘密鍵は環境変数で管理する方法が推奨されます。
+
+**foundry.toml:**
+
+```toml
+[rpc_endpoints]
+soneium = "https://rpc.soneium.org"
+```
+
+**.env（.gitignoreに追加すること）:**
+
+```bash
+PRIVATE_KEY=0xあなたの秘密鍵
+```
+
+**使用例：**
+
+```bash
+# RPC URLはfoundry.tomlから、PRIVATE_KEYは環境変数から
+┌──(stardust✨stardust)-[~]
+└─$ cast send 0x... "function()" --rpc-url soneium --private-key $PRIVATE_KEY
+```
+
+#### セキュリティのベストプラクティス
+
+1. **`.env`ファイルを`.gitignore`に追加**
+   ```bash
+   echo ".env" >> .gitignore
+   ```
+
+2. **`.env.example`ファイルを作成**
+   ```bash
+   # .env.example
+   RPC_URL=https://rpc.soneium.org
+   PRIVATE_KEY=0x...
+   ETHERSCAN_API_KEY=...
+   ```
+
+3. **秘密鍵は環境変数で管理**
+   - `foundry.toml`には秘密鍵を書き込まない
+   - `.env`ファイルは`.gitignore`に追加
+   - 本番環境では、環境変数やシークレット管理サービスを使用
+
+#### 実際の設定例
+
+**プロジェクト構造：**
+
+```
+my-project/
+├── foundry.toml
+├── .env          # .gitignoreに追加
+├── .env.example  # テンプレート
+└── .gitignore
+```
+
+**foundry.toml:**
+
+```toml
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+
+[rpc_endpoints]
+soneium = "https://rpc.soneium.org"
+mainnet = "https://eth.llamarpc.com"
+
+[etherscan]
+soneium = { key = "${ETHERSCAN_API_KEY}" }
+```
+
+**.env:**
+
+```bash
+PRIVATE_KEY=0xあなたの秘密鍵
+ETHERSCAN_API_KEY=あなたのAPIキー
+```
+
+**使用例：**
+
+```bash
+# foundry.tomlで設定したエンドポイントを使用
+┌──(stardust✨stardust)-[~]
+└─$ cast tx $TX_HASH --rpc-url soneium
+
+# 環境変数から秘密鍵を読み込む
+┌──(stardust✨stardust)-[~]
+└─$ cast send 0x... "function()" --rpc-url soneium --private-key $PRIVATE_KEY
 ```
 
 ### トランザクションの基本情報を取得
