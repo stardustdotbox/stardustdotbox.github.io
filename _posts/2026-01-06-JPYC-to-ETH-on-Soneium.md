@@ -3,7 +3,7 @@ title: 'JPYCをSoneium上のETHに変換するの巻'
 date: 2026-01-19 20:55:20
 permalink: /posts/2025/01/2026-01-06-JPYC-to-Eth-on-Soneium/
 tags:
-  - jpyc
+  - JPYC
 header:
   image: https://github.com/user-attachments/assets/dc44e241-1730-430b-9cd3-98604ad89eb4
 ---
@@ -82,3 +82,4 @@ Total Supply: 120,694,828.98 ETH
 ┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
 └─$ git add -A && git commit -m 'JPYCをSoneium上のETHに変換するの巻' && git push
 ```
+
