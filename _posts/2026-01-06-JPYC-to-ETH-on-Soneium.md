@@ -1,6 +1,6 @@
 ---
 title: 'JPYCをSoneium上のETHに変換するの巻'
-date: 2026-01-19 20:55:20
+date: 2026-01-06 20:55:20
 permalink: /posts/2025/01/2026-01-06-JPYC-to-Eth-on-Soneium/
 tags:
   - JPYC
