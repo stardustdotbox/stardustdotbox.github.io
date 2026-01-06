@@ -27,6 +27,7 @@ author_profile: true
 ## SNS
 
  * [X](https://x.com/)
+ * [X Developer Portal](https://developer.twitter.com/en/portal/dashboard)
  * [discord](https://discord.com/)
  * [spotify](https://open.spotify.com/)
  * [telegram](https://web.telegram.org/)
