@@ -32,6 +32,10 @@ author_profile: true
  * [telegram](https://web.telegram.org/)
  * [note.com](https://note.com/)
 
+## 便利TOOL
+
+ * [web-check.xyz](https://web-check.xyz/)
+
 ## ウォレット
 
  * [MetaMask](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
@@ -40,6 +44,7 @@ author_profile: true
 ## 日本人向けWeb3サービス
 
  * [JPYC](https://jpyc.co.jp/)
+ * [JPYC INFO](https://jpyc-info.com/)
 
 ## Web3全般
 
