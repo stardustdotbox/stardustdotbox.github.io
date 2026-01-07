@@ -1,0 +1,76 @@
+---
+title: '推し活をはじめる(1)'
+date: 2026-01-07 22:06:30
+permalink: /posts/2026/01/Oshi-katsu-1/
+tags:
+  - Oshi-katsu
+header:
+  image: https://github.com/user-attachments/assets/c1116c3c-3ec5-4100-b8f6-a03a49186b9e
+---
+
+<img width="966" height="171" alt="image" src="https://github.com/user-attachments/assets/c1116c3c-3ec5-4100-b8f6-a03a49186b9e" />
+
+{% include toc %}
+
+## Recordプロトコルとは？
+
+ * https://recordprotocol.xyz/en/
+
+Record Protocolは、オンチェーン上で実際のファン支援を記録・報酬することに焦点を当てています。購入だけを追跡するのではなく、アイドルを支援する、コンテンツに関わる、コミュニティに貢献するなどの意味のある行動も認識します。
+目標は、アイドルやクリエイターがファンをよりよく理解し、報いることを支援すると同時に、ファンが本物のサポートに対して見せ場と価値を得られるようにすることです。プラットフォームが成長するにつれて、ファンコミュニティとクリエイターが互いに交流し、認知を得たり、恩恵を解禁したりする方法が増えていきます。
+
+## R.E.C.ポイントシステム
+
+IRCスコアの数は、Record Protocolによって開発されたR.E.C.ポイントシステムに基づいています。IRCアプリで、適格なIPの中でお気に入りのIPをサポートするにつれて、日々のポイントを超えたポイントを獲得できます。
+
+## Fandom Economy
+
+ * https://docs.recordprotocol.xyz/ipfi-powered-by-fandom
+
+ファンダムは最も本物のコミュニティ形態であり、エンターテイメントにおける需要形成の永続的な原動力です。24/7 で運営されるグローバルな分散型自律コミュニティと考えてください。マクロサイクルを生き延び、コホート全体で再生し、創造、増幅、調整を通じて文化の勢いをさらに高めます。
+
+何十年もの間、ファンであるということは、— CD、レコード、コンサート チケット、商品を購入することを意味していました。ファンダムへの献身は、あなたが所有できるものによって測られました。それからインターネットはすべてを変えました。ソーシャルメディアはファンダムをデジタル化するだけでなく、ファンに声を与えました。ファンダムは受動的な消費から積極的な参加 — に進化し、ファンはお金だけでなく時間、創造性、感情も投資します。
+
+## R.E.C.ポイントシステムを採用したIRC APP
+
+ * https://app.idolrunwaycollection.jp/ja
+
+これが推し活専用アプリケーションのIRC APPになります。
+
+ <img width="940" height="359" alt="image" src="https://github.com/user-attachments/assets/b55c2afa-51b1-4f7c-86e3-6bdc116fcc43" />
+
+デイリーログインでは一日に1スコアか2スコアしか稼げないので、ムリゲーじゃないと思っていたのですが、R.E.C.ポイントシステムに沿って行動した人はすでにゴールドランクに到達しているとのことです。
+
+## 推すアイドルを決定する
+
+僕は葉月紗蘭ちゃんを推すことにしました。
+
+<img width="997" height="757" alt="image" src="https://github.com/user-attachments/assets/9bf42a21-480e-4a4e-98c6-bf8ff4626aeb" />
+
+## 推し活を実施する
+
+IRC APPとXを連携した後に、葉月紗蘭ちゃんを推すポストをすることでR.E.C.ポイントシステムにより、IRCスコアが向上すると思う。
+
+https://x.com/stardustdotbox/status/2008837931818172691
+
+<img width="528" height="634" alt="image" src="https://github.com/user-attachments/assets/f3314111-e698-40f7-b1fa-8ad1b69b1604" />
+
+## ブログ更新コマンド
+
+```
+┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
+└─$ git add -A && git commit -m '推し活をはじめる(1)' && git push
+```
+
+## 参考文献
+
+ * https://recordprotocol.xyz/en/
+ * https://docs.recordprotocol.xyz/
+ * https://x.com/record_protocol
+ * https://app.idolrunwaycollection.jp/ja
+ * https://x.com/idolrunwaycolle
+ * https://x.com/takanenofficial
+ * https://takanenonadeshiko.jp/
+ * https://www.youtube.com/channel/UCoR4zZDvWvUIqgEWz4HS-sA
+ * https://x.com/saara_hazuki
+ * https://x.com/stardustdotbox/status/2008837931818172691
