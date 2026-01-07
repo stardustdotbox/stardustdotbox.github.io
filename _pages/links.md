@@ -49,6 +49,7 @@ author_profile: true
 
 ## Web3全般
 
+ * [Airdrop List](https://airdroplist.co/)
  * [coingecko](https://www.coingecko.com/)
  * [geckoterminal](https://www.geckoterminal.com/ja)
  * [CoinMarketCap](https://coinmarketcap.com/ja/)
