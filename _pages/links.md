@@ -81,6 +81,10 @@ author_profile: true
  * [yay!](https://yay.space/)
  * [BONSAI NFT CLUB](https://www.bonsainft.club/ja)
 
+## クリプトニュース
+
+ * [コインテレグラフジャパン](https://jp.cointelegraph.com/)
+
 ## トレード
 
  * [TradingView](https://jp.tradingview.com/)
@@ -163,3 +167,10 @@ author_profile: true
 ## 日本
 
  * [参政党](https://sanseito.jp/)
+
+## ブログ更新コマンド
+
+```
+┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
+└─$ git add -A && git commit -m 'Link集の更新' && git push
+```

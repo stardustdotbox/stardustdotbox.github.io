@@ -27,9 +27,11 @@ header:
 
 ## $LOOTの価格推移
 
-　* アップデート前
+ * アップデート前
 
 ```
+┌──(venv)(stardust✨stardust)-[~/coingecko]
+└─$ python coingecko.py loot
 === Lootcoin (LOOT) Price Data ===
 0.0079757USD
 1.25JPY
