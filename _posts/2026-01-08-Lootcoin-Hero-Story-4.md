@@ -65,7 +65,21 @@ header:
 
 <img width="460" height="704" alt="image" src="https://github.com/user-attachments/assets/6936254e-c1b6-45d9-b1d9-e8ebfbc32a87" />
 
-うーん。今んところ間違いなく最強パーティーなんだけど、儲かるのかな。これ。w
+## 今のところの感想
+
+ * プレーヤーができるのはできるだけはやく、Burnする量を減らしながら、最小コストで重量を超えないように採掘能力を増やすことだけ。
+ * 今回のアップデートの3400LOOTが必要なイベントは今までで一番多くの$LOOTを必要とするイベントだった。
+ * それでも価格がついてきてるのは、$LOOTに需要があることを示している
+ * ヒーローの数は限界値が決まっている。(多分5人)
+ * このペースでイベントを打っていて、いきづまらないかが心配だが、しかし$LOOTがうまくといくと過程すると今が仕組み上一番$LOOTの価格が安いと想定。
+
+## $LOOTを追加購入してみた
+
+<img width="1003" height="617" alt="image" src="https://github.com/user-attachments/assets/371c686c-8f72-4f56-9c99-a6f82afe73b9" />
+
+<img width="510" height="712" alt="image" src="https://github.com/user-attachments/assets/d722189b-ec63-4b1b-9223-cd4ecfca725b" />
+
+はやく、僕の勇者たちが僕をNEETにしてくれるといいな。がんばれ、勇者たちよヽ(´ー`)ノ
 
 ## ブログ更新コマンド
 
