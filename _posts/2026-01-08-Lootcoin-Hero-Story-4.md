@@ -75,7 +75,11 @@ header:
 
 ## $LOOTを追加購入してみた
 
+明らかにまとまった量をswapするときはkyoよりuniswapのほうがいいよね。。。
+
 <img width="1003" height="617" alt="image" src="https://github.com/user-attachments/assets/371c686c-8f72-4f56-9c99-a6f82afe73b9" />
+
+とりあえず10000$LOOT持っていれば、この冒険は安全なはずだ。。。きっと。。。
 
 <img width="510" height="712" alt="image" src="https://github.com/user-attachments/assets/d722189b-ec63-4b1b-9223-cd4ecfca725b" />
 
