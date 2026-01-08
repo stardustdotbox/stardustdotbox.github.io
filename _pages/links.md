@@ -53,7 +53,6 @@ author_profile: true
  * [coingecko](https://www.coingecko.com/)
  * [geckoterminal](https://www.geckoterminal.com/ja)
  * [CoinMarketCap](https://coinmarketcap.com/ja/)
- * [THE BLOCK](https://www.theblock.co/)
  * [DeBank](https://debank.com/)
  * [ChainList](https://chainlist.org/?search=)
  * [DappRadar](https://dappradar.com/)
@@ -84,6 +83,7 @@ author_profile: true
 ## クリプトニュース
 
  * [コインテレグラフジャパン](https://jp.cointelegraph.com/)
+ * [THE BLOCK](https://www.theblock.co/)
 
 ## トレード
 
