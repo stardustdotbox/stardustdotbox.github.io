@@ -55,6 +55,16 @@ https://x.com/stardustdotbox/status/2008837931818172691
 
 <img width="528" height="634" alt="image" src="https://github.com/user-attachments/assets/f3314111-e698-40f7-b1fa-8ad1b69b1604" />
 
+## 最強の葉月紗蘭ちゃんを推している人
+
+ * https://x.com/akaringo_10o_
+
+## 個人用推しハッシュタグ
+
+```
+#葉月紗蘭 #高嶺のなでしこ
+```
+
 ## ブログ更新コマンド
 
 ```
