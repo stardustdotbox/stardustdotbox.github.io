@@ -25,7 +25,7 @@ header:
 
 <img width="266" height="65" alt="image" src="https://github.com/user-attachments/assets/683317de-4d7d-4a2f-8242-2b74254e4e38" />
 
-## 価格状況の変化
+## $LOOTの価格推移
 
 　* アップデート前
 
