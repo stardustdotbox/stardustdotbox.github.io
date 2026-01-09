@@ -1,33 +1,59 @@
 ---
 title: 'Astarピアーズプログラムシーズン3に応募する'
-date: 2025-01-01 00:00:00
+date: 2026-01-09 20:23:30
 permalink: /posts/2026/01/Asatr-Peers-Program-Season3/
 tags:
-  - template
+  - Astar
 header:
-  image: stardust.jpg
+  image: https://github.com/user-attachments/assets/88a35b01-514e-4d31-a949-e28218da5210
 ---
 
-<video controls width="100%">
-  <source src="https://github.com/user-attachments/assets/3e07ab01-af74-4007-b685-af2cd86638e6" type="video/mp4">
-  お使いのブラウザは動画タグをサポートしていません。ヽ(´ー`)ノ
-</video>
+![logo-primary-color-black](https://github.com/user-attachments/assets/88a35b01-514e-4d31-a949-e28218da5210)
 
-# Midjourney Bot
 
-```
-/imagine Happy New Year 
-```
+## マイルストーン
 
-{% include toc %}
+ * 2026/01 シーズン3参加者募集、Astarノードランナー10名募集
+ * 2026/06 シーズン3中間結果レビュー（残存報酬の確認、継続案の決定）
+ * 2026/12 シーズン3の結果の最終確認とシーズン4の募集の調整
 
-## Hello Template
+## 報酬基準
+
+ * 基本報酬額は30米ドルで、ASTRトークンで支払われます。
+ * 最終的な報酬額は、翌月のEMA30値を使用して、Astar 価格に基づいて調整されます。
+
+## 報酬条件
+
+ * 80%を超える可用性に対して100%の報酬
+ * オンチェーンIDが登録されていない場合：50％の控除が適用されます
+ * 在庫状況が80%を下回る場合、50%の報酬
+ * ノードが実行していないか非アクティブな場合は報酬はありません
+
+## 応募用のウォレットをpolkadotjsで作成する
+
+ * https://astar.subscan.io/account/5HVsYfdgxBGWdonNt5ABnGfHMjuKMtMncqwCGpVQTHfFTjip
+
+<img width="1451" height="576" alt="image" src="https://github.com/user-attachments/assets/1eaad1c2-665b-44b8-a593-0ba4d9d08b01" />
+
+## 応募する
+
+<img width="661" height="903" alt="image" src="https://github.com/user-attachments/assets/c1d09d78-5741-4b86-b4fc-314d63158c7b" />
+
+## Astar discordをBANされていて、peers-programsチャンネルに参加できないのでAstarフォーラムで問い合わせをする
+
+ * https://forum.astar.network/t/peers-program-season-3-empower-astar-together-applications-open/9283/3
 
 ## ブログ更新コマンド
 
 ```
 ┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
-└─$ git add -A && git commit -m 'Lootcoinの勇者物語(2)' && git push
+└─$ git add -A && git commit -m 'Astarピアーズプログラムシーズン3に応募する' && git push
 ```
 
 ## 参考文献
+
+ * https://forum.astar.network/t/peers-program-season-3-empower-astar-together-applications-open/9283
+ * https://peers.sun-t-sarah.work/
+ * https://telemetry.polkadot.io/
+ * https://astar.subscan.io/account/5HVsYfdgxBGWdonNt5ABnGfHMjuKMtMncqwCGpVQTHfFTjip
+
