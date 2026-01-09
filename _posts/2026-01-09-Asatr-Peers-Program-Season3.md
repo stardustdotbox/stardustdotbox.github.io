@@ -1,0 +1,33 @@
+---
+title: 'Astarピアーズプログラムシーズン3に応募する'
+date: 2025-01-01 00:00:00
+permalink: /posts/2026/01/Asatr-Peers-Program-Season3/
+tags:
+  - template
+header:
+  image: stardust.jpg
+---
+
+<video controls width="100%">
+  <source src="https://github.com/user-attachments/assets/3e07ab01-af74-4007-b685-af2cd86638e6" type="video/mp4">
+  お使いのブラウザは動画タグをサポートしていません。ヽ(´ー`)ノ
+</video>
+
+# Midjourney Bot
+
+```
+/imagine Happy New Year 
+```
+
+{% include toc %}
+
+## Hello Template
+
+## ブログ更新コマンド
+
+```
+┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
+└─$ git add -A && git commit -m 'Lootcoinの勇者物語(2)' && git push
+```
+
+## 参考文献
