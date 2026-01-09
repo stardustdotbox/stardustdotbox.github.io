@@ -8,7 +8,7 @@ date: 2026-01-01
 header:
   image: stardust.jpg
 tags:
-  - Foundry
+  - Prompts
 ---
 
 {% include toc %}
