@@ -1,7 +1,7 @@
 ---
-title: 'Astarピアーズプログラムシーズン3に応募する'
-date: 2026-01-09 20:23:30
-permalink: /posts/2026/01/Asatr-Peers-Program-Season3/
+title: 'Astarピアーズプログラムシーズン3に応募する(1)'
+date: 2026-01-10 12:57:21
+permalink: /posts/2026/01/Asatr-Peers-Program-Season3-1/
 tags:
   - Astar
 header:
@@ -43,11 +43,16 @@ header:
 
  * https://forum.astar.network/t/peers-program-season-3-empower-astar-together-applications-open/9283/3
 
+<img width="748" height="1083" alt="image" src="https://github.com/user-attachments/assets/ed1a83dd-273f-4938-bf88-97df663e99c0" />
+
+僕にはAstarの正当な僕をdiscordからBANする理由もよくわからんが、ノードのセットアップに成功したら、discordに戻してくれる可能性があるらしい。
+なんか腑に落ちない理由でBANされ、ハードモードに突入してる気がしないでもないが、Astarノードのセットアップは個人的にも興味があるし、ラズパイハードウェアも後々使う予定だったからやってみるか。。。
+
 ## ブログ更新コマンド
 
 ```
 ┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
-└─$ git add -A && git commit -m 'Astarピアーズプログラムシーズン3に応募する' && git push
+└─$ git add -A && git commit -m 'Astarピアーズプログラムシーズン3に応募する(1)' && git push
 ```
 
 ## 参考文献
@@ -56,4 +61,4 @@ header:
  * https://peers.sun-t-sarah.work/
  * https://telemetry.polkadot.io/
  * https://astar.subscan.io/account/5HVsYfdgxBGWdonNt5ABnGfHMjuKMtMncqwCGpVQTHfFTjip
-
+ * https://x.com/Rahul66267247/status/1961362805153829017
