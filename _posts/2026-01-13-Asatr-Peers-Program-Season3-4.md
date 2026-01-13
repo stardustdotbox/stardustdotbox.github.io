@@ -10,16 +10,18 @@ header:
 
 ![logo-primary-color-black](https://github.com/user-attachments/assets/88a35b01-514e-4d31-a949-e28218da5210)
 
+{% include toc %}
+
 ## 目標
 
  * Astarアーカイブノードをラズパイ5のSSD上に構築する
 
 ## 前回までのまとめ
 
- * USB-SDD経由でOS起動したが、ラズパイOSはどのdistro使ってもMSDOSパーティションテーブルになる。(Ubuntu Server for ラズパイも同じ)
+ * USB-SSD経由でOS起動したが、ラズパイOSはどのdistro使ってもMSDOSパーティションテーブルになる。(Ubuntu Server for ラズパイも同じ)
  * Astar nodeを立ち上げるなら2TB制限は迂回しないと後々問題になりそう。
 
-## ラズパイ5をUSB-SDD(GPT)環境を構築する
+## ラズパイ5をUSB-SSD(GPT)環境を構築する
 
 ### Raspberry Pi Imagerを使ってRaspberry PiをSDカードに焼く
 
@@ -65,7 +67,7 @@ mmcblk0     179:0    0 29.7G  0 disk
 zram0       254:0    0    2G  0 disk [SWAP]
 ```
 
- * USB-SDDを差した後に再度実行
+ * USB-SSDを差した後に再度実行
 
 ```
 stardust@stardust:~ $ lsblk
@@ -80,7 +82,7 @@ mmcblk0     179:0    0 29.7G  0 disk
 zram0       254:0    0    2G  0 disk [SWAP]
 ```
 
-### USB-BOOTを使用してGPT化してUSB-SDDにシステムを焼く
+### USB-BOOTを使用してGPT化してUSB-SSDにシステムを焼く
 
  * USB-BOOTのダウンロード
 

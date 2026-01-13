@@ -14,7 +14,7 @@ header:
 
 ## 完成したノードを眺めてみるよヽ(´ー`)ノ
 
-ラズパイ5とUSB-SDDの間にUSBハブをはさんで、USB-SDDの電力の供給不足に対処しているよ。
+ラズパイ5とUSB-SSDの間にUSBハブをはさんで、USB-SSDの電力の供給不足に対処しているよ。
 
 <img width="428" height="734" alt="image" src="https://github.com/user-attachments/assets/0232763f-5af8-473f-933b-5cfde1ae2df2" />
 
