@@ -38,6 +38,7 @@ header:
 ```
 
 問題なのは毎月30ドル分ずつAstarもらえるとしても、一年半以上運営しないと元がとれないことである。((*´∀`))ｹﾗｹﾗ
+デバイスが来るのが楽しみだな。
 
 ## ブログ更新コマンド
 
@@ -48,6 +49,7 @@ header:
 
 ## 参考文献
 
+ * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-1/
  * https://forum.astar.network/t/peers-program-season-3-empower-astar-together-applications-open/9283
  * https://peers.sun-t-sarah.work/
  * https://telemetry.polkadot.io/
