@@ -103,7 +103,7 @@ root@stardust:/etc/sudoers.d# rm 010_pi-nopasswd 90-cloud-init-users
 
 ## Astarのアーカイブノードを実行する
 
- * getsubstrate.ioで指定されているパッケージ名が微妙にラズパイ5のパッケージ名とは異なるみたいなので、修正して実行
+ * getsubstrate.ioで指定されているパッケージ名が微妙にラズパイ5のパッケージ名とは異なるみたいなので、修正して実行する
  
 ```
 stardust✨stardust:~ $ sudo apt install -y protobuf-compiler libprotobuf-dev pkg-config
