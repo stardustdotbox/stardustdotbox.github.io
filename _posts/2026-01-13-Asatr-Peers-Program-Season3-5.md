@@ -417,6 +417,13 @@ stardust✨stardust:~ $ curl -s -H "Content-Type: application/json" \
 }
 ```
 
+## 申請準備完了かな。
+
+とりあえずこれで、Astarのアーカイブノードを起動させることができ、telemetryで自分のノードを確認できるようになった。次は何をしたらいいかわからないので、JuminStockにきいてみよう。（ ´ー｀）y―┛~~
+
+ * https://forum.astar.network/t/peers-program-season-3-empower-astar-together-applications-open/9283/7?u=astarpunks
+
+
 ## ブログ更新コマンド
 
 ```
