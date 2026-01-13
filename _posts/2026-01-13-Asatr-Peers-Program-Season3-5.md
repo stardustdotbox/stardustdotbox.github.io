@@ -281,7 +281,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --pruning archive \
   --chain astar \
   --base-path /var/lib/Astar \
-  --name AstarNode \
+  --name [好きなノード名] \
   --port 30333 \
   --rpc-port 9944 \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
@@ -433,4 +433,3 @@ stardust✨stardust:~ $ curl -s -H "Content-Type: application/json" \
  * https://github.com/AstarNetwork/Astar/
  * https://docs.astar.network/docs/build/nodes/archive-node/binary/
  * https://telemetry.polkadot.io/
-
