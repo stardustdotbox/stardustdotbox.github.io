@@ -83,7 +83,29 @@ tmpfs           1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
 tmpfs           1.0M     0  1.0M   0% /run/credentials/serial-getty@ttyAMA10.service
 ```
 
+## 回線速度を計測する
+
+```
+stardust✨stardust:~ $ sudo apt install -y speedtest-cli
+stardust✨stardust:~ $ speedtest
+Retrieving speedtest.net configuration...
+Testing from QTnet (58.3.29.76)...
+Retrieving speedtest.net server list...
+Selecting best server based on ping...
+Hosted by IPA CyberLab (Bunkyo) [794.70 km]: 38.217 ms
+Testing download speed...............................................................................
+.Download: 44.50 Mbit/s
+Testing upload speed......................................................................................................
+Upload: 70.30 Mbit/s
+```
+
 ## 基礎システム設定変更
+
+### ホスト名を修正する
+
+```
+root@stardust:~# echo 'stardust.local' > /etc/hostname
+```
 
 ### sudo時にパスワードを必須にする
 
@@ -99,6 +121,25 @@ root@stardust:/etc/sudoers.d# cat 90-cloud-init-users
 # User rules for stardust
 stardust ALL=(ALL) NOPASSWD:ALL
 root@stardust:/etc/sudoers.d# rm 010_pi-nopasswd 90-cloud-init-users
+```
+
+### 言語設定をja_JP.UTF-8に変更する
+
+```
+stardust✨stardust:~ $ sudo dpkg-reconfigure locales
+```
+
+### bashrcに追加する
+
+```
+# dateコマンドを見やすくする
+alias 'date'='LANG=ja_JP.UTF-8 date "+%Y-%m-%d(%a) %H:%M"'
+
+# Bash履歴のカスタマイズ
+HISTSIZE=10000
+HISTFILESIZE=20000
+export HISTCONTROL=ignoredups
+export HISTTIMEFORMAT='%F %T '
 ```
 
 ## Astarのアーカイブノードを実行する
@@ -119,16 +160,262 @@ stardust✨stardust:~ $ bash getsubstrate.sh --fast
 
 ```
 stardust✨stardust:~ $ git clone --recurse-submodules https://github.com/AstarNetwork/Astar.git
+stardust✨stardust:~/Astar $ git fetch --tags
 ```
 
- * コンパイルする
+ * コンパイルする(1時間ぐらいかかる)
 
 ```
 stardust✨stardust:~/Astar $ exec $SHELL -l
 stardust✨stardust:~/Astar $ cargo build --profile production
+stardust✨stardust:~/Astar $ ./target/production/astar-collator --version
+astar-collator 5.48.0-7502f2de834
+```
+
+ * データディレクトリを作成する
+
+```
+stardust✨stardust:~ $ sudo mkdir -p /var/lib/astar
+stardust✨stardust:~ $ sudo chown -R $USER:$USER /var/lib/astar
+```
+
+ * テスト起動する
+
+```
+stardust✨stardust:~/Astar $ ./target/production/astar-collator \
+  --chain astar \
+  --base-path /var/lib/astar \
+  --name Stardust✨ \
+  --port 30333 \
+  --rpc-port 9944 \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --rpc-cors all \
+  --collator
+2026-01-13 21:51:12 Astar Collator
+2026-01-13 21:51:12 ✌️  version 5.48.0-7502f2de834
+2026-01-13 21:51:12 ❤️  by Stake Technologies <devops@stake.co.jp>, 2019-2026
+2026-01-13 21:51:12 📋 Chain specification: Astar
+2026-01-13 21:51:12 🏷  Node name: Stardust✨
+2026-01-13 21:51:12 👤 Role: AUTHORITY
+2026-01-13 21:51:12 💾 Database: RocksDb at /var/lib/astar/chains/astar/db/full
+2026-01-13 21:51:12 Parachain id: Id(2006)
+2026-01-13 21:51:12 Parachain Account: 5Ec4AhPW97z4ZyYkd3mYkJrSeZWcwVv4wiANES2QrJi1x17F
+2026-01-13 21:51:12 Is collating: yes
+2026-01-13 21:51:14 [Parachain] Creating transaction pool txpool_type=ForkAware ready=Limit { count: 8192, total_bytes: 20971520 } future=Limit { count: 819, total_bytes: 2097152 }
+2026-01-13 21:51:15 [Relaychain] Creating transaction pool txpool_type=ForkAware ready=Limit { count: 8192, total_bytes: 20971520 } future=Limit { count: 819, total_bytes: 2097152 }
+2026-01-13 21:51:16 [Relaychain] Local node identity is: 12D3KooWNVgUpZAAPj7MkZCfFxYnxsiYDLaSAxFBX1TJG1wq4TNT
+2026-01-13 21:51:16 [Relaychain] Running litep2p network backend
+2026-01-13 21:51:16 [Relaychain] 💻 Operating system: linux
+2026-01-13 21:51:16 [Relaychain] 💻 CPU architecture: aarch64
+2026-01-13 21:51:16 [Relaychain] 💻 Target environment: gnu
+2026-01-13 21:51:16 [Relaychain] 💻 Memory: 16218MB
+2026-01-13 21:51:16 [Relaychain] 💻 Kernel: 6.12.62+rpt-rpi-2712
+2026-01-13 21:51:16 [Relaychain] 💻 Linux distribution: Debian GNU/Linux 13 (trixie)
+2026-01-13 21:51:16 [Relaychain] 💻 Virtual machine: no
+2026-01-13 21:51:16 [Relaychain] 📦 Highest known block at #192
+2026-01-13 21:51:16 [Relaychain] 〽️ Prometheus exporter started at 127.0.0.1:9616
+2026-01-13 21:51:16 [Relaychain] Running JSON-RPC server: addr=127.0.0.1:9945,[::1]:9945
+2026-01-13 21:51:16 [Relaychain] 🏁 CPU single core score: 449.48 MiBs, parallelism score: 240.52 MiBs with expected cores: 8
+2026-01-13 21:51:16 [Relaychain] 🏁 Memory score: 5.37 GiBs
+2026-01-13 21:51:16 [Relaychain] 🏁 Disk score (seq. writes): 294.88 MiBs
+2026-01-13 21:51:16 [Relaychain] 🏁 Disk score (rand. writes): 138.81 MiBs
+ ```
+
+ * Astarノードがリソースをどれぐらい食うかを調査
+
+<img width="1914" height="399" alt="image" src="https://github.com/user-attachments/assets/092c16df-a163-4fc0-806e-253974ce9165" />
+
+## 長期運用設計
+
+### テスト環境のクリーンアップ
+
+ * データディレクトリの削除
+
+```
+stardust✨stardust:/var/lib $ sudo rm -fr astar
+```
+
+### 本番環境の構築
+
+ * astarノード実行ユーザの作成
+
+```
+stardust✨stardust:~ $ sudo useradd --no-create-home --shell /usr/sbin/nologin astar
+```
+
+ * データディレクトリを作成する
+
+```
+stardust✨stardust:~ $ sudo mkdir -p /var/lib/Astar
+stardust✨stardust:~ $ sudo chown -R $USER:$USER /var/lib/Astar
+```
+
+ * 本番用のノードバイナリを配置する
+
+```
+stardust✨stardust:~ $ sudo cp /home/stardust/Astar/target/production/astar-collator /usr/local/bin/
+stardust✨stardust:~ $ sudo chown astar:astar /usr/local/bin/astar-collator
+```
+
+ * データディレクトリの所有権をastarユーザにする
+
+```
+stardust✨stardust:~ $ sudo chown -R astar:astar /var/lib/Astar
+stardust✨stardust:~ $ sudo chmod 700 /var/lib/Astar
+```
+
+### systemdでサービス化する
+
+ * unitファイルの作成
+
+```
+stardust✨stardust:~ $ sudo cat /etc/systemd/system/astar.service
+[Unit]
+Description=Astar Archive node
+
+[Service]
+User=astar
+Group=astar
+
+ExecStart=/usr/local/bin/astar-collator \
+  --pruning archive \
+  --chain astar \
+  --base-path /var/lib/Astar \
+  --name AstarNode \
+  --port 30333 \
+  --rpc-port 9944 \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --rpc-cors all
+
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+```
+
+ * ユニットファイル書き換えの適用
+
+```
+stardust✨stardust:~ $ sudo systemctl daemon-reload
+```
+
+ * Astarノードの再起動
+
+```
+stardust✨stardust:~ $ sudo systemctl status astar.service
+stardust✨stardust:~ $ sudo systemctl start astar.service
+stardust✨stardust:~ $ sudo systemctl restart astar.service
+stardust✨stardust:~ $ sudo systemctl stop astar.service
+```
+
+## 検証時
+
+ * サービスが停止していることを確認する
+
+```
+stardust✨stardust:~ $ sudo systemctl stop astar.service
+```
+
+ * データディレクトリの削除
+
+```
+stardust✨stardust:~ $ sudo rm -fr /var/lib/Astar/
+```
+
+ * データディレクトリを作成する
+
+```
+stardust✨stardust:~ $ sudo mkdir -p /var/lib/Astar
+stardust✨stardust:~ $ sudo chown -R $USER:$USER /var/lib/Astar
+```
+
+ * 検証用バイナリを起動する
+
+```
+stardust✨stardust:~ $ /home/stardust/Astar/target/production/astar-collator \
+  --pruning archive \
+  --chain astar \
+  --base-path /var/lib/Astar \
+  --name [好きなノード名] \
+  --port 30333 \
+  --rpc-port 9944 \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --rpc-cors all
+2026-01-14 00:59:43 Astar Collator
+2026-01-14 00:59:43 ✌️  version 5.48.0-7502f2de834
+2026-01-14 00:59:43 ❤️  by Stake Technologies <devops@stake.co.jp>, 2019-2026
+2026-01-14 00:59:43 📋 Chain specification: Astar
+2026-01-14 00:59:43 👤 Role: FULL
+2026-01-14 00:59:43 💾 Database: RocksDb at /var/lib/Astar/chains/astar/db/full
+2026-01-14 00:59:43 Parachain id: Id(2006)
+2026-01-14 00:59:43 Parachain Account: 5Ec4AhPW97z4ZyYkd3mYkJrSeZWcwVv4wiANES2QrJi1x17F
 ```
 
 
+ * データディレクトリの削除
+
+```
+stardust✨stardust:~ $ sudo rm -fr /var/lib/Astar/
+```
+
+ * データディレクトリを作成する
+
+```
+stardust✨stardust:~ $ sudo mkdir -p /var/lib/Astar
+stardust✨stardust:~ $ sudo chown -R astar:astar /var/lib/Astar
+```
+
+ * 本番用サービスを起動する
+
+```
+stardust✨stardust:~ $ sudo systemctl status astar.service
+● astar.service - Astar Archive node
+     Loaded: loaded (/etc/systemd/system/astar.service; disabled; preset: enabled)
+     Active: active (running) since Wed 2026-01-14 01:02:47 JST; 8s ago
+ Invocation: 4bc0ccd63e284926b66806c402a96bf5
+   Main PID: 69305 (astar-collator)
+      Tasks: 50 (limit: 19362)
+        CPU: 10.864s
+     CGroup: /system.slice/astar.service
+             └─69305 /usr/local/bin/astar-collator --pruning archive --chain astar --base-path /var/lib/Astar --name AstarNode --port 30333 --rpc-port 9944 --telemetry-url "wss://telemetry.polkadot.io/submit/>
+
+Jan 14 01:02:53 stardust astar-collator[69305]: 2026-01-14 01:02:53 [Parachain] 💻 Kernel: 6.12.62+rpt-rpi-2712
+Jan 14 01:02:53 stardust astar-collator[69305]: 2026-01-14 01:02:53 [Parachain] 💻 Linux distribution: Debian GNU/Linux 13 (trixie)
+Jan 14 01:02:53 stardust astar-collator[69305]: 2026-01-14 01:02:53 [Parachain] 💻 Virtual machine: no
+Jan 14 01:02:53 stardust astar-collator[69305]: 2026-01-14 01:02:53 [Parachain] 📦 Highest known block at #0
+Jan 14 01:02:53 stardust astar-collator[69305]: 2026-01-14 01:02:53 [Parachain] 〽️ Prometheus exporter started at 127.0.0.1:9615
+Jan 14 01:02:53 stardust astar-collator[69305]: 2026-01-14 01:02:53 [Parachain] Running JSON-RPC server: addr=127.0.0.1:9944,[::1]:9944
+Jan 14 01:02:53 stardust astar-collator[69305]: 2026-01-14 01:02:53 [Parachain] 🏁 CPU single core score: 425.54 MiBs, parallelism score: 258.48 MiBs with expected cores: 8
+Jan 14 01:02:53 stardust astar-collator[69305]: 2026-01-14 01:02:53 [Parachain] 🏁 Memory score: 4.27 GiBs
+Jan 14 01:02:53 stardust astar-collator[69305]: 2026-01-14 01:02:53 [Parachain] 🏁 Disk score (seq. writes): 293.61 MiBs
+Jan 14 01:02:53 stardust astar-collator[69305]: 2026-01-14 01:02:53 [Parachain] 🏁 Disk score (rand. writes): 140.76 MiBs
+```
+
+ * Astarノードが使用しているデータ量を確認する
+
+```
+stardust✨stardust:~ $ df -h /var/lib/Astar/
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda2       3.6T   28G  3.4T   1% /
+```
+
+ * 同期中であることを確認する
+
+```
+stardust✨stardust:~ $ curl -s -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"system_health","params":[]}' \
+  http://127.0.0.1:9944 | jq
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "peers": 8,
+    "isSyncing": true,
+    "shouldHavePeers": true
+  }
+}
+```
 
 ## ブログ更新コマンド
 
@@ -144,3 +431,5 @@ stardust✨stardust:~/Astar $ cargo build --profile production
  * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-3/
  * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-4/
  * https://github.com/AstarNetwork/Astar/
+ * https://docs.astar.network/docs/build/nodes/archive-node/binary/
+ * https://telemetry.polkadot.io/
