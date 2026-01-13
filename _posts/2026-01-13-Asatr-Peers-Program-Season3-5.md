@@ -83,7 +83,9 @@ tmpfs           1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
 tmpfs           1.0M     0  1.0M   0% /run/credentials/serial-getty@ttyAMA10.service
 ```
 
-## sudo時にパスワードを必須にする
+## 基礎システム設定変更
+
+### sudo時にパスワードを必須にする
 
 ```
 root@stardust:/etc/sudoers.d# grep -i nopasswd *
@@ -99,6 +101,34 @@ stardust ALL=(ALL) NOPASSWD:ALL
 root@stardust:/etc/sudoers.d# rm 010_pi-nopasswd 90-cloud-init-users
 ```
 
+## Astarのアーカイブノードを実行する
+
+ * getsubstrate.ioで指定されているパッケージ名が微妙にラズパイ5のパッケージ名とは異なるみたいなので、修正して実行
+ 
+```
+stardust✨stardust:~ $ sudo apt install -y protobuf-compiler libprotobuf-dev pkg-config
+stardust✨stardust:~ $ curl -fsSL https://getsubstrate.io -o getsubstrate.sh
+stardust✨stardust:~ $ grep -n "protobuf" getsubstrate.sh
+16:             $MAKE_ME_ROOT yum install -y cmake openssl-devel git protobuf protobuf-compiler clang clang-devel
+35:             $MAKE_ME_ROOT apt install -y cmake pkg-config libssl-dev git gcc build-essential git protobuf protobuf-compiler clang libclang-dev
+stardust✨stardust:~ $ sudo sed -i -E '/(apt|yum).*install/ s/ protobuf / protobuf-compiler /g' getsubstrate.sh
+stardust✨stardust:~ $ bash getsubstrate.sh --fast
+```
+
+ * Astarノードのレポジトリを取得する
+
+```
+stardust✨stardust:~ $ git clone --recurse-submodules https://github.com/AstarNetwork/Astar.git
+```
+
+ * コンパイルする
+
+```
+stardust✨stardust:~/Astar $ exec $SHELL -l
+stardust✨stardust:~/Astar $ cargo build --profile production
+```
+
+
 
 ## ブログ更新コマンド
 
@@ -113,3 +143,4 @@ root@stardust:/etc/sudoers.d# rm 010_pi-nopasswd 90-cloud-init-users
  * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-2/
  * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-3/
  * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-4/
+ * https://github.com/AstarNetwork/Astar/
