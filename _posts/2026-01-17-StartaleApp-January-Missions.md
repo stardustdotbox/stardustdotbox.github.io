@@ -33,22 +33,22 @@ header:
 
 ## StartaleApp 1月のミッションを攻略する
 
-*プロモーション1：USDCでUSDSCを購入 
+ * プロモーション1：USDCでUSDSCを購入 
 USDCを使用して最低 **26 USDSC** を購入したユーザーは、**STARポイントを5ポイント** 受け取れます。
 
 <img width="459" height="414" alt="image" src="https://github.com/user-attachments/assets/aabb0bb4-2171-4cbe-875d-d37f7aba5f5e" />
 
-*プロモーション2：Earn Vault に入金 
+ * プロモーション2：Earn Vault に入金 
 Startaleアプリで利回りを得るために最低 **26 USDSC** を入金したユーザーは、**STARポイントを7ポイント** 獲得対象になります。
 
 <img width="365" height="614" alt="image" src="https://github.com/user-attachments/assets/910d5743-3af8-4fb9-ab8e-e152c27c3505" />
 
-*プロモーション3：USDCでUSDSCを購入
+ * プロモーション3：USDCでUSDSCを購入
 USDCを使用して最低 **50 USDSC** を購入したユーザーは、**STARポイントを5ポイント** 受け取れます。
 
 <img width="414" height="474" alt="image" src="https://github.com/user-attachments/assets/95690dd8-0bd1-4c9f-89c2-14df03b2027d" />
 
-*プロモーション4：流動性を提供 
+ * プロモーション4：流動性を提供 
 StartaleアプリでUniswap経由で最低 **50ドル相当** の流動性を提供したユーザーは、**STARポイントを7ポイント** 獲得対象になります。
 
 
