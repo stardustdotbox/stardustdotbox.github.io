@@ -51,7 +51,15 @@ USDCを使用して最低 **50 USDSC** を購入したユーザーは、**STAR�
  * プロモーション4：流動性を提供 
 StartaleアプリでUniswap経由で最低 **50ドル相当** の流動性を提供したユーザーは、**STARポイントを7ポイント** 獲得対象になります。
 
-<img width="369" height="517" alt="image" src="https://github.com/user-attachments/assets/613988ba-e3a5-40be-95fb-f608ac778961" />
+<img width="356" height="526" alt="image" src="https://github.com/user-attachments/assets/ccc0d11c-c531-4f78-8dd5-cbc61e4a9160" />
+
+## 全てのミッションが終わったことを確認
+
+<img width="1068" height="525" alt="image" src="https://github.com/user-attachments/assets/113c70bd-47cf-4faa-a91b-4ee92550abad" />
+
+## 気を付けること
+
+ * valutとLPに預けた26USDCとLPに提供した50ドルは7日後にStarポイントがもらえるため、貰った後、引き出すこと。
 
 ## ブログ更新コマンド
 
