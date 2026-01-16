@@ -36,7 +36,7 @@ header:
  * プロモーション1：USDCでUSDSCを購入 
 USDCを使用して最低 **26 USDSC** を購入したユーザーは、**STARポイントを5ポイント** 受け取れます。
 
-<img width="459" height="414" alt="image" src="https://github.com/user-attachments/assets/aabb0bb4-2171-4cbe-875d-d37f7aba5f5e" />
+<img width="420" height="474" alt="image" src="https://github.com/user-attachments/assets/a58f9979-92de-4239-ac06-82813a2b3b2b" />
 
  * プロモーション2：Earn Vault に入金 
 Startaleアプリで利回りを得るために最低 **26 USDSC** を入金したユーザーは、**STARポイントを7ポイント** 獲得対象になります。
@@ -46,11 +46,12 @@ Startaleアプリで利回りを得るために最低 **26 USDSC** を入金し�
  * プロモーション3：USDCでUSDSCを購入
 USDCを使用して最低 **50 USDSC** を購入したユーザーは、**STARポイントを5ポイント** 受け取れます。
 
-<img width="414" height="474" alt="image" src="https://github.com/user-attachments/assets/95690dd8-0bd1-4c9f-89c2-14df03b2027d" />
+<img width="428" height="479" alt="image" src="https://github.com/user-attachments/assets/eb365bda-b7fd-45d8-8089-5393bc0e38f1" />
 
  * プロモーション4：流動性を提供 
 StartaleアプリでUniswap経由で最低 **50ドル相当** の流動性を提供したユーザーは、**STARポイントを7ポイント** 獲得対象になります。
 
+<img width="369" height="517" alt="image" src="https://github.com/user-attachments/assets/613988ba-e3a5-40be-95fb-f608ac778961" />
 
 ## ブログ更新コマンド
 
