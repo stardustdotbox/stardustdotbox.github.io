@@ -1,5 +1,5 @@
 ---
-title: "僕が良く使うプロンプト集"
+title: "良く使うプロンプト集"
 collection: teaching
 type: "Workshop"
 permalink: /teaching/2026-01-01-Collection-Of-Prompts/
