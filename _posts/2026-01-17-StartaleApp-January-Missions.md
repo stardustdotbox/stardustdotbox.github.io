@@ -14,22 +14,7 @@ header:
 
 ## キャンペーン参加前の状態
 
- * サマリ
-
 <img width="1062" height="548" alt="image" src="https://github.com/user-attachments/assets/40e1e657-b2fe-41e6-bebc-9943cb68869c" />
-
- * 流動性提供
-
-<img width="357" height="694" alt="image" src="https://github.com/user-attachments/assets/5cab8b4b-656b-47a9-8f8b-f25fd9676181" />
-
- * valut
-
-<img width="368" height="291" alt="image" src="https://github.com/user-attachments/assets/259a582a-a815-49cd-8d2f-dcbc629c8a66" />
-
- * debank
-
-<img width="1247" height="569" alt="image" src="https://github.com/user-attachments/assets/2513d5c6-a52f-4a06-8eab-f8309184540f" />
-
 
 ## StartaleApp 1月のミッションを攻略する
 
