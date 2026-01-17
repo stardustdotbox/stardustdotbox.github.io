@@ -137,5 +137,6 @@ I respect and support Startale for standing up as a pioneer in creating that ori
 
 ## 参考文献
 
+ * https://x.com/Rahul66267247/status/2009261886307434759
  * https://startale.com/en/brand-kit
 
