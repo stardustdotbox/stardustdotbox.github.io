@@ -1,7 +1,7 @@
 ---
 title: 'Startaleポートフォリオについて学ぶ'
 date: 2026-01-17 15:37:24
-permalink: /posts/2026/01/StartaleApp-January-Missions/
+permalink: /posts/2026/01/Startale-Portofolio
 tags:
   - Startale
 header:
