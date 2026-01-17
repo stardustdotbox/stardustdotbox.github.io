@@ -36,7 +36,6 @@ header:
 
 ポートフォリオには、以下のような**あらゆる形式の成果物**を含めることができます。
 
-
  * Product ideas or UX explorations
  * Design, visual, or motion work
  * Writing, research, or ecosystem analysis
