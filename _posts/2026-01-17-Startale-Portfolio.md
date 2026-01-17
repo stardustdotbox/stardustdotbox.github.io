@@ -79,6 +79,55 @@ header:
 
 あなたのポートフォリオは、**将来の機会に影響を与える可能性**があります。**意図を持って構築してください。**
 
+## ポートフォリオメインテンプレート
+
+```
+## Motivation
+
+I am interested in how the Web3 community can reach DAO-based systems, how people can move away from centralized structures, and how they can build ecosystems with decentralized freedom and dignity.
+I respect and support Startale for standing up as a pioneer in creating that original vision of Web3 and for continuing to grow and develop in that direction.
+
+## Table of Content
+```
+
+## tags
+
+ * Product ideas or UX explorations
+ * Design, visual, or motion work
+ * Writing, research, or ecosystem analysis
+ * Code, tools, or technical experiments
+ * Content, media, or community initiatives
+
+## ポートフォリオエントリテンプレート
+
+ * 「日本語スレッドをまず出して、1〜2時間後に英語スレッドを別で投稿」
+
+```
+## これはなんですか？
+
+## なぜ重要ですか？
+
+## ブログポスト
+
+## Xスレッド
+
+```
+
+## Xスレッド戦略
+
+ *「超共感フック＋3〜5個の核心だけ抜粋」型
+ * 最初の1〜3行で「これは自分ごとだ」と思わせる
+ * スレッド全体は7〜15ツイートくらいに抑える
+ * ブログの「一番強い部分」だけを3〜5個厳選
+ * 最後の2〜3ツイートでブログへの導線を自然に作る
+ * ビジュアルを最低3〜4枚は入れる
+
+## ポートフォリオサイクル
+
+ * 日本語でブログを書く
+ * 日本語でスレッドを書く
+ * ブログとスレッドをすべて英語化して、数時間後に投下する
+
 ## ブログ更新コマンド
 
 ```
