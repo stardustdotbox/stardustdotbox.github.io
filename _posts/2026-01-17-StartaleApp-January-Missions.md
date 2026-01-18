@@ -1,5 +1,5 @@
 ---
-title: 'StartaleApp 1月のミッションを攻略する'
+title: '[StartaleApp] 1月のミッションを攻略する'
 date: 2026-01-14 17:10:31
 permalink: /posts/2026/01/StartaleApp-January-Missions/
 tags:
