@@ -3,7 +3,7 @@ title: 'StartaleApp 1月のミッションを攻略する'
 date: 2026-01-14 17:10:31
 permalink: /posts/2026/01/StartaleApp-January-Missions/
 tags:
-  - StartaleApp
+  - Startale
 header:
   image: https://github.com/user-attachments/assets/8315bdb2-eae7-433b-84e9-967c722e8424
 ---
