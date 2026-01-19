@@ -134,5 +134,5 @@ Soneiumスコアは80点を超えるとバッジをもらえるSoneium内のア�
 
 ## 参考文献
 
+ * <https://www.stardust.box/posts/2026/01/Startale-Portofolio/>
  * <https://portal.soneium.org/>
-
