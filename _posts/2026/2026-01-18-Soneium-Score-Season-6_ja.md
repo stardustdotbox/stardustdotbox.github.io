@@ -121,7 +121,7 @@ Soneiumスコアは80点を超えるとバッジをもらえるSoneium内のア�
 
 オンチェインGMや、Ruby Scoreのvotingやデイリータスクなどでトランザクションを発生させて、80点を超えてバッジをゲットしましょう。（ ´ー｀）y―┛~~
 
-詳細は僕の以下のブログ記事をみてね。ヽ(´ー`)ノ
+詳細は以下のブログ記事をみてね。ヽ(´ー`)ノ
 <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/>
 
 
