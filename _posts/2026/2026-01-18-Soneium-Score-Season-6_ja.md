@@ -107,7 +107,7 @@ Soneiumスコアは80点を超えるとバッジをもらえるSoneium内のア�
 
 <img width="646" height="761" alt="image" src="https://github.com/user-attachments/assets/3a2f337e-5594-49b7-b522-ef633bef73d9" />
 
-<https://velodrome.finance/>にアクセスして20回トランザクションを刻むのがタスクですが、一回swapすると2回トランザクションが刻まれるので、私は0.0001USDCEをETHに10回swapしてタスクを完了させました。（ ´ー｀）y―┛~~
+<https://velodrome.finance/>にアクセスして20回トランザクションを刻むのがタスクですが、一回swapすると2回トランザクションが刻まれるので、僕は0.0001USDCEをETHに10回swapしてタスクを完了させました。（ ´ー｀）y―┛~~
 
 ### スレッド5
 
