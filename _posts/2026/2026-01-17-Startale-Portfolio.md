@@ -146,5 +146,7 @@ I respect and support Startale for standing up as a pioneer in creating that ori
  * https://x.com/Rahul66267247/status/2009261886307434759
  * https://x.com/Rahul66267247/status/2011035569468678500
  * https://x.com/0xqlueid/status/2012459768460525753
+ * https://x.com/sora_toshi01/status/2012687928196055313
  * https://startale.com/en/brand-kit
-
+ * https://help.x.com/ja/using-x/create-a-thread
+ * https://www.wikihow.jp/%E3%83%84%E3%82%A4%E3%83%83%E3%82%BF%E3%83%BC%E3%81%AE%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B

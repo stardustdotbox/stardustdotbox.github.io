@@ -36,6 +36,7 @@ author_profile: true
 ## 便利TOOL
 
  * [web-check.xyz](https://web-check.xyz/)
+ * [新世界の株価](https://kabuka.seisakusho.jp/?mode=pcmax)
 
 ## ウォレット
 

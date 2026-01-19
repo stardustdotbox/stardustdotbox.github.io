@@ -16,7 +16,7 @@ header:
 
 ### これはなんですか？
 
-[Soneium Portal](https://portal.soneium.org/)で提供されるSoneiumスコアシーズン6の攻略ガイドです。
+<https://portal.soneium.org/>で提供されるSoneiumスコアシーズン6の攻略ガイドです。
 
 ### なぜ重要ですか？
 
@@ -26,6 +26,50 @@ Soneium Scoreシーズン6についての周知や、ガイドを提供するこ
 
 ### Xスレッド
 
+## キャンペーンを攻略する
+
+Soneiumスコアは80点を超えるとバッジをもらえるSoneium内のアクティビティのスコアリングシステムです。
+スコアを向上させるには、ユニークなトランザクションを発生させることや、LP提供、レンディング、ValutなどのTVLへの貢献などがありますが、効率的にSoneiumスコアを攻略するにはシーズンごとのキャンペーンから優先的にクリアしていくといいと思います。
+
+### キャンペーン1
+
+<img width="704" height="308" alt="image" src="https://github.com/user-attachments/assets/1bbc5693-d0f0-4071-b933-9b6470619e50" />
+
+<img width="367" height="464" alt="image" src="https://github.com/user-attachments/assets/c8690784-d267-4309-886b-c5f428474444" />
+
+<https://www.harkan.io/>にアクセスして、アカウントを作成後、サイバー・ホイール・オブ・フォーチュンを10回回すとタスクを完了できるが、一日に5回しか回せないので、最低二日はかかります。
+
+### キャンペーン2
+
+<img width="699" height="313" alt="image" src="https://github.com/user-attachments/assets/95d1a291-4258-46fa-9b04-a4c253f9c4aa" />
+
+<img width="348" height="343" alt="image" src="https://github.com/user-attachments/assets/a2625e9f-7fe2-47da-9eaa-838f6b6e2e74" />
+
+<img width="305" height="56" alt="image" src="https://github.com/user-attachments/assets/623338d3-c1b7-42fa-8f5d-7a3da6d1f3b6" />
+
+<https://surflayer.xyz/?lootbox=1868>にアクセスするとLoot Boxに関するポップアップが表示されるので、これを10回開けば、キャンペーン2は完了できるが、一日に開くことができる箱は5つまでみたいなので最低二日はかかりますね。
+ちなみに一回、箱を開くのにかかるコストは0.000004ETH(20円)です。
+
+### キャンペーン3
+
+<img width="700" height="315" alt="image" src="https://github.com/user-attachments/assets/6216c439-b069-40ee-a37e-dc0bb3e9712b" />
+
+<img width="646" height="761" alt="image" src="https://github.com/user-attachments/assets/3a2f337e-5594-49b7-b522-ef633bef73d9" />
+
+<https://velodrome.finance/>にアクセスして20回トランザクションを刻むのがタスクだが、一回swapすると2回トランザクションが刻まれるので、私は0.0001USDCEをETHに10回swapしてタスクを完了させました。（ ´ー｀）y―┛~~
+
+### キャンペーン4
+
+<img width="705" height="320" alt="image" src="https://github.com/user-attachments/assets/30981e0f-536d-4b10-b778-e0ef13a0fb58" />
+
+<img width="535" height="552" alt="image" src="https://github.com/user-attachments/assets/ae983987-526b-4b16-9289-3c440319ec39" />
+
+<https://wowmax.exchange/>にアクセスして0.0001 USDCEを10回Ethにswapしてタスクを完了させました。ヽ(´ー`)ノ
+
+### それでもスコアが足りないときは
+
+オンチェインGMや、Ruby Scoreのvotingやデイリータスクなどでトランザクションを発生させて、80点を超えてバッジをゲットしましょう。
+ 
 ## ブログ更新コマンド
 
 ```
@@ -34,4 +78,6 @@ Soneium Scoreシーズン6についての周知や、ガイドを提供するこ
 ```
 
 ## 参考文献
+
+ * <https://portal.soneium.org/>
 
