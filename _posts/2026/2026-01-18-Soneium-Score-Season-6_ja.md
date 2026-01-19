@@ -23,11 +23,11 @@ header:
  * Soneium Scoreシーズン6についての周知や、ガイドを提供することによって、Soneiumに興味がある人を助けます。
  * X上で影響力を広げる方法を研究します。
 
-### ブログポスト
+### ブログポストリンク
 
  * 日本語版 : <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/>
 
-### Xスレッド
+### Xスレッドリンク
 
 ## Soneium Scoreシーズン6のキャンペーンを攻略する
 
