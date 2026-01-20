@@ -127,6 +127,10 @@ Soneiumスコアは80点を超えるとバッジをもらえるSoneium内のア�
 詳細は以下のブログ記事をみてね。ヽ(´ー`)ノ
 <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/>
 
+### アナリティクス
+
+<img width="878" height="895" alt="image" src="https://github.com/user-attachments/assets/88f63e7e-3e15-40ca-bfb9-ffd62c84b777" />
+
 
 ## ブログ更新コマンド
 
