@@ -3,7 +3,8 @@ title: 'Soneiumスコアシーズン6攻略ガイド'
 date: 2026-01-18 19:18:12
 permalink: /posts/2026/01/Soneium-Score-Season-6_ja/
 tags:
-  - Soneium
+  - portfolio
+  - community initiatives
 header:
   image: https://github.com/user-attachments/assets/09cbf88d-d81d-4cbc-9999-c6b5e659c016
 ---
@@ -41,7 +42,7 @@ Soneiumスコアは80点を超えるとバッジをもらえるSoneium内のア�
 
 <img width="367" height="464" alt="image" src="https://github.com/user-attachments/assets/c8690784-d267-4309-886b-c5f428474444" />
 
-<https://www.harkan.io/>にアクセスして、アカウントを作成後、サイバー・ホイール・オブ・フォーチュンを10回回すとタスクを完了できますが、一日に5回しか回せないので、最低二日はかかります。
+<https://www.harkan.io/>にアクセスして、アカウントを作成後、サイバー・ホイール・オブ・フォーチュンを10回回すとタスクを完了できますが、一日に5回しか回せないので、最低2日はかかります。
 
 ### キャンペーン2
 
@@ -51,7 +52,7 @@ Soneiumスコアは80点を超えるとバッジをもらえるSoneium内のア�
 
 <img width="305" height="56" alt="image" src="https://github.com/user-attachments/assets/623338d3-c1b7-42fa-8f5d-7a3da6d1f3b6" />
 
-<https://surflayer.xyz/?lootbox=1868>にアクセスするとLoot Boxに関するポップアップが表示されるので、これを10回開けば、キャンペーン2は完了できますが、一日に開くことができる箱は5つまでみたいなので最低二日はかかります。
+<https://surflayer.xyz/?lootbox=1868>にアクセスするとLoot Boxに関するポップアップが表示されるので、これを10回開けば、キャンペーン2は完了できますが、一日に開くことができる箱は5つまでみたいなので最低2日はかかります。
 ちなみに一回、箱を開くのにかかるコストは0.000004ETH(20円)です。
 
 ### キャンペーン3
