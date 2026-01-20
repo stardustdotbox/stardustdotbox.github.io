@@ -167,4 +167,4 @@ Xは「中で会話させて滞在させる人」だけ優遇したい。
  * https://help.x.com/ja/using-x/create-a-thread
  * https://www.wikihow.jp/%E3%83%84%E3%82%A4%E3%83%83%E3%82%BF%E3%83%BC%E3%81%AE%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B
  * https://x.com/riku720720/status/2013497124084949281
-
+ * https://x.com/cb_doge/status/2013477113018622151
