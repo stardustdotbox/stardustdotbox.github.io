@@ -142,6 +142,8 @@ I respect and support Startale for standing up as a pioneer in creating that ori
 ・連投や重複はスパム扱いで罰
 ```
 
+Xは「中で会話させて滞在させる人」だけ優遇したい。
+
 ## ポートフォリオサイクル
 
  * 日本語でブログを書く
