@@ -13,27 +13,6 @@ header:
 
 {% include toc %}
 
-## Startale Portfolio
-
-### Category
-
- * Writing
-
-### What is this?
-
-This is a strategy guide for Soneium Score Season 6 provided on <https://portal.soneium.org/>.
-
-### Why is it important?
-
- * It helps people who are interested in Soneium by spreading information about Soneium Score Season 6 and providing a clear guide.
- * I also use it as a way to study how to expand my influence on X.
-
-### Blog post link
-
- * Japanese: <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/>
-
-### X thread links
-
 ## How to beat the Soneium Score Season 6 campaigns
 
 Soneium Score Season 6 has started ヽ(´ー`)ノ  
