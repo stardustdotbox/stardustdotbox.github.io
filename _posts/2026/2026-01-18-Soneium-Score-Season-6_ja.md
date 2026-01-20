@@ -4,7 +4,7 @@ date: 2026-01-18 19:18:12
 permalink: /posts/2026/01/Soneium-Score-Season-6_ja/
 tags:
   - portfolio
-  - community initiatives
+  - Writing
 header:
   image: https://github.com/user-attachments/assets/8b3a2714-99d2-4c70-8d1c-d4027cc3d95e
 ---
@@ -14,6 +14,10 @@ header:
 {% include toc %}
 
 ## Startaleポートフォリオ
+
+### 分類
+
+　* Writing
 
 ### これはなんですか？
 
