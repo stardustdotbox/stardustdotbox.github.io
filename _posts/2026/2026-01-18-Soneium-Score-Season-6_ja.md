@@ -6,10 +6,10 @@ tags:
   - portfolio
   - community initiatives
 header:
-  image: https://github.com/user-attachments/assets/09cbf88d-d81d-4cbc-9999-c6b5e659c016
+  image: https://github.com/user-attachments/assets/8b3a2714-99d2-4c70-8d1c-d4027cc3d95e
 ---
 
-<img width="736" height="221" alt="image" src="https://github.com/user-attachments/assets/09cbf88d-d81d-4cbc-9999-c6b5e659c016" />
+<img width="724" height="213" alt="image" src="https://github.com/user-attachments/assets/8b3a2714-99d2-4c70-8d1c-d4027cc3d95e" />
 
 {% include toc %}
 
