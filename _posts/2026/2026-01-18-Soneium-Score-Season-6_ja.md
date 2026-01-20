@@ -30,9 +30,13 @@ header:
 
 ### ブログポストリンク
 
+ * 英語版 : <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_en/>
  * 日本語版 : <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/>
 
 ### Xスレッドリンク
+
+ * 英語版 : <>
+ * 日本語版 : <>
 
 ## Soneium Scoreシーズン6のキャンペーンを攻略する
 
@@ -128,7 +132,7 @@ Soneiumスコアは80点を超えるとバッジをもらえるSoneium内のア�
 
 オンチェインGMや、Ruby Scoreのvotingやデイリータスクなどでトランザクションを発生させて、80点を超えてバッジをゲットしましょう。（ ´ー｀）y―┛~~
 
-さらに詳細を知りたい人は僕の以下のブログ記事をみてね。ヽ(´ー`)ノ
+さらに詳細を知りたい人は僕の以下のブログ記事をみてくださいね。ヽ(´ー`)ノ
 <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/>
 
 ### アナリティクス

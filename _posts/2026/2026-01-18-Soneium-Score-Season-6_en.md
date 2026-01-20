@@ -1,5 +1,5 @@
 ---
-title: 'Guide to Beating Soneium Score Season 6'
+title: 'Soneium Score Season 6 Guide'
 date: 2026-01-18 19:18:12
 permalink: /posts/2026/01/Soneium-Score-Season-6_en/
 tags:
@@ -13,12 +13,36 @@ header:
 
 {% include toc %}
 
-## How to beat the Soneium Score Season 6 campaigns
+## Startale Portfolio
 
-Soneium Score Season 6 has started ヽ(´ー`)ノ  
-Soneium Score is an on-chain activity scoring system on Soneium where you receive a badge once you go over 80 points.  
-To increase your score, you need to generate unique transactions, provide LP, do lending, contribute to TVL via vaults, and so on.  
-If you want to efficiently beat Soneium Score, the best approach is to clear the seasonal campaigns first and then optimize from there.
+### Category
+
+ * Writing
+
+### What is this?
+
+A guide for Soneium Score Season 6 provided at <https://portal.soneium.org/>.
+
+### Why is it important?
+
+ * It helps people interested in Soneium by raising awareness and providing a guide about Soneium Score Season 6.
+ * It researches methods to expand influence on X.
+
+### Blog Post Links
+
+ * English : <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_en/>
+ * Japanese : <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/>
+
+### X Thread Links
+
+ * English : <>
+ * Japanese : <>
+
+## How to Complete Soneium Score Season 6 Campaigns
+
+Soneium Score Season 6 has started! 🎉
+Soneium Score is a scoring system for activities within Soneium that rewards you with a badge when you exceed 80 points.
+To increase your score, you can generate unique transactions, contribute to TVL through LP provision, lending, Vault, etc. However, to efficiently complete Soneium Score, it's most effective to prioritize clearing the season-specific campaigns first.
 
 ### Campaign 1
 
@@ -26,8 +50,7 @@ If you want to efficiently beat Soneium Score, the best approach is to clear the
 
 <img width="367" height="464" alt="image" src="https://github.com/user-attachments/assets/c8690784-d267-4309-886b-c5f428474444" />
 
-Go to <https://www.harkan.io/>, create an account, and spin the Cyber Wheel of Fortune 10 times to complete the task.  
-You can only spin 5 times per day, so it takes at least 2 days.
+Visit <https://www.harkan.io/>, create an account, and spin the Cyber Wheel of Fortune 10 times to complete the task. However, you can only spin 5 times per day, so it will take at least 2 days.
 
 ### Campaign 2
 
@@ -37,10 +60,8 @@ You can only spin 5 times per day, so it takes at least 2 days.
 
 <img width="305" height="56" alt="image" src="https://github.com/user-attachments/assets/623338d3-c1b7-42fa-8f5d-7a3da6d1f3b6" />
 
-When you access <https://surflayer.xyz/?lootbox=1868>, a popup about a Loot Box will appear.  
-Open this box 10 times to complete Campaign 2.  
-You can only open 5 boxes per day, so again it takes at least 2 days.  
-By the way, the cost to open a box once is 0.000004 ETH (about 20 JPY).
+Visit <https://surflayer.xyz/?lootbox=1868> and a popup about Loot Box will appear. Open it 10 times to complete Campaign 2. However, you can only open 5 boxes per day, so it will take at least 2 days.
+By the way, it costs 0.000004 ETH (approximately $0.15) to open one box.
 
 ### Campaign 3
 
@@ -48,8 +69,7 @@ By the way, the cost to open a box once is 0.000004 ETH (about 20 JPY).
 
 <img width="646" height="761" alt="image" src="https://github.com/user-attachments/assets/3a2f337e-5594-49b7-b522-ef633bef73d9" />
 
-The task is to record 20 transactions on <https://velodrome.finance/>.  
-Since one swap actually records 2 transactions, I completed the task by swapping 0.0001 USDCE to ETH 10 times. （ ´ー｀）y―┛~~
+Visit <https://velodrome.finance/> and make 20 transactions. Since one swap counts as 2 transactions, I completed the task by swapping 0.0001 USDCE to ETH 10 times. 😊
 
 ### Campaign 4
 
@@ -57,24 +77,21 @@ Since one swap actually records 2 transactions, I completed the task by swapping
 
 <img width="535" height="552" alt="image" src="https://github.com/user-attachments/assets/ae983987-526b-4b16-9289-3c440319ec39" />
 
-For this one, I went to <https://wowmax.exchange/> and swapped 0.0001 USDCE to ETH 10 times to finish the task. ヽ(´ー`)ノ
+Visit <https://wowmax.exchange/> and swap 0.0001 USDCE to ETH 10 times to complete the task. 🎉
 
-### If your score is still not enough
+### If Your Score Still Isn't Enough
 
-If your score is still below 80, keep generating transactions using things like on-chain GM, Ruby Score voting, and Ruby’s daily tasks.  
-Keep grinding until you cross 80 points and grab the badge. （ ´ー｀）y―┛~~
+Generate transactions through on-chain GM, Ruby Score voting, daily tasks, etc., to exceed 80 points and get your badge! 😊
 
-## X threads
+## X Thread
 
 ### Thread 1
 
-Soneium Score Season 6 has started ヽ(´ー`)ノ  
+Soneium Score Season 6 has started! 🎉
 
-Soneium Score is an on-chain activity scoring system on Soneium where you receive a badge once you go over 80 points.  
-To increase your score, you need to generate unique transactions, provide LP, do lending, contribute to TVL via vaults, and so on.  
-If you want to efficiently beat Soneium Score, the best approach is to clear the seasonal campaigns first and then optimize from there.
+Soneium Score is a scoring system for activities within Soneium that rewards you with a badge when you exceed 80 points. To increase your score, you can generate unique transactions, contribute to TVL through LP provision, lending, Vault, etc. However, to efficiently complete Soneium Score, it's most effective to prioritize clearing the season-specific campaigns first.
 
-In the thread below, I explain how to clear all of the Soneium Score Season 6 campaigns.
+The following threads will introduce how to complete all campaigns for Soneium Score Season 6.
 
 ### Thread 2
 
@@ -82,8 +99,7 @@ In the thread below, I explain how to clear all of the Soneium Score Season 6 ca
 
 <img width="367" height="464" alt="image" src="https://github.com/user-attachments/assets/c8690784-d267-4309-886b-c5f428474444" />
 
-Go to <https://www.harkan.io/>, create an account, and spin the Cyber Wheel of Fortune 10 times to complete the task.  
-You can only spin 5 times per day, so it takes at least 2 days.
+Visit <https://www.harkan.io/>, create an account, and spin the Cyber Wheel of Fortune 10 times to complete the task. However, you can only spin 5 times per day, so it will take at least 2 days.
 
 ### Thread 3
 
@@ -91,10 +107,8 @@ You can only spin 5 times per day, so it takes at least 2 days.
 
 <img width="348" height="343" alt="image" src="https://github.com/user-attachments/assets/a2625e9f-7fe2-47da-9eaa-838f6b6e2e74" />
 
-When you access <https://surflayer.xyz/?lootbox=1868>, a popup about a Loot Box will appear.  
-Open this box 10 times to complete Campaign 2.  
-You can only open 5 boxes per day, so again it takes at least 2 days.  
-By the way, the cost to open a box once is 0.000004 ETH (about 20 JPY).
+Visit <https://surflayer.xyz/?lootbox=1868> and a popup about Loot Box will appear. Open it 10 times to complete Campaign 2. However, you can only open 5 boxes per day, so it will take at least 2 days.
+By the way, it costs 0.000004 ETH (approximately $0.15) to open one box.
 
 ### Thread 4
 
@@ -102,8 +116,7 @@ By the way, the cost to open a box once is 0.000004 ETH (about 20 JPY).
 
 <img width="646" height="761" alt="image" src="https://github.com/user-attachments/assets/3a2f337e-5594-49b7-b522-ef633bef73d9" />
 
-The task is to record 20 transactions on <https://velodrome.finance/>.  
-Since one swap actually records 2 transactions, I completed the task by swapping 0.0001 USDCE to ETH 10 times. （ ´ー｀）y―┛~~
+Visit <https://velodrome.finance/> and make 20 transactions. Since one swap counts as 2 transactions, I completed the task by swapping 0.0001 USDCE to ETH 10 times. 😊
 
 ### Thread 5
 
@@ -111,16 +124,15 @@ Since one swap actually records 2 transactions, I completed the task by swapping
 
 <img width="535" height="552" alt="image" src="https://github.com/user-attachments/assets/ae983987-526b-4b16-9289-3c440319ec39" />
 
-For this one, I went to <https://wowmax.exchange/> and swapped 0.0001 USDCE to ETH 10 times to finish the task. ヽ(´ー`)ノ
+Visit <https://wowmax.exchange/> and swap 0.0001 USDCE to ETH 10 times to complete the task. 🎉
 
 ### Thread 6
 
-[If your score is still not enough]
+[If Your Score Still Isn't Enough]
 
-If your score is still below 80, keep generating transactions using things like on-chain GM, Ruby Score voting, and Ruby’s daily tasks.  
-Keep grinding until you cross 80 points and grab the badge. （ ´ー｀）y―┛~~
+Generate transactions through on-chain GM, Ruby Score voting, daily tasks, etc., to exceed 80 points and get your badge! 😊
 
-If you want to dive deeper into the details, check out my blog post here:  
+For more details, please check out my blog post below! 🎉
 <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_en/>
 
 ### Analytics
@@ -128,16 +140,15 @@ If you want to dive deeper into the details, check out my blog post here:
 <img width="878" height="895" alt="image" src="https://github.com/user-attachments/assets/88f63e7e-3e15-40ca-bfb9-ffd62c84b777" />
 
 
-## Blog update command
+## Blog Update Command
 
 ```
 ┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
-└─$ git add -A && git commit -m 'Guide to Beating Soneium Score Season 6' && git push
+└─$ git add -A && git commit -m 'Soneium Score Season 6 Guide' && git push
 ```
 
 ## References
 
  * <https://www.stardust.box/posts/2026/01/Startale-Portofolio/>
  * <https://portal.soneium.org/>
-
 
