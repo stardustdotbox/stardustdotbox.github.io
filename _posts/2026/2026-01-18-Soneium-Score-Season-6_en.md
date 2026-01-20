@@ -120,8 +120,8 @@ For this one, I went to <https://wowmax.exchange/> and swapped 0.0001 USDCE to E
 If your score is still below 80, keep generating transactions using things like on-chain GM, Ruby Score voting, and Ruby’s daily tasks.  
 Keep grinding until you cross 80 points and grab the badge. （ ´ー｀）y―┛~~
 
-If you want to dive deeper into the details, check out my Japanese blog post here:  
-<https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/>
+If you want to dive deeper into the details, check out my blog post here:  
+<https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_en/>
 
 ### Analytics
 
