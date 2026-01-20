@@ -128,6 +128,20 @@ I respect and support Startale for standing up as a pioneer in creating that ori
  * 1ツイートは日本語も英語も280文字以内
  * 各スレッドはできるだけはやく投稿する
 
+## Xの新アルゴリズムが公開された！！
+
+ * https://x.com/riku720720/status/2013497124084949281
+
+```
+・いいね集めは弱い。コメント（リプライ）を取れ
+・投稿して終わりはダメ。返信しないと伸びにくい
+・本文リンクは損。外に飛ばす投稿は嫌われる
+・スクロール止めたやつが勝つ（長文・スレッド・動画）
+・専門外に寄り道すると配られない、下手すると全体が落ちる
+・ブロック/ミュートが重い。煽り・炎上狙いは長期で損
+・連投や重複はスパム扱いで罰
+```
+
 ## ポートフォリオサイクル
 
  * 日本語でブログを書く
@@ -150,3 +164,5 @@ I respect and support Startale for standing up as a pioneer in creating that ori
  * https://startale.com/en/brand-kit
  * https://help.x.com/ja/using-x/create-a-thread
  * https://www.wikihow.jp/%E3%83%84%E3%82%A4%E3%83%83%E3%82%BF%E3%83%BC%E3%81%AE%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B
+ * https://x.com/riku720720/status/2013497124084949281
+
