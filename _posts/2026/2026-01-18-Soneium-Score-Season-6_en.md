@@ -160,7 +160,7 @@ This is a strategy guide for Soneium Score Season 6 provided on <https://portal.
 
 ### X Thread Links
 
- * English: <>
+ * English: <https://x.com/stardustdotbox/status/2013940247307207000>
  * Japanese: <https://x.com/stardustdotbox/status/2013897946803396906>
 
 ### X Analytics
