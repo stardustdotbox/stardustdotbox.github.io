@@ -156,7 +156,7 @@ I completed the task by accessing https://wowmax.exchange/ and swapping 0.0001 U
 If your score is still short, generate more transactions through on-chain GM, Ruby Score voting, and daily tasks to push your score above 80 and get the badge. （ ´ー｀）y―┛~~
 
 If you want to know more details, please check my blog post below. ヽ(´ー`)ノ  
-https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/
+https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_en/
 
 ### Analytics
 
