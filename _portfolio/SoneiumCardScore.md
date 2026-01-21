@@ -1,5 +1,5 @@
 ---
-title: "Soneium Card Score"
+title: "Stardust✨’s Soneium card."
 excerpt: "[Csec](https://x.com/cescshdq)兄弟が作ってくれた作品<br/><img src='/images/portfolio/SoneiumCardScore.jpg'>"
 collection: portfolio
 ---
