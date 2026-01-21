@@ -109,7 +109,7 @@ Soneiumスコアは80点を超えるとバッジをもらえるSoneium内のア�
 
 <img width="367" height="464" alt="image" src="https://github.com/user-attachments/assets/c8690784-d267-4309-886b-c5f428474444" />
 
-<https://www.harkan.io/>にアクセスして、アカウントを作成後、サイバー・ホイール・オブ・フォーチュンを10回回すとタスクを完了できますが、一日に5回しか回せないので、最低2日はかかります。
+https://www.harkan.io/にアクセスして、アカウントを作成後、サイバー・ホイール・オブ・フォーチュンを10回回すとタスクを完了できますが、一日に5回しか回せないので、最低2日はかかります。
 
 ### スレッド3
 
@@ -119,7 +119,7 @@ Soneiumスコアは80点を超えるとバッジをもらえるSoneium内のア�
 
 <img width="348" height="343" alt="image" src="https://github.com/user-attachments/assets/a2625e9f-7fe2-47da-9eaa-838f6b6e2e74" />
 
-<https://surflayer.xyz/?lootbox=1868>にアクセスするとLoot Boxに関するポップアップが表示されるので、これを10回開けば、キャンペーン2は完了できますが、一日に開くことができる箱は5つまでみたいなので最低2日はかかります。
+https://surflayer.xyz/?lootbox=1868にアクセスするとLoot Boxに関するポップアップが表示されるので、これを10回開けば、キャンペーン2は完了できますが、一日に開くことができる箱は5つまでみたいなので最低2日はかかります。
 ちなみに一回、箱を開くのにかかるコストは0.000004ETHです。
 
 ### スレッド4
@@ -130,7 +130,7 @@ Soneiumスコアは80点を超えるとバッジをもらえるSoneium内のア�
 
 <img width="646" height="761" alt="image" src="https://github.com/user-attachments/assets/3a2f337e-5594-49b7-b522-ef633bef73d9" />
 
-<https://velodrome.finance/>にアクセスして20回トランザクションを刻むのがタスクですが、一回swapすると2回トランザクションが刻まれるので、僕は0.0001USDCEをETHに10回swapしてタスクを完了させました。（ ´ー｀）y―┛~~
+https://velodrome.finance/にアクセスして20回トランザクションを刻むのがタスクですが、一回swapすると2回トランザクションが刻まれるので、僕は0.0001USDCEをETHに10回swapしてタスクを完了させました。（ ´ー｀）y―┛~~
 
 ### スレッド5
 
@@ -140,7 +140,7 @@ Soneiumスコアは80点を超えるとバッジをもらえるSoneium内のア�
 
 <img width="535" height="552" alt="image" src="https://github.com/user-attachments/assets/ae983987-526b-4b16-9289-3c440319ec39" />
 
-<https://wowmax.exchange/>にアクセスして0.0001 USDCEを10回Ethにswapしてタスクを完了させました。ヽ(´ー`)ノ
+https://wowmax.exchange/にアクセスして0.0001 USDCEを10回Ethにswapしてタスクを完了させました。ヽ(´ー`)ノ
 
 ### スレッド6
 
@@ -149,7 +149,7 @@ Soneiumスコアは80点を超えるとバッジをもらえるSoneium内のア�
 オンチェインGMや、Ruby Scoreのvotingやデイリータスクなどでトランザクションを発生させて、80点を超えてバッジをゲットしましょう。（ ´ー｀）y―┛~~
 
 さらに詳細を知りたい人は僕の以下のブログ記事をみてくださいね。ヽ(´ー`)ノ
-<https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/>
+https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/
 
 ### アナリティクス
 
