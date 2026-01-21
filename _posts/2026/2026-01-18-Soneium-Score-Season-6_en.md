@@ -140,29 +140,26 @@ https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_en/
 
 ## Startale Portfolio
 
-### Tags
+### Title
 
- * Writing
-
+ * Soneium Score Season 6 Strategy Guide
 ### What is this?
 
 This is a strategy guide for Soneium Score Season 6 provided on <https://portal.soneium.org/>.
-
 ### Why is it important?
 
  * By spreading information and providing a guide about Soneium Score Season 6, it helps people who are interested in Soneium.
- * It is part of my research on how to expand my influence on X.
+### Tags
 
+ * Writing
 ### Blog Post Links
 
  * English: <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_en/>
  * Japanese: <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/>
-
 ### X Thread Links
 
  * English: <https://x.com/stardustdotbox/status/2013940247307207000>
  * Japanese: <https://x.com/stardustdotbox/status/2013897946803396906>
-
 ### X Analytics
 
 <img width="878" height="895" alt="image" src="https://github.com/user-attachments/assets/88f63e7e-3e15-40ca-bfb9-ffd62c84b777" />

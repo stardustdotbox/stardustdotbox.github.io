@@ -128,6 +128,10 @@ https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/
 
 ## Startaleポートフォリオ
 
+### タイトル
+
+ * Soneiumスコアシーズン6攻略ガイド
+
 ### これはなんですか？
 
 <https://portal.soneium.org/>で提供されるSoneiumスコアシーズン6の攻略ガイドです。
