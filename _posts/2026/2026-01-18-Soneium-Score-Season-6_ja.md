@@ -13,31 +13,6 @@ header:
 
 {% include toc %}
 
-## Startaleポートフォリオ
-
-### タグ
-
-　* Writing
-
-### これはなんですか？
-
-<https://portal.soneium.org/>で提供されるSoneiumスコアシーズン6の攻略ガイドです。
-
-### なぜ重要ですか？
-
- * Soneium Scoreシーズン6についての周知や、ガイドを提供することによって、Soneiumに興味がある人を助けます。
- * X上で影響力を広げる方法を研究します。
-
-### ブログポストリンク
-
- * 英語版 : <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_en/>
- * 日本語版 : <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/>
-
-### Xスレッドリンク
-
- * 英語版 : <>
- * 日本語版 : <https://x.com/stardustdotbox/status/2013897946803396906>
-
 ## Soneium Scoreシーズン6のキャンペーンを攻略する
 
 Soneiumスコアシーズン6が開始されましたヽ(´ー`)ノ
@@ -151,10 +126,34 @@ https://wowmax.exchange/にアクセスして0.0001 USDCEを10回Ethにswapし�
 さらに詳細を知りたい人は以下の僕のブログ記事をみてくださいね。ヽ(´ー`)ノ
 https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/
 
-### アナリティクス
+## Startaleポートフォリオ
+
+### タグ
+
+　* Writing
+
+### これはなんですか？
+
+<https://portal.soneium.org/>で提供されるSoneiumスコアシーズン6の攻略ガイドです。
+
+### なぜ重要ですか？
+
+ * Soneium Scoreシーズン6についての周知や、ガイドを提供することによって、Soneiumに興味がある人を助けます。
+ * X上で影響力を広げる方法を研究します。
+
+### ブログポストリンク
+
+ * 英語版 : <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_en/>
+ * 日本語版 : <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/>
+
+### Xスレッドリンク
+
+ * 英語版 : <>
+ * 日本語版 : <https://x.com/stardustdotbox/status/2013897946803396906>
+
+### Xアナリティクス
 
 <img width="878" height="895" alt="image" src="https://github.com/user-attachments/assets/88f63e7e-3e15-40ca-bfb9-ffd62c84b777" />
-
 
 ## ブログ更新コマンド
 
