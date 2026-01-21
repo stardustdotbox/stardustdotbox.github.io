@@ -67,7 +67,7 @@ Period: Jan 15 - Feb 12, 07:00 - 07:00 (UTC)
 
 When you access <https://surflayer.xyz/?lootbox=1868>, a popup related to a Loot Box will appear.  
 If you open this 10 times, Campaign 2 will be completed. However, it seems you can only open 5 boxes per day, so it will take at least 2 days.  
-By the way, the cost to open one box is 0.000004 ETH (about 20 JPY).
+By the way, the cost to open one box is 0.000004 ETH.
 
 ### Campaign 3
 

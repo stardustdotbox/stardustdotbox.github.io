@@ -15,7 +15,7 @@ header:
 
 ## Startaleポートフォリオ
 
-### 分類
+### タグ
 
 　* Writing
 
