@@ -36,7 +36,7 @@ header:
 ### Xスレッドリンク
 
  * 英語版 : <>
- * 日本語版 : <>
+ * 日本語版 : <https://x.com/stardustdotbox/status/2013897946803396906>
 
 ## Soneium Scoreシーズン6のキャンペーンを攻略する
 
