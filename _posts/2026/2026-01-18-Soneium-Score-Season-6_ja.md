@@ -148,7 +148,7 @@ https://wowmax.exchange/にアクセスして0.0001 USDCEを10回Ethにswapし�
 
 オンチェインGMや、Ruby Scoreのvotingやデイリータスクなどでトランザクションを発生させて、80点を超えてバッジをゲットしましょう。（ ´ー｀）y―┛~~
 
-さらに詳細を知りたい人は僕の以下のブログ記事をみてくださいね。ヽ(´ー`)ノ
+さらに詳細を知りたい人は以下の僕のブログ記事をみてくださいね。ヽ(´ー`)ノ
 https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/
 
 ### アナリティクス
