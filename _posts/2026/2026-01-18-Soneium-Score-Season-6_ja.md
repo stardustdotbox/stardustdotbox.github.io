@@ -128,10 +128,6 @@ https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/
 
 ## Startaleポートフォリオ
 
-### タグ
-
-　* Writing
-
 ### これはなんですか？
 
 <https://portal.soneium.org/>で提供されるSoneiumスコアシーズン6の攻略ガイドです。
@@ -141,6 +137,10 @@ https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/
  * Soneium Scoreシーズン6についての周知や、ガイドを提供することによって、Soneiumに興味がある人を助けます。
  * X上で影響力を広げる方法を研究します。
 
+### タグ
+
+　* Writing
+
 ### ブログポストリンク
 
  * 英語版 : <https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_en/>
@@ -148,7 +148,7 @@ https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/
 
 ### Xスレッドリンク
 
- * 英語版 : <>
+ * 英語版 : <https://x.com/stardustdotbox/status/2013940247307207000>
  * 日本語版 : <https://x.com/stardustdotbox/status/2013897946803396906>
 
 ### Xアナリティクス
