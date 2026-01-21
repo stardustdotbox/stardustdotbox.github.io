@@ -40,7 +40,7 @@ Soneiumスコアは80点を超えるとバッジをもらえるSoneium内のア�
 <img width="305" height="56" alt="image" src="https://github.com/user-attachments/assets/623338d3-c1b7-42fa-8f5d-7a3da6d1f3b6" />
 
 <https://surflayer.xyz/?lootbox=1868>にアクセスするとLoot Boxに関するポップアップが表示されるので、これを10回開けば、キャンペーン2は完了できますが、一日に開くことができる箱は5つまでみたいなので最低2日はかかります。
-ちなみに一回、箱を開くのにかかるコストは0.000004ETH(20円)です。
+ちなみに一回、箱を開くのにかかるコストは0.000004ETHです。
 
 ### キャンペーン3
 
