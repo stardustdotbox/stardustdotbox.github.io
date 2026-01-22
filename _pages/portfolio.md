@@ -1,5 +1,5 @@
 ---
-title: "Portfolio"
+title: "Starfolio"
 permalink: /portfolio/
 author_profile: true
 ---
