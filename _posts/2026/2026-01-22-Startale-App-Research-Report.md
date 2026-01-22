@@ -1,17 +1,14 @@
 ---
-title: 'ブログテンプレート'
-date: 2025-01-01 00:00:00
-permalink: /posts/2026/01/template/
+title: 'Startale App調査レポート'
+date: 2026-01-22 00:00:00
+permalink: /posts/2026/01/Startale-App-Research-Report/
 tags:
   - template
 header:
-  image: stardust.jpg
+  image: https://github.com/user-attachments/assets/0b57b04c-03dc-4c04-8285-df1a279a400d
 ---
 
-<video controls width="100%">
-  <source src="https://github.com/user-attachments/assets/3e07ab01-af74-4007-b685-af2cd86638e6" type="video/mp4">
-  お使いのブラウザは動画タグをサポートしていません。ヽ(´ー`)ノ
-</video>
+<img width="313" height="60" alt="image" src="https://github.com/user-attachments/assets/0b57b04c-03dc-4c04-8285-df1a279a400d" />
 
 {% include toc %}
 
@@ -25,30 +22,27 @@ header:
 # Midjourney Bot
 
 ```
-/imagine Happy New Year 
+/imagine Startale https://github.com/user-attachments/assets/0b57b04c-03dc-4c04-8285-df1a279a400d App --ar 2:1　
 ```
 
 ## Startaleポートフォリオ
 
 ### タイトル
 
- * ブログタイトル
+ * Startale App調査レポート
 
 ### タグ
 
- * Product ideas or UX explorations
- * Design, visual, or motion work
- * Writing, research, or ecosystem analysis
- * Code, tools, or technical experiments
- * Content, media, or community initiatives
+ * Writing
+ * Technical experiments
 
 ### これはなんですか？
 
- * 
+ * 個人的なStartale Appを調査した際のメモ書きです。
 
 ### なぜ重要ですか？
 
- * 
+ * Startale Appの認知を高め、Startale Appに対しての知識を世の中に広める
 
 ### ブログポスト
 
@@ -69,5 +63,6 @@ header:
 
 ## 参考文献
 
- * https://www.stardust.box/
- * https://startale.com/en/blog/friend-invites
+ * <https://www.stardust.box/posts/2026/01/Startale-Portofolio/>
+ * <https://startale.com/en/app>
+ * <https://startale.com/ja/app>

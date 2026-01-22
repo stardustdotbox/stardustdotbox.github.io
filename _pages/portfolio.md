@@ -27,4 +27,3 @@ I respect and support Startale for standing up as a pioneer in creating that ori
 └─$ git add -A && git commit -m 'Portfolioの更新' && git push
 ```
 
-

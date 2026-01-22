@@ -8,9 +8,7 @@ header:
   image: https://github.com/user-attachments/assets/0b57b04c-03dc-4c04-8285-df1a279a400d
 ---
 
-
 <img width="313" height="60" alt="image" src="https://github.com/user-attachments/assets/0b57b04c-03dc-4c04-8285-df1a279a400d" />
-
 
 {% include toc %}
 
