@@ -19,7 +19,7 @@ header:
 └─$ cp 2000-01-01-template.md 2026/2026-01-22-Startale-App-Research-Report.md
 ```
 
-# Midjourney Bot
+### Midjourney Bot
 
 ```
 /imagine Startale https://github.com/user-attachments/assets/0b57b04c-03dc-4c04-8285-df1a279a400d App --ar 2:1　
@@ -54,7 +54,7 @@ header:
  * 英語版 : https://x.com/stardustdotbox
  * 日本語版 : https://x.com/stardustdotbox
 
-## ブログ更新コマンド
+### ブログ更新コマンド
 
 ```
 ┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
