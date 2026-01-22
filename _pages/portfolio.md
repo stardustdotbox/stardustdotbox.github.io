@@ -6,7 +6,7 @@ author_profile: true
 
 ## Startale Portfolio - Dust of Star✨
 
-### Portfolio
+### Starfolio
 
 I am interested in how the Web3 community can reach DAO-based systems, how people can move away from centralized structures, and how they can build ecosystems with decentralized freedom and dignity.
 I respect and support Startale for standing up as a pioneer in creating that original vision of Web3 and for continuing to grow and develop in that direction. ヽ(´ー`)ノ
