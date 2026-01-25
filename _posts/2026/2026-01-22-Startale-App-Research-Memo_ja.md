@@ -1,7 +1,7 @@
 ---
 title: 'Startale App調査メモ(1) - 基本機能概説'
 date: 2026-01-22 00:00:00
-permalink: /posts/2026/01/Startale-App-Research-memo-1/
+permalink: /posts/2026/01/Startale-App-Research-memo-1_ja/
 tags:
   - Writing
   - Technical experiments
@@ -224,7 +224,6 @@ https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/
 ### タグ
 
  * Writing
- * Technical experiments
 
 ### これはなんですか？
 
