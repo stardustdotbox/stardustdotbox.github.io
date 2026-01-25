@@ -4,7 +4,7 @@ date: 2026-01-25 17:24:31
 permalink: /posts/2026/01/Startale-App-Research-memo-1_ja/
 tags:
   - Writing
-  - Technical experiments
+  - StartaleApp
 header:
   image: https://github.com/user-attachments/assets/2953d55d-71e2-48b4-8d0b-476301f9ae6c
 ---
