@@ -128,12 +128,13 @@ https://startale.com/en/app
 https://startale.com/jp/app
 
 The following threads provide an overview of Startale App's main features by screen. （ ´ー｀）y―┛~~
-#Soneium #Startale #StartaleApp
 
+#Soneium #Startale #StartaleApp
 
 ### Thread 1
 
 [HOME Screen]
+
 <img width="1693" height="929" alt="image" src="https://github.com/user-attachments/assets/5668e340-ad6d-4fc9-ae4a-96f8243dcc39" />
 
 The HOME screen displays the amount of STAR Points you hold, the progress of missions currently in progress, and a summary of liquidity provision management.
@@ -142,6 +143,7 @@ The HOME screen is very important. This is because, on the interface, you can on
 ### Thread 2
 
 [Liquidity Provision Screen]
+
 <img width="382" height="753" alt="image" src="https://github.com/user-attachments/assets/6e70ea4d-b086-4aae-8fb3-1a396c12e777" />
 <img width="745" height="383" alt="image" src="https://github.com/user-attachments/assets/0ba16701-dfb0-4855-a588-f043c0d5c034" />
 
@@ -152,13 +154,17 @@ If you plan to efficiently collect Star Points in Startale App, understanding th
  * Providing liquidity for a longer period allows you to earn Star Points more efficiently. The multiplier increases every 30 days, reaching a maximum cap of 2.0 after 180 days.
 
 ### Thread 3
+
 [Liquidity Provision Position Screen]
+
 <img width="396" height="382" alt="image" src="https://github.com/user-attachments/assets/40cf5657-f0ac-4658-850f-172c5169f7f4" />
 
 Withdrawals follow the Last In First Out (LIFO) method, protecting older positions. It's a thoughtful design, isn't it!
 
 ### Thread 4
+
 [Earn (Vault) Screen]
+
 <img width="370" height="339" alt="image" src="https://github.com/user-attachments/assets/77fa3ec1-1972-4a15-99f3-c705d41c3bc3" />
 
 The current APY for Startale USDC's Vault feature is 9.42%.
@@ -168,27 +174,35 @@ You can withdraw at any time, so I use it as a convenient Startale USDC storage 
  * <https://usd.startale.com/faq#how-does-earn-vault-work>
 
 ### Thread 5
+
 [Swap Screen]
+
 <img width="440" height="487" alt="image" src="https://github.com/user-attachments/assets/cb6e27f7-eeb1-4b56-ba00-8f3908bdcd17" />
 
 The Swap feature allows you to swap tokens you hold for other tokens. When purchasing Startale USDC, this feature seems to be the mainstream method currently.
 I suspect the backend uses Uniswap, so there's a rumor that Uniswap might actually be cheaper for swap costs. ((*´∀`))ｹﾗｹﾗ
 
 ### Thread 6
+
 [Token/NFT Send Screen]
+
 <img width="459" height="367" alt="image" src="https://github.com/user-attachments/assets/53410889-898f-47b4-a603-8c9ad230a7ad" />
 
 You can send tokens and NFTs you hold to other wallets. I'm glad that Startale App has implemented this basic feature.
 
 ### Thread 7
+
 [Referral Screen]
+
 <img width="370" height="514" alt="image" src="https://github.com/user-attachments/assets/f10be9c6-e6da-4cc2-b851-44dc1d6988bc" />
 
 Startale App allows you to share referral codes and earn 10% of the Star Points earned by the people you referred.
 Referral codes may be added in the future, but the initial design is 3 per person, so if you give them to people who seem likely to earn Star Points, you can also earn Star Points yourself, which is great. ヽ(´ー`)ノ
 
 ### Thread 8
+
 [Summary]
+
 It's clear that Startale App has successfully developed the main features necessary for web3 activities as dapps on Soneium.
 Also, although not explained this time, it includes features such as account abstraction to onboard Web2 users to Soneium, so it's expected to become the main application that Startale will deploy on Soneium in the future.
 
