@@ -221,7 +221,7 @@ https://www.stardust.box/posts/2026/01/Startale-App-Research-memo-1_ja/
 ### Xスレッド
 
  * 英語版 : https://x.com/stardustdotbox
- * 日本語版 : https://x.com/stardustdotbox
+ * 日本語版 : https://x.com/stardustdotbox/status/2015345043192848843
 
 ### ブログ更新コマンド
 
