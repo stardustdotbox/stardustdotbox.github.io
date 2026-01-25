@@ -13,6 +13,7 @@ I respect and support Startale for standing up as a pioneer in creating that ori
 ### Table of Contents
 
  * [Writing] [Soneium Score Season 6 Strategy Guide](https://discord.com/channels/1417813694980685885/1461659403651383468/1463501393896800361)
+ * [Writing] [Startale App Research Memo (1) - Basic Features Overview](https://discord.com/channels/1417813694980685885/1461659403651383468/1464909571599634619)
 
 {% include base_path %}
 
