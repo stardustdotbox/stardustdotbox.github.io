@@ -130,7 +130,7 @@ Startale Appベータテスター参加は以下からのStartaleのページか
  * <https://startale.com/en/app>
  * <https://startale.com/jp/app>
 
-以下のスレッドではStartale Appの主要機能について画面事に概説します。（ ´ー｀）y―┛~~
+以下のスレッドではStartale Appの主要機能について画面毎に概説します。（ ´ー｀）y―┛~~
 
 #Soneium #Startale #StartaleApp
 
