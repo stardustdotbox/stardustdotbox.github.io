@@ -234,7 +234,7 @@ https://www.stardust.box/posts/2026/01/Startale-App-Research-memo-1_en/
 
 ### X Threads
 
- * English: https://x.com/stardustdotbox
+ * English: https://x.com/stardustdotbox/status/2015349622257139794
  * Japanese: https://x.com/stardustdotbox/status/2015345043192848843
 
 ### Blog Update Command
