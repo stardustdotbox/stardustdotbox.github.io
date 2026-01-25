@@ -139,6 +139,8 @@ Startale Appベータテスター参加は以下からのStartaleのページか
 
 以下のスレッドではStartale Appの主要機能について画面事に概説します。（ ´ー｀）y―┛~~
 
+#Soneium #Startale #StartaleApp
+
 ### スレッド1
 
 [HOME画面]
