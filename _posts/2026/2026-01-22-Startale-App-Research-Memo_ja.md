@@ -13,13 +13,6 @@ header:
 
 {% include toc %}
 
-### 記事作成コマンド
-
-```
-┌──(stardust✨stardust)-[~/stardustdotbox.github.io/_posts]
-└─$ cp 2000-01-01-template.md 2026/2026-01-22-Startale-App-Research-Memo.md
-```
-
 ## Startale Appについて
 
 Startale Appはweb3の黎明期を経験したStartaleのノウハウが蓄積されているようなアプリケーションです。
@@ -215,7 +208,7 @@ Startale Appは現状、web3で活動するために必要な主要機能をSone
 また、今回は説明していませんが、アカウントアブストラクションなどのWeb2ユーザをSoneiumにオンボードする機能も備えているため、今後、Soneium上のStartaleが展開するメインアプリケーションになることが予想されます。
 
 さらに詳細を知りたい人は以下の僕のブログ記事をみてくださいね。ヽ(´ー`)ノ
-https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/
+https://www.stardust.box/posts/2026/01/Startale-App-Research-memo-1_ja/
 
 ## Startaleポートフォリオ
 
@@ -238,7 +231,7 @@ https://www.stardust.box/posts/2026/01/Soneium-Score-Season-6_ja/
 ### ブログポスト
 
  * 英語版 : https://www.stardust.box/
- * 日本語版 : https://www.stardust.box/
+ * 日本語版 : https://www.stardust.box/posts/2026/01/Startale-App-Research-memo-1_ja/
 
 ### Xスレッド
 
