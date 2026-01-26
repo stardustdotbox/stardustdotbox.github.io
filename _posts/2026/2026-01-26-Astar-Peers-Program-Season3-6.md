@@ -104,8 +104,11 @@ NAME          TYPE      SIZE USED PRIO
 
 かなり、Astarアーカイブノードとしては安定してきたように感じるぞ（ ´ー｀）y―┛~~
 
+## 同期状況
 
+うーん。追いついてるのかな、離されてるのかな。。。
 
+<img width="610" height="36" alt="image" src="https://github.com/user-attachments/assets/2675f31a-94b6-41aa-a112-7a9d23d5fd1b" />
 
 ## ブログ更新コマンド
 
