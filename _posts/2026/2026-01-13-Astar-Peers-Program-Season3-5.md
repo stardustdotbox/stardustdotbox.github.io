@@ -1,7 +1,7 @@
 ---
 title: 'Astarピアーズプログラムシーズン3に応募する(5)'
 date: 2026-01-13 18:32:30
-permalink: /posts/2026/01/Asatr-Peers-Program-Season3-5/
+permalink: /posts/2026/01/Astar-Peers-Program-Season3-5/
 tags:
   - Astar
 header:
@@ -433,10 +433,10 @@ stardust✨stardust:~ $ curl -s -H "Content-Type: application/json" \
 
 ## 参考文献
 
- * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-1/
- * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-2/
- * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-3/
- * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-4/
+ * https://www.stardust.box/posts/2026/01/Astar-Peers-Program-Season3-1/
+ * https://www.stardust.box/posts/2026/01/Astar-Peers-Program-Season3-2/
+ * https://www.stardust.box/posts/2026/01/Astar-Peers-Program-Season3-3/
+ * https://www.stardust.box/posts/2026/01/Astar-Peers-Program-Season3-4/
  * https://github.com/AstarNetwork/Astar/
  * https://docs.astar.network/docs/build/nodes/archive-node/binary/
  * https://telemetry.polkadot.io/

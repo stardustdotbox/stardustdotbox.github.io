@@ -1,7 +1,7 @@
 ---
 title: 'Astarピアーズプログラムシーズン3に応募する(2)'
 date: 2026-01-10 12:57:21
-permalink: /posts/2026/01/Asatr-Peers-Program-Season3-2/
+permalink: /posts/2026/01/Astar-Peers-Program-Season3-2/
 tags:
   - Astar
 header:
@@ -51,7 +51,7 @@ header:
 
 ## 参考文献
 
- * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-1/
+ * https://www.stardust.box/posts/2026/01/Astar-Peers-Program-Season3-1/
  * https://forum.astar.network/t/peers-program-season-3-empower-astar-together-applications-open/9283
  * https://peers.sun-t-sarah.work/
  * https://telemetry.polkadot.io/
