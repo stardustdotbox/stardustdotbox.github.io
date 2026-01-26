@@ -102,7 +102,8 @@ NAME          TYPE      SIZE USED PRIO
 
 <img width="1901" height="327" alt="image" src="https://github.com/user-attachments/assets/54a2fd09-7c1e-495f-b488-943214c8b26a" />
 
-かなり、Astarアーカイブノードとしては安定してきたように感じるぞ（ ´ー｀）y―┛~~
+かなり、Astarアーカイブノードとしては安定してきたように感じるぞ。
+というか、かなり汎用性のあるラズパイ5の構成ではないだろうか。（ ´ー｀）y―┛~~
 
 ## 同期状況
 
