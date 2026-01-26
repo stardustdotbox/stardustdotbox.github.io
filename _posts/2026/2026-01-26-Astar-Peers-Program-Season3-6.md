@@ -1,7 +1,7 @@
 ---
 title: 'Astarピアーズプログラムシーズン3に応募する(6)'
 date: 2026-01-26 04:34:20
-permalink: /posts/2026/01/Asatr-Peers-Program-Season3-6/
+permalink: /posts/2026/01/Astar-Peers-Program-Season3-6/
 tags:
   - Astar
 header:
@@ -125,11 +125,11 @@ stardust✨stardust:~ $ journalctl -u astar -n 2 --no-pager | egrep "Relaychain"
 
 ## 参考文献
 
- * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-1/
- * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-2/
- * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-3/
- * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-4/
- * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-5/
+ * https://www.stardust.box/posts/2026/01/Astar-Peers-Program-Season3-1/
+ * https://www.stardust.box/posts/2026/01/Astar-Peers-Program-Season3-2/
+ * https://www.stardust.box/posts/2026/01/Astar-Peers-Program-Season3-3/
+ * https://www.stardust.box/posts/2026/01/Astar-Peers-Program-Season3-4/
+ * https://www.stardust.box/posts/2026/01/Astar-Peers-Program-Season3-5/
  * https://telemetry.polkadot.io/
  * https://forums.raspberrypi.com/viewtopic.php?t=390708
  * https://medium.com/@sequaja.marco/astar-peers-program-troubleshooting-guide-and-faq-a6958a76d021
