@@ -110,6 +110,11 @@ NAME          TYPE      SIZE USED PRIO
 
 <img width="610" height="36" alt="image" src="https://github.com/user-attachments/assets/2675f31a-94b6-41aa-a112-7a9d23d5fd1b" />
 
+```
+stardust✨stardust:~ $ journalctl -u astar -n 2 --no-pager | egrep "Relaychain"
+ 1月 27 02:06:47 stardust astar-collator[1861]: 2026-01-27 02:06:47 [Relaychain] ⚙️  Syncing  8.0 bps, target=#29683475 (8 peers), best: #18859008 (0x225b…5ab9), finalized #18858496 (0xcb6f…5f9c), ⬇ 598.1kiB/s ⬆ 6.5kiB/s
+```
+
 ## ブログ更新コマンド
 
 ```
