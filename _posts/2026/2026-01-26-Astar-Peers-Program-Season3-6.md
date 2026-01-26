@@ -124,3 +124,4 @@ NAME          TYPE      SIZE USED PRIO
  * https://telemetry.polkadot.io/
  * https://forums.raspberrypi.com/viewtopic.php?t=390708
  * https://medium.com/@sequaja.marco/astar-peers-program-troubleshooting-guide-and-faq-a6958a76d021
+ * https://docs.astar.network/docs/build/nodes/rpi-cheat-sheet
