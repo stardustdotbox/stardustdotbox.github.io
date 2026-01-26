@@ -31,48 +31,26 @@ stardust✨stardust:~ $ dmesg -T | egrep -i 'oom|killed process|out of memory'
 [月  1月 26 01:49:41 2026] Out of memory: Killed process 1888 (astar-collator) total-vm:1254255840kB, anon-rss:15096608kB, file-rss:0kB, shmem-rss:0kB, UID:1001 pgtables:16960kB oom_score_adj:0
 ```
 
-## ラズパイ5のswapを2GBから8GBに増やす
+## ラズパイ5のswap設計
 
-### ラズパイ5のデフォルトのswap状況を確認する
-
-```
-stardust✨stardust:~ $ swapon --show
-NAME       TYPE      SIZE USED PRIO
-/dev/zram0 partition   2G   0B  100
-```
-
-### /etc/rpi/swap.confの編集
-
-/etc/rpi/swap.confのFileセクションとZramセクションのMaxSizeMiBを8192に設定する
+/etc/rpi/swap.confを設定して、swap関連の設定をするのが基本みたい。zramを8GBとswapfileを8GB確保していくよヽ(´ー`)ノ
 
 ```
 stardust✨stardust:~ $ cat /etc/rpi/swap.conf
-#  This file is part of rpi-swap.
-#
-#  Defaults are provided as commented-out options. Local configuration
-#  should be created by either modifying this file, or by creating "drop-ins" in
-#  the swap.conf.d/ subdirectory. The latter is generally recommended.
-#
-#  See swap.conf(5) for details.
-
 [Main]
-#Mechanism=auto
+Mechanism=zram+file
 
 [File]
-#Path=/var/swap
-#RamMultiplier=1
+Path=/var/swapfile
 MaxSizeMiB=8192
-#MaxDiskPercent=50
-#FixedSizeMiB=
 
 [Zram]
-#RamMultiplier=1
 MaxSizeMiB=8192
-#FixedSizeMiB=
-# Writeback settings (for zram+file mechanism):
-#WritebackTrigger=auto
-#WritebackInitialDelay=180min
-#WritebackPeriodicInterval=24h
+
+# zramが埋まってきたらfileへ書き戻す（有効化）
+WritebackTrigger=auto
+WritebackInitialDelay=30min
+WritebackPeriodicInterval=6h
 ```
 
 ### 現状のswapを止める
@@ -97,13 +75,34 @@ stardust✨stardust:~ $ sudo systemctl start systemd-zram-setup@zram0.service
 stardust✨stardust:~ $ sudo systemctl start dev-zram0.swap
 ```
 
-### Swapが2GBから8GB担ったことを確認
+### Swapがzramを使用して、2GBから8GBに増えたことを確認
 
 ```
 stardust✨stardust:~ $ swapon --show
 NAME       TYPE      SIZE   USED PRIO
 /dev/zram0 partition   8G 205.6M  100
 ```
+
+### swapfileが作成されていることを確認する
+
+```
+stardust✨stardust:~ $ ls -lh /var/swapfile
+-rw------- 1 root root 8.0G  1月 26 23:48 /var/swapfile
+```
+
+### swapfileをswap領域として適用する
+
+```
+root@stardust:/etc/rpi# sudo swapon -p 10 /var/swapfile
+root@stardust:/etc/rpi# swapon --show
+NAME          TYPE      SIZE USED PRIO
+/dev/zram0    partition   8G   0B  100
+/var/swapfile file        8G   0B   10
+```
+
+<img width="1901" height="327" alt="image" src="https://github.com/user-attachments/assets/54a2fd09-7c1e-495f-b488-943214c8b26a" />
+
+かなり、Astarアーカイブノードとしては安定してきたように感じるぞ（ ´ー｀）y―┛~~
 
 ## ブログ更新コマンド
 
@@ -121,3 +120,5 @@ NAME       TYPE      SIZE   USED PRIO
  * https://www.stardust.box/posts/2026/01/Asatr-Peers-Program-Season3-5/
  * https://telemetry.polkadot.io/
  * https://forums.raspberrypi.com/viewtopic.php?t=390708
+ * https://medium.com/@sequaja.marco/astar-peers-program-troubleshooting-guide-and-faq-a6958a76d021
+ * https://theastarbulletin.news/setup-astar-node-with-raspberry-pi-5-the-extra-edition-08f58d0ffa69
