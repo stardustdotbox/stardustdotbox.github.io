@@ -31,6 +31,34 @@ stardust✨stardust:~ $ dmesg -T | egrep -i 'oom|killed process|out of memory'
 [月  1月 26 01:49:41 2026] Out of memory: Killed process 1888 (astar-collator) total-vm:1254255840kB, anon-rss:15096608kB, file-rss:0kB, shmem-rss:0kB, UID:1001 pgtables:16960kB oom_score_adj:0
 ```
 
+## Cgroupのメモリ管理を有効化する
+
+systemdでメモリ管理を行うために、cgroupによるメモリ管理をラズパイ5で有効化しているが、特にこの機能はしようしなかった。（ ´ー｀）y―┛~~
+
+### 初期状態でラズパイ5のcgroupによるメモリ管理が無効化されていることを確認する
+
+```
+stardust✨stardust:~ $ cat /sys/fs/cgroup/cgroup.controllers
+cpuset cpu io pids
+```
+
+### boot時のコマンドラインを書き換える
+
+/boot/firmware/cmdline.txtにcgroup_enable=memory swapaccount=1オプションを追加する
+
+```
+stardust✨stardust:~ $ cat /boot/firmware/cmdline.txt
+console=serial0,115200 console=tty1 root=PARTUUID=ca9636a7-465b-434c-a65d-f1ae7c347e60 rootfstype=ext4 fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles cfg80211.ieee80211_regdom=JP cgroup_enable=memory swapaccount=1
+stardust✨stardust:~ $ sudo reboot
+```
+
+### cgroupによるメモリ管理が無効化されていることを確認する
+
+```
+stardust✨stardust:~ $ cat /sys/fs/cgroup/cgroup.controllers
+cpuset cpu io memory pids
+```
+
 ## ラズパイ5のswap設計
 
 /etc/rpi/swap.confを設定して、swap関連の設定をするのが基本みたい。zramを8GBとswapfileを8GB確保していくよヽ(´ー`)ノ
@@ -56,6 +84,7 @@ WritebackPeriodicInterval=6h
 ### 現状のswapを止める
 
 ```
+stardust✨stardust:~ $ sudo swapoff /dev/zram0
 stardust✨stardust:~ $ sudo systemctl stop dev-zram0.swap
 stardust✨stardust:~ $ sudo systemctl stop systemd-zram-setup@zram0.service
 ```
