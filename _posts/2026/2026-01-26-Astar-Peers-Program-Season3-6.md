@@ -104,6 +104,9 @@ NAME          TYPE      SIZE USED PRIO
 
 かなり、Astarアーカイブノードとしては安定してきたように感じるぞ（ ´ー｀）y―┛~~
 
+
+
+
 ## ブログ更新コマンド
 
 ```
@@ -121,4 +124,3 @@ NAME          TYPE      SIZE USED PRIO
  * https://telemetry.polkadot.io/
  * https://forums.raspberrypi.com/viewtopic.php?t=390708
  * https://medium.com/@sequaja.marco/astar-peers-program-troubleshooting-guide-and-faq-a6958a76d021
- * https://theastarbulletin.news/setup-astar-node-with-raspberry-pi-5-the-extra-edition-08f58d0ffa69
