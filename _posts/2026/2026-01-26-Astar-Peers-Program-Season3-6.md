@@ -140,13 +140,17 @@ NAME          TYPE      SIZE USED PRIO
 
 ```
 
-
-
 ## 同期状況
 
-うーん。追いついてるのかな、離されてるのかな。。。
+ * データをすべて削除
 
-<img width="610" height="36" alt="image" src="https://github.com/user-attachments/assets/2675f31a-94b6-41aa-a112-7a9d23d5fd1b" />
+```
+stardust✨stardust:~ $ date
+2026-01-27(火) 03:24
+stardust✨stardust:/var/lib/Astar $ sudo rm -fr *
+```
+
+ * リレーチェインの同期状態を確認
 
 ```
 stardust✨stardust:~ $ journalctl -u astar -n 2 --no-pager | egrep "Relaychain"
