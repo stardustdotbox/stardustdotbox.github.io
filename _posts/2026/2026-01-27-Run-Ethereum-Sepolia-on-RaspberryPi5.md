@@ -31,6 +31,54 @@ SepoliaはEthereum L1の公式テストネットであり、EVM・Execution Laye
 
 これは、RPCプロバイダ利用やL2のみの開発では得られないEthereumの基礎構造そのものの理解につながります。ヽ(´ー`)ノ
 
+## Execution / Consensus の役割分離
+
+Ethereum は The Merge 以降、ノードの役割が Execution Layer（実行） と Consensus Layer（合意） に明確に分離された。
+この分離は「性能のため」だけではなく、責務を分けて安全性・拡張性・クライアント多様性を確保するためのアーキテクチャである。
+
+ * EL（Execution Layer） はこのトランザクションを実行したら、状態（state）はどう変わるか？を解く (EVM / トランザクション / state / ガス / ストレージ)
+ * CL（Consensus Layer） は次のブロックはどれで、どの順番が正史（canonical）か？ を解く (PoS / フォーク選択 / finality / validator / ブロック提案)
+
+```mermaid
+flowchart LR
+  subgraph Users[Users / Tools]
+    DApp[DApp / Wallet]
+    L2[L2 / Rollup Node]
+    Ops[Ops / Monitoring]
+  end
+
+  subgraph EL[Execution Layer (EL)]
+    RPC[JSON-RPC\neth_* / web3_*]
+    EVM[EVM Execution\nTx Validation]
+    State[State DB\n(chaindata / triedb)]
+    Mempool[Tx Pool]
+    EngineAPI[Engine API\n(authrpc 8551)\nJWT protected]
+  end
+
+  subgraph CL[Consensus Layer (CL)]
+    Beacon[Beacon Node\nFork Choice]
+    Finality[Finality\n(FFG)]
+    Gossip[P2P Gossip\nPeers/Subnets]
+  end
+
+  DApp -->|RPC calls| RPC
+  L2 -->|RPC calls| RPC
+  Ops -->|RPC + metrics| RPC
+
+  RPC --> EVM
+  Mempool --> EVM
+  EVM --> State
+
+  Beacon <--> |Engine API\nforkchoiceUpdate / payload| EngineAPI
+  Gossip --> Beacon
+  Beacon --> Finality
+
+  classDef el fill:#f6f6ff,stroke:#666,stroke-width:1px;
+  classDef cl fill:#f6fff6,stroke:#666,stroke-width:1px;
+  class EL,EL el;
+  class CL,CL cl;
+```
+
 ## ラズパイ5(ノードマシン)のスペック紹介
 
 ラズパイ5(16GB)と4TBのUSB-SSDの構成になっているよヽ(´ー`)ノ
