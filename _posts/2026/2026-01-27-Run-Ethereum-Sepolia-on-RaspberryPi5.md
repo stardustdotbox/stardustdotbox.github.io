@@ -680,11 +680,11 @@ stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 -H 'Content-Type: applicat
 
 ### これはなんですか？
 
- * ラズパイ5上でEthereum Sepolia（L1）を稼働させる
+ * ラズパイ5上でEthereum Sepolia（L1）を稼働させた時の作業ログです。
 
 ### なぜ重要ですか？
 
- * EVM学習の基礎を固めます。
+ * EVM学習のための基礎を固めます。
 
 ### ブログポスト
 
