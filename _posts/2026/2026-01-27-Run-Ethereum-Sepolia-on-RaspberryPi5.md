@@ -608,9 +608,7 @@ stardust✨stardust:~ $ journalctl -u lighthouse-sepolia -n 120 --no-pager
  1月 28 00:57:39 stardust lighthouse[63133]: Jan 28 00:57:39.790 INFO  Blob DB initialized                           path: "/var/lib/Sepolia/lighthouse/beacon/blobs_db", oldest_blob_slot: Some(Slot(4243456)), oldest_data_column_slot: Some(Slot(8724480))
 ```
 
-### 同期状態を確認する
-
-#### EL(Geth)
+### EL(Geth)の同期状態を確認する
 
  * eth_syncingの返り値がfalseになったら、同期が完了している
 
@@ -642,7 +640,7 @@ stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 -H 'Content-Type: applicat
 }
 ```
 
-#### CL(Lighthouse)
+### CL(Lighthouse)の同期状態を確認する
 
  * 追従モード
 
