@@ -41,42 +41,37 @@ Ethereum は The Merge 以降、ノードの役割が Execution Layer（実行�
 
 ```mermaid
 flowchart LR
-  subgraph Users[Users / Tools]
+  subgraph Users
     DApp[DApp / Wallet]
     L2[L2 / Rollup Node]
     Ops[Ops / Monitoring]
   end
 
-  subgraph EL[Execution Layer (EL)]
-    RPC[JSON-RPC\neth_* / web3_*]
-    EVM[EVM Execution\nTx Validation]
-    State[State DB\n(chaindata / triedb)]
+  subgraph EL
+    RPC[JSON RPC]
+    EVM[EVM Execution]
+    State[State DB]
     Mempool[Tx Pool]
-    EngineAPI[Engine API\n(authrpc 8551)\nJWT protected]
+    EngineAPI[Engine API authrpc 8551]
   end
 
-  subgraph CL[Consensus Layer (CL)]
-    Beacon[Beacon Node\nFork Choice]
-    Finality[Finality\n(FFG)]
-    Gossip[P2P Gossip\nPeers/Subnets]
+  subgraph CL
+    Beacon[Beacon Node]
+    Finality[Finality FFG]
+    Gossip[P2P Gossip]
   end
 
-  DApp -->|RPC calls| RPC
-  L2 -->|RPC calls| RPC
-  Ops -->|RPC + metrics| RPC
+  DApp --> RPC
+  L2 --> RPC
+  Ops --> RPC
 
   RPC --> EVM
   Mempool --> EVM
   EVM --> State
 
-  Beacon <--> |Engine API\nforkchoiceUpdate / payload| EngineAPI
+  Beacon <--> EngineAPI
   Gossip --> Beacon
   Beacon --> Finality
-
-  classDef el fill:#f6f6ff,stroke:#666,stroke-width:1px;
-  classDef cl fill:#f6fff6,stroke:#666,stroke-width:1px;
-  class EL,EL el;
-  class CL,CL cl;
 ```
 
 ## ラズパイ5(ノードマシン)のスペック紹介
