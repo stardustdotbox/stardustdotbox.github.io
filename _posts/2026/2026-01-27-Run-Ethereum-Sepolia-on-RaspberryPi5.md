@@ -128,7 +128,7 @@ stardust.local (Raspberry Pi 5)
      └─ lighthouse (Beacon Node)
 ```
 
-### anyenvのインストール
+## anyenvのインストール
 
 ```
 stardust✨stardust:~ $ git clone https://github.com/anyenv/anyenv ~/.anyenv
@@ -162,7 +162,7 @@ stardust✨stardust:~ $ anyenv -v
 anyenv 1.1.5-1-g5c58783
 ```
 
-### Go言語をgoenvでインストールする
+## Go言語をgoenvでインストールする
 
 ```
 stardust✨stardust:~ $ sudo apt install -y \
@@ -216,7 +216,7 @@ Installing Go Linux arm 64bit 1.25.5...
 Installed Go Linux arm 64bit 1.25.5 to /home/stardust/.anyenv/envs/goenv/versions/1.25.5
 ```
 
-### gethのインストール
+## gethのインストール
 
 ```
 stardust✨stardust:~ $ git clone https://github.com/ethereum/go-ethereum.git
@@ -244,7 +244,7 @@ GOPATH=/home/stardust/go/1.25.5
 GOROOT=/home/stardust/.anyenv/envs/goenv/versions/1.25.5
 ```
 
-#### stable版のgethに切り替える
+### stable版のgethに切り替える
 
 ```
 stardust✨stardust:~/go-ethereum $ git fetch --all --tags
@@ -304,7 +304,7 @@ GOPATH=/home/stardust/go/1.25.5
 GOROOT=/home/stardust/.anyenv/envs/goenv/versions/1.25.5
 ```
 
-#### 本番環境にgethを配置する
+### 本番環境にgethを配置する
 
 ```
 stardust✨stardust:~ $ sudo cp ~/go-ethereum/build/bin/geth /usr/local/bin/geth
@@ -323,13 +323,13 @@ GOPATH=/home/stardust/go/1.25.5
 GOROOT=/home/stardust/.anyenv/envs/goenv/versions/1.25.5
 ```
 
-#### sepolia実行ユーザの作成
+### sepolia実行ユーザの作成
 
 ```
 stardust✨stardust:~ $ sudo useradd --no-create-home --shell /usr/sbin/nologin sepolia
 ```
 
-#### データディレクトリを作成する
+### データディレクトリを作成する
 
 ```
 stardust✨stardust:~ $ sudo mkdir -p /var/lib/Sepolia/geth
@@ -337,14 +337,14 @@ stardust✨stardust:~ $ sudo chown -R sepolia:sepolia /var/lib/Sepolia
 stardust✨stardust:~ $ sudo chmod 700 /var/lib/Sepolia
 ```
 
-#### JWT secret 作成
+### JWT secret 作成
 
 ```
 stardust✨stardust:~ $ sudo sh -c 'umask 077; openssl rand -hex 32 > /var/lib/Sepolia/jwt.hex'
 stardust✨stardust:~ $ sudo chown sepolia:sepolia /var/lib/Sepolia/jwt.hex
 ```
 
-#### systemdサービス作成
+### systemdサービス作成
 
 ```
 stardust✨stardust:~ $ cat /etc/systemd/system/geth-sepolia.service
@@ -379,7 +379,7 @@ LimitNOFILE=1048576
 WantedBy=multi-user.target
 ```
 
-#### systemdサービス有効化
+### systemdサービス有効化
 
 ```
 stardust✨stardust:~ $ sudo systemctl daemon-reload
@@ -390,7 +390,7 @@ stardust✨stardust:~ $ sudo systemctl status geth-sepolia
 stardust✨stardust:~ $ sudo systemctl restart geth-sepolia
 ```
 
-#### systemdでgeth-sepoliaの状態を確認する
+### systemdでgeth-sepoliaの状態を確認する
 
 ```
 stardust✨stardust:~ $ systemctl status geth-sepolia --no-pager
@@ -417,7 +417,7 @@ stardust✨stardust:~ $ systemctl status geth-sepolia --no-pager
  1月 27 23:19:14 stardust geth[22309]: WARN [01-27|23:19:14.643] Beacon client online, but no consensus updates received in a while. Please fix your beacon client to follow the chain!
 ```
 
-#### systemdでgeth-sepoliaのログを確認する
+### systemdでgeth-sepoliaのログを確認する
 
 ```
 stardust✨stardust:~ $ journalctl -u geth-sepolia -n 50 --no-pager
@@ -473,7 +473,7 @@ stardust✨stardust:~ $ journalctl -u geth-sepolia -n 50 --no-pager
  1月 27 23:19:14 stardust geth[22309]: WARN [01-27|23:19:14.643] Beacon client online, but no consensus updates received in a while. Please fix your beacon client to follow the chain!
 ```
 
-#### RPC通信の接続確認
+### RPC通信の接続確認
 
 ```
 stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 \
@@ -482,7 +482,7 @@ stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 \
 {"jsonrpc":"2.0","id":1,"result":"0xaa36a7"}
 ```
 
-### lighthouseのインストール
+## lighthouseのインストール
 
 ```
 stardust✨stardust:~ $ rustc --version
