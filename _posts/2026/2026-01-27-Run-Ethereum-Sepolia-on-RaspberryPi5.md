@@ -684,6 +684,20 @@ stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 -H 'Content-Type: applicat
 0x0
 ```
 
+## Sepoliaノードの起動と終了
+
+ * 起動
+
+```
+stardust✨stardust:~ $ sudo systemctl start geth-sepolia && sudo systemctl start lighthouse-sepolia
+```
+
+ * 終了
+
+```
+stardust✨stardust:~ $ sudo systemctl stop geth-sepolia && sudo systemctl stop lighthouse-sepolia
+```
+
 ## まとめ
 
 本当はsepolia(Ethereum L1)とSoneium Minato(Ethereum L2)を接続させる予定だったけど、なぜか公式のSoneium minatoの構築ページが削除されている。。。
