@@ -187,6 +187,14 @@ RestartSec=10
 WantedBy=multi-user.target
 ```
 
+## ホスト名をstardust.localに変更する
+
+/etc/hostnameを書き換えても、書き戻されるし、raspi-configでもだめだけど、以下の方法ならホスト名を変更できた。
+
+```
+stardust✨stardust:~ $ sudo hostnamectl set-hostname stardust.local
+```
+
 
 ## 同期状況
 
