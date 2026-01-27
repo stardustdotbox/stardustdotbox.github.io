@@ -1,6 +1,6 @@
 ---
 title: 'ラズパイ5上でEthereum Sepolia（L1）を稼働させる'
-date: 2025-01-01 00:00:00
+date: 2026-01-27 20:40:26
 permalink: /posts/2026/01/Run-Ethereum-Sepolia-on-RaspberryPi5/
 tags:
   - Ethereum
