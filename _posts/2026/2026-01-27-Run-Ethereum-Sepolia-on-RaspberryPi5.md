@@ -1,17 +1,14 @@
 ---
 title: 'ラズパイ5上でEthereum Sepolia（L1）を稼働させる'
 date: 2025-01-01 00:00:00
-permalink: /posts/2026/01/template/
+permalink: /posts/2026/01/Run-Ethereum-Sepolia-on-RaspberryPi5/
 tags:
-  - template
+  - Ethereum
 header:
-  image: stardust.jpg
+  image: https://github.com/user-attachments/assets/ed5db34b-38eb-4638-b480-cc8b7818435e
 ---
 
-<video controls width="100%">
-  <source src="https://github.com/user-attachments/assets/3e07ab01-af74-4007-b685-af2cd86638e6" type="video/mp4">
-  お使いのブラウザは動画タグをサポートしていません。ヽ(´ー`)ノ
-</video>
+<img width="1920" height="600" alt="image" src="https://github.com/user-attachments/assets/ed5db34b-38eb-4638-b480-cc8b7818435e" />
 
 {% include toc %}
 
@@ -19,7 +16,7 @@ header:
 
 ```
 ┌──(stardust✨stardust)-[~/stardustdotbox.github.io/_posts]
-└─$ cp 2000-01-01-template.md 2026/2026-01-27-
+└─$ cp 2000-01-01-template.md 2026/2026-01-27-Run-Ethereum-Sepolia-on-RaspberryPi5.md
 ```
 
 # Midjourney Bot

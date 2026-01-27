@@ -4,6 +4,7 @@ date: 2026-01-10 12:57:21
 permalink: /posts/2026/01/Asatr-Peers-Program-Season3-1/
 tags:
   - Astar
+  - RaspberryPi5
 header:
   image: https://github.com/user-attachments/assets/88a35b01-514e-4d31-a949-e28218da5210
 ---
