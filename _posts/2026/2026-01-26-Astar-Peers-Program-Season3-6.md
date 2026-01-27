@@ -53,7 +53,7 @@ console=serial0,115200 console=tty1 root=PARTUUID=ca9636a7-465b-434c-a65d-f1ae7c
 stardust✨stardust:~ $ sudo reboot
 ```
 
-### cgroupによるメモリ管理が無効化されていることを確認する
+### cgroupによるメモリ管理が有効化されていることを確認する
 
 ```
 stardust✨stardust:~ $ cat /sys/fs/cgroup/cgroup.controllers
