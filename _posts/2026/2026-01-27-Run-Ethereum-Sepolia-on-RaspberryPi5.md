@@ -305,6 +305,183 @@ GOPATH=/home/stardust/go/1.25.5
 GOROOT=/home/stardust/.anyenv/envs/goenv/versions/1.25.5
 ```
 
+### 本番環境にgethを配置する
+
+```
+stardust✨stardust:~ $ sudo cp ~/go-ethereum/build/bin/geth /usr/local/bin/geth
+stardust✨stardust:~ $ sudo chmod +x /usr/local/bin/geth
+stardust✨stardust:~ $ which geth
+/usr/local/bin/geth
+stardust✨stardust:~ $ geth version
+Geth
+Version: 1.16.8-stable
+Git Commit: abeb78c647e354ed922726a1d719ac7bc64a07e2
+Git Commit Date: 20260114
+Architecture: arm64
+Go Version: go1.25.5
+Operating System: linux
+GOPATH=/home/stardust/go/1.25.5
+GOROOT=/home/stardust/.anyenv/envs/goenv/versions/1.25.5
+```
+
+### sepolia実行ユーザの作成
+
+```
+stardust✨stardust:~ $ sudo useradd --no-create-home --shell /usr/sbin/nologin sepolia
+```
+
+### データディレクトリを作成する
+
+```
+stardust✨stardust:~ $ sudo mkdir -p /var/lib/Sepolia/geth
+stardust✨stardust:~ $ sudo chown -R sepolia:sepolia /var/lib/Sepolia
+stardust✨stardust:~ $ sudo chmod 700 /var/lib/Sepolia
+```
+
+### JWT secret 作成
+
+```
+stardust✨stardust:~ $ sudo sh -c 'umask 077; openssl rand -hex 32 > /var/lib/Sepolia/jwt.hex'
+stardust✨stardust:~ $ sudo chown sepolia:sepolia /var/lib/Sepolia/jwt.hex
+```
+
+### systemdサービス作成
+
+```
+stardust✨stardust:~ $ cat /etc/systemd/system/geth-sepolia.service
+[Unit]
+Description=Sepolia Execution node (geth)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=sepolia
+Group=sepolia
+
+ExecStart=/usr/local/bin/geth \
+  --sepolia \
+  --datadir /var/lib/Sepolia/geth \
+  --syncmode snap \
+  --http \
+  --http.addr 127.0.0.1 \
+  --http.port 8545 \
+  --http.api eth,net,web3 \
+  --authrpc.addr 127.0.0.1 \
+  --authrpc.port 8551 \
+  --authrpc.jwtsecret /var/lib/Sepolia/jwt.hex \
+  --port 30303 \
+  --cache 1024
+
+Restart=always
+RestartSec=10
+LimitNOFILE=1048576
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### systemdサービス有効化
+
+```
+stardust✨stardust:~ $ sudo systemctl status geth-sepolia
+○ geth-sepolia.service - Sepolia Execution node (geth)
+     Loaded: loaded (/etc/systemd/system/geth-sepolia.service; disabled; preset: enabled)
+     Active: inactive (dead)
+stardust✨stardust:~ $ sudo systemctl start geth-sepolia
+```
+
+### systemdでsepoliaの状態を確認する
+
+```
+stardust✨stardust:~ $ systemctl status geth-sepolia --no-pager
+● geth-sepolia.service - Sepolia Execution node (geth)
+     Loaded: loaded (/etc/systemd/system/geth-sepolia.service; disabled; preset: enabled)
+     Active: active (running) since Tue 2026-01-27 23:18:37 JST; 1min 51s ago
+ Invocation: b3ca250183884dc785177d7528c42465
+   Main PID: 22309 (geth)
+      Tasks: 11 (limit: 19362)
+     Memory: 42.1M (peak: 47M)
+        CPU: 16.207s
+     CGroup: /system.slice/geth-sepolia.service
+             └─22309 /usr/local/bin/geth --sepolia --datadir /var/lib/Sepolia/geth --syncmode snap --http --http.addr 127.0.0.1 --http.port 8545 --http.api eth,net,web3 --authrpc.addr 127.0.0.1 --authrpc.port…
+
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.697] Started P2P networking                   self=enode://4efc82dcfac118323294a55f99319054ec6c7bf8143bcff7921b31df8a2f8feaf571170…0@127.0.0.1:30303
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.701] IPC endpoint opened                      url=/var/lib/Sepolia/geth/geth.ipc
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.702] Loaded JWT secret file                   path=/var/lib/Sepolia/jwt.hex crc32=0xd1658b68
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.703] HTTP server started                      endpoint=127.0.0.1:8545 auth=false prefix= cors= vhosts=localhost
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.703] WebSocket enabled                        url=ws://127.0.0.1:8551
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.703] HTTP server started                      endpoint=127.0.0.1:8551 auth=true  prefix= cors=localhost vhosts=localhost
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.705] Started log indexer
+ 1月 27 23:18:40 stardust geth[22309]: INFO [01-27|23:18:40.836] New local node record                    seq=1,769,523,519,657 id=cfaaa087d21527ac ip=58.3.29.76 udp=30303 tcp=30303
+ 1月 27 23:18:41 stardust geth[22309]: INFO [01-27|23:18:41.947] New local node record                    seq=1,769,523,519,658 id=cfaaa087d21527ac ip=10.128.1.3 udp=30303 tcp=30303
+ 1月 27 23:19:14 stardust geth[22309]: WARN [01-27|23:19:14.643] Beacon client online, but no consensus updates received in a while. Please fix your beacon client to follow the chain!
+```
+
+### systemdでsepoliaのログを確認する
+
+```
+stardust✨stardust:~ $ journalctl -u geth-sepolia -n 50 --no-pager
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333] ---------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333] Chain ID:  11155111 (sepolia)
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333] Consensus: Beacon (proof-of-stake), merged from Ethash (proof-of-work)
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333] Pre-Merge hard forks (block based):
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - Homestead:                   #0
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - Tangerine Whistle (EIP 150): #0
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - Spurious Dragon/1 (EIP 155): #0
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - Spurious Dragon/2 (EIP 158): #0
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - Byzantium:                   #0
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - Constantinople:              #0
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - Petersburg:                  #0
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - Istanbul:                    #0
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - Muir Glacier:                #0
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - Berlin:                      #0
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - London:                      #0
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333] Merge configured:
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - Total terminal difficulty:  17000000000000000
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - Merge netsplit block:       #1735371
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333] Post-Merge hard forks (timestamp based):
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - Shanghai:                    @1677557088
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - Cancun:                      @1706655072 blob: (target: 3, max: 6, fraction: 3338477)
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - Prague:                      @1741159776 blob: (target: 6, max: 9, fraction: 5007716)
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - Osaka:                       @1760427360 blob: (target: 6, max: 9, fraction: 5007716)
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - BPO1:                        @1761017184 blob: (target: 10, max: 15, fraction: 8346193)
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]  - BPO2:                        @1761607008 blob: (target: 14, max: 21, fraction: 11684671)
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333] All fork specifications can be found at https://ethereum.github.io/execution-specs/src/ethereum/forks/
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333] ---------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.333]
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.334] Loaded most recent local block           number=0 hash=25a5cc..3e6dd9 age=4y4mo2w
+ 1月 27 23:18:38 stardust geth[22309]: INFO [01-27|23:18:38.335] Initialized transaction indexer          range="last 2350000 blocks"
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.638] Enabled snap sync                        head=0 hash=25a5cc..3e6dd9
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.638] Gasprice oracle is ignoring threshold set threshold=2
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.641] Registered sync override service
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.641] Starting peer-to-peer node               instance=Geth/v1.16.8-stable-abeb78c6/linux-arm64/go1.25.5
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.693] New local node record                    seq=1,769,523,519,656 id=cfaaa087d21527ac ip=127.0.0.1 udp=30303 tcp=30303
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.697] Started P2P networking                   self=enode://4efc82dcfac118323294a55f99319054ec6c7bf8143bcff7921b31df8a2f8feaf5711700c56caf882dacccaf85fc0dfd37fa03b97797eb5655b431809cf1ce20@127.0.0.1:30303
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.701] IPC endpoint opened                      url=/var/lib/Sepolia/geth/geth.ipc
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.702] Loaded JWT secret file                   path=/var/lib/Sepolia/jwt.hex crc32=0xd1658b68
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.703] HTTP server started                      endpoint=127.0.0.1:8545 auth=false prefix= cors= vhosts=localhost
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.703] WebSocket enabled                        url=ws://127.0.0.1:8551
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.703] HTTP server started                      endpoint=127.0.0.1:8551 auth=true  prefix= cors=localhost vhosts=localhost
+ 1月 27 23:18:39 stardust geth[22309]: INFO [01-27|23:18:39.705] Started log indexer
+ 1月 27 23:18:40 stardust geth[22309]: INFO [01-27|23:18:40.836] New local node record                    seq=1,769,523,519,657 id=cfaaa087d21527ac ip=58.3.29.76 udp=30303 tcp=30303
+ 1月 27 23:18:41 stardust geth[22309]: INFO [01-27|23:18:41.947] New local node record                    seq=1,769,523,519,658 id=cfaaa087d21527ac ip=10.128.1.3 udp=30303 tcp=30303
+ 1月 27 23:19:14 stardust geth[22309]: WARN [01-27|23:19:14.643] Beacon client online, but no consensus updates received in a while. Please fix your beacon client to follow the chain!
+```
+
+### RPC通信の接続確認
+
+```
+stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 \
+  -H 'Content-Type: application/json' \
+  -d '{"jsonrpc":"2.0","id":1,"method":"eth_chainId","params":[]}'
+{"jsonrpc":"2.0","id":1,"result":"0xaa36a7"}
+```
+
 ## Startaleポートフォリオ
 
 ### タイトル
