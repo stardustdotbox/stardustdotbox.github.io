@@ -191,10 +191,68 @@ WantedBy=multi-user.target
 ## Astarコレータバイナリを安定版に置き換える
 
 ```
-
+stardust✨stardust:~/Astar $ git fetch --all --tags
+stardust✨stardust:~/Astar $ git tag --list | tail -n 20
+v5.37.0
+v5.38.0
+v5.39.0
+v5.39.1
+v5.4.0
+v5.40.0
+v5.41.0
+v5.42.0
+v5.42.1
+v5.42.2
+v5.42.3
+v5.43.0
+v5.43.1
+v5.44.0
+v5.45.0
+v5.46.0
+v5.47.0
+v5.48.0
+v5.48.1
+v5.9.0
+stardust✨stardust:~/Astar $ git checkout v5.48.0
+Previous HEAD position was d5a307237 Update Docker tags in release-client workflow (#1579)
+HEAD is now at 00338639b fix: missing migrations (#1575)
+stardust✨stardust:~/Astar $ cargo build --profile production
+stardust✨stardust:~/Astar $ /home/stardust/Astar/target/production/astar-collator \
+  --pruning archive \
+  --chain astar \
+  --base-path /var/lib/Astar \
+  --name AstarNode \
+  --port 30333 \
+  --rpc-port 9944 \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --rpc-cors all
+2026-01-27 22:20:45 Astar Collator
+2026-01-27 22:20:45 ✌️  version 5.48.0-00338639b9e
+Error: Service(Client(Backend("Io error: Permission denied (os error 13)")))
+2026-01-27 22:20:45 Failed to run the random write disk benchmark: failed to create a test file: Permission denied (os error 13)
+stardust✨stardust:~/Astar $ git checkout v5.48.1
+Previous HEAD position was 00338639b fix: missing migrations (#1575)
+HEAD is now at d5a307237 Update Docker tags in release-client workflow (#1579)
+stardust✨stardust:~/Astar $ cargo build --profile production
+stardust✨stardust:~/Astar $ /home/stardust/Astar/target/production/astar-collator \
+  --pruning archive \
+  --chain astar \
+  --base-path /var/lib/Astar \
+  --name AstarNode \
+  --port 30333 \
+  --rpc-port 9944 \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --rpc-cors all
+2026-01-27 22:44:17 Astar Collator
+2026-01-27 22:44:17 ✌️  version 5.48.0-d5a307237b3
 ```
 
+ * 本番用のノードバイナリを配置する
 
+```
+stardust✨stardust:~ $ sudo cp /home/stardust/Astar/target/production/astar-collator /usr/local/bin/
+stardust✨stardust:~ $ sudo chown astar:astar /usr/local/bin/astar-collator
+```
 
 ## 同期状況
 
