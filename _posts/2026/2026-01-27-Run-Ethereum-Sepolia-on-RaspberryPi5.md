@@ -390,7 +390,7 @@ stardust✨stardust:~ $ sudo systemctl status geth-sepolia
 stardust✨stardust:~ $ sudo systemctl start geth-sepolia
 ```
 
-### systemdでsepoliaの状態を確認する
+### systemdでgeth-sepoliaの状態を確認する
 
 ```
 stardust✨stardust:~ $ systemctl status geth-sepolia --no-pager
@@ -417,7 +417,7 @@ stardust✨stardust:~ $ systemctl status geth-sepolia --no-pager
  1月 27 23:19:14 stardust geth[22309]: WARN [01-27|23:19:14.643] Beacon client online, but no consensus updates received in a while. Please fix your beacon client to follow the chain!
 ```
 
-### systemdでsepoliaのログを確認する
+### systemdでgeth-sepoliaのログを確認する
 
 ```
 stardust✨stardust:~ $ journalctl -u geth-sepolia -n 50 --no-pager
