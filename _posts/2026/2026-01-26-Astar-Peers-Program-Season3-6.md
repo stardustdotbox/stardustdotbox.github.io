@@ -164,6 +164,31 @@ NAME          TYPE      SIZE USED PRIO
 /var/swapfile file        8G   0B   10
 ```
 
+```
+stardust✨stardust:~ $ cat /etc/systemd/system/astar.service
+[Unit]
+Description=Astar Archive node
+
+[Service]
+User=astar
+Group=astar
+
+ExecStart=/usr/local/bin/astar-collator \
+  --pruning archive \
+  --chain astar \
+  --base-path /var/lib/Astar \
+  --name AstarNode \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --rpc-cors all
+
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+```
+
+
 ## 同期状況
 
  * データをすべて削除
