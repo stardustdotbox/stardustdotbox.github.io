@@ -666,9 +666,6 @@ stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 -H 'Content-Type: applicat
 0x0
 ```
 
-https://github.com/StartaleLabs/minato-node
-
-
 ## Startaleポートフォリオ
 
 ### タイトル
@@ -685,7 +682,7 @@ https://github.com/StartaleLabs/minato-node
 
 ### なぜ重要ですか？
 
- * Ethereumおよび、Soneiumの実験をするためのベースを構築します。
+ * EVM学習の基礎を固めます。
 
 ### ブログポスト
 
