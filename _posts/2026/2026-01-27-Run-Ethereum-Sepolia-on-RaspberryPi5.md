@@ -19,6 +19,18 @@ header:
 └─$ cp 2000-01-01-template.md 2026/2026-01-27-Run-Ethereum-Sepolia-on-RaspberryPi5.md
 ```
 
+## はじめに
+
+SepoliaはEthereum L1の公式テストネットであり、EVM・Execution Layer（geth）・Consensus Layer（lighthouse）・RPC仕様はMainnetと同一です。
+ラズパイ5上でSepoliaノードを稼働させることで、以下の点を学ぶことができます。
+
+ - EVMの挙動
+ - トランザクション処理フロー
+ - ブロック生成・確定（finality）
+ - Execution / Consensus の役割分離
+
+これは、RPCプロバイダ利用やL2のみの開発では得られないEthereumの基礎構造そのものの理解につながります。ヽ(´ー`)ノ
+
 ## ラズパイ5(ノードマシン)のスペック紹介
 
 ラズパイ5(16GB)と4TBのUSB-SSDの構成になっているよヽ(´ー`)ノ
