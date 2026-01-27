@@ -155,9 +155,6 @@ WantedBy=multi-user.target
 root@stardust:~# sudo systemctl daemon-reload
 root@stardust:~# sudo systemctl enable --now enable-swapfile.service
 Created symlink '/etc/systemd/system/multi-user.target.wants/enable-swapfile.service' → '/etc/systemd/system/enable-swapfile.service'.
-root@stardust:~# swapon --show --output=NAME,TYPE,SIZE,PRIO
-swapon: option '--output-all' doesn't allow an argument
-Try 'swapon --help' for more information.
 root@stardust:~# swapon --show
 NAME          TYPE      SIZE USED PRIO
 /dev/zram0    partition   8G   0B  100
