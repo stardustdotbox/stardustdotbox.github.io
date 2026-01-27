@@ -382,11 +382,12 @@ WantedBy=multi-user.target
 #### systemdサービス有効化
 
 ```
+stardust✨stardust:~ $ sudo systemctl daemon-reload
 stardust✨stardust:~ $ sudo systemctl status geth-sepolia
 ○ geth-sepolia.service - Sepolia Execution node (geth)
      Loaded: loaded (/etc/systemd/system/geth-sepolia.service; disabled; preset: enabled)
      Active: inactive (dead)
-stardust✨stardust:~ $ sudo systemctl start geth-sepolia
+stardust✨stardust:~ $ sudo systemctl restart geth-sepolia
 ```
 
 #### systemdでgeth-sepoliaの状態を確認する
@@ -481,6 +482,193 @@ stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 \
 {"jsonrpc":"2.0","id":1,"result":"0xaa36a7"}
 ```
 
+### lighthouseのインストール
+
+```
+stardust✨stardust:~ $ rustc --version
+rustc 1.92.0 (ded5c06cf 2025-12-08)
+stardust✨stardust:~ $ cargo --version
+cargo 1.92.0 (344c4567c 2025-10-21)
+stardust✨stardust:~ $ git clone https://github.com/sigp/lighthouse.git
+stardust✨stardust:~ $ cd ~/lighthouse
+stardust✨stardust:~/lighthouse $ git fetch --all --tags
+stardust✨stardust:~/lighthouse $ git tag --list "v*" --sort=version:refname | tail -n 10
+v7.0.0-beta.4
+v7.0.0-beta.5
+v7.0.0-beta.7
+v7.0.1
+v7.1.0
+v8.0.0
+v8.0.0-rc.0
+v8.0.0-rc.1
+v8.0.0-rc.2
+v8.0.1
+stardust✨stardust:~/lighthouse $ git checkout v8.0.1
+Note: switching to 'v8.0.1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at ced49dd26 Release v8.0.1 (#8414)
+stardust✨stardust:~/lighthouse $ make
+stardust✨stardust:~/lighthouse $ ./target/release/lighthouse --version
+Lighthouse v8.0.1-ced49dd
+BLS library: blst
+BLS hardware acceleration: true
+SHA256 hardware acceleration: false
+Allocator: jemalloc (16K)
+Profile: release
+Specs: mainnet (true), minimal (false), gnosis (false)
+```
+
+### 本番環境に構築する
+
+```
+stardust✨stardust:~ $ sudo cp ~/lighthouse/target/release/lighthouse /usr/local/bin/lighthouse
+stardust✨stardust:~ $ sudo chmod +x /usr/local/bin/lighthouse
+stardust✨stardust:~ $ lighthouse --version
+Lighthouse v8.0.1-ced49dd
+BLS library: blst
+BLS hardware acceleration: true
+SHA256 hardware acceleration: false
+Allocator: jemalloc (16K)
+Profile: release
+Specs: mainnet (true), minimal (false), gnosis (false)
+```
+
+### データディレクトリを作成する
+
+```
+stardust✨stardust:~ $ sudo mkdir -p /var/lib/Sepolia/lighthouse
+stardust✨stardust:~ $ sudo chown -R sepolia:sepolia /var/lib/Sepolia/lighthouse
+```
+
+### systemd サービス作成（Sepolia / geth と連携）
+
+```
+stardust✨stardust:~ $ cat /etc/systemd/system/lighthouse-sepolia.service
+[Unit]
+Description=Sepolia Consensus node (lighthouse)
+After=geth-sepolia.service
+Wants=geth-sepolia.service
+
+[Service]
+User=sepolia
+Group=sepolia
+
+ExecStart=/usr/local/bin/lighthouse beacon_node \
+  --network sepolia \
+  --datadir /var/lib/Sepolia/lighthouse \
+  --execution-endpoint http://127.0.0.1:8551 \
+  --execution-jwt /var/lib/Sepolia/jwt.hex \
+  --checkpoint-sync-url https://sepolia.checkpoint-sync.ethpandaops.io \
+  --http --http-address 127.0.0.1 --http-port 5052
+
+Restart=always
+RestartSec=10
+LimitNOFILE=1048576
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### 有効化して起動する
+
+```
+stardust✨stardust:~ $ sudo systemctl daemon-reload
+stardust✨stardust:~ $ sudo systemctl status lighthouse-sepolia
+○ lighthouse-sepolia.service - Sepolia Consensus node (lighthouse)
+     Loaded: loaded (/etc/systemd/system/lighthouse-sepolia.service; disabled; preset: enabled)
+     Active: inactive (dead)
+stardust✨stardust:~ $ sudo systemctl start lighthouse-sepolia
+```
+
+### ログを確認する
+
+```
+stardust✨stardust:~ $ journalctl -u lighthouse-sepolia -n 120 --no-pager
+ 1月 28 00:57:39 stardust systemd[1]: Started lighthouse-sepolia.service - Sepolia Consensus node (lighthouse).
+ 1月 28 00:57:39 stardust lighthouse[63133]: Jan 28 00:57:39.753 INFO  Lighthouse started                            version: "Lighthouse/v8.0.1-ced49dd"
+ 1月 28 00:57:39 stardust lighthouse[63133]: Jan 28 00:57:39.753 INFO  Configured network                            network_name: "sepolia"
+ 1月 28 00:57:39 stardust lighthouse[63133]: Jan 28 00:57:39.755 INFO  Data directory initialised                    datadir: /var/lib/Sepolia/lighthouse
+ 1月 28 00:57:39 stardust lighthouse[63133]: Jan 28 00:57:39.756 INFO  Deposit contract                              deploy_block: 1273020, address: 0x7f02c3e3c98b133055b8b348b2ac625669ed295d
+ 1月 28 00:57:39 stardust lighthouse[63133]: Jan 28 00:57:39.758 WARN  Fork boundaries are not well aligned / multiples of 256  info: "This may cause issues as fork boundaries do not align with the start of sync committee period.", misaligned_forks: [(Altair, Epoch(50)), (Bellatrix, Epoch(100))]
+ 1月 28 00:57:39 stardust lighthouse[63133]: Jan 28 00:57:39.790 INFO  Blob DB initialized                           path: "/var/lib/Sepolia/lighthouse/beacon/blobs_db", oldest_blob_slot: Some(Slot(4243456)), oldest_data_column_slot: Some(Slot(8724480))
+```
+
+### 同期状態を確認する
+
+#### EL(Geth)
+
+ * eth_syncingの返り値がfalseになったら、同期が完了している
+
+```
+stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":1,"method":"eth_syncing","params":[]}' | jq
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "currentBlock": "0x1e275b",
+    "healedBytecodeBytes": "0x0",
+    "healedBytecodes": "0x0",
+    "healedTrienodeBytes": "0x0",
+    "healedTrienodes": "0x0",
+    "healingBytecode": "0x0",
+    "healingTrienodes": "0x0",
+    "highestBlock": "0x9aa7dc",
+    "startingBlock": "0x1a050b",
+    "stateIndexRemaining": "0x0",
+    "syncedAccountBytes": "0x238c4f4c",
+    "syncedAccounts": "0x290fd6",
+    "syncedBytecodeBytes": "0x2a37a3b7",
+    "syncedBytecodes": "0x4ecb8",
+    "syncedStorage": "0xa86b70",
+    "syncedStorageBytes": "0x9474f7df",
+    "txIndexFinishedBlocks": "0x0",
+    "txIndexRemainingBlocks": "0x1"
+  }
+}
+```
+
+#### CL(Lighthouse)
+
+ * 追従モード
+
+```
+stardust✨stardust:~ $ curl -s http://127.0.0.1:5052/eth/v1/node/syncing | jq
+{
+  "data": {
+    "is_syncing": false,
+    "is_optimistic": true,
+    "el_offline": false,
+    "head_slot": "9483106",
+    "sync_distance": "0"
+  }
+}
+```
+
+### 正規チェインになれたことを確認する
+
+```
+stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":1,"method":"eth_blockNumber","params":[]}' | jq -r .result
+0x0
+```
+
+https://github.com/StartaleLabs/minato-node
+
+
 ## Startaleポートフォリオ
 
 ### タイトル
@@ -527,3 +715,4 @@ stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 \
  * https://geth.ethereum.org/docs
  * https://geth.ethereum.org/downloads
  * https://github.com/ethereum/go-ethereum/releases
+ * https://github.com/sigp/lighthouse/
