@@ -164,6 +164,8 @@ NAME          TYPE      SIZE USED PRIO
 /var/swapfile file        8G   0B   10
 ```
 
+## Astar Archive Nodeのユニットファイルをシンプル化
+
 ```
 stardust✨stardust:~ $ cat /etc/systemd/system/astar.service
 [Unit]
@@ -191,15 +193,15 @@ WantedBy=multi-user.target
 
 ## 同期状況
 
- * データをすべて削除
+### 同期データをすべて削除
 
 ```
 stardust✨stardust:~ $ date
-2026-01-27(火) 03:24
+2026-01-27(火) 18:00
 stardust✨stardust:/var/lib/Astar $ sudo rm -fr *
 ```
 
- * リレーチェインの同期状態を確認
+### リレーチェインの同期状態を確認
 
 ```
 stardust✨stardust:~ $ journalctl -u astar -n 2 --no-pager | egrep "Relaychain"
