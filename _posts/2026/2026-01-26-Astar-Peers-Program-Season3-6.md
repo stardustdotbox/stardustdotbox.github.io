@@ -188,6 +188,14 @@ RestartSec=10
 WantedBy=multi-user.target
 ```
 
+## Astarコレータバイナリを安定版に置き換える
+
+```
+
+```
+
+
+
 ## 同期状況
 
 ### 同期データをすべて削除

@@ -1,7 +1,7 @@
 ---
 title: 'Astarピアーズプログラムシーズン3に応募する(3)'
 date: 2026-01-12 14:46:41
-permalink: /posts/2026/01/Asatr-Peers-Program-Season3-3/
+permalink: /posts/2026/01/Astar-Peers-Program-Season3-3/
 tags:
   - Astar
   - RaspberryPi5
