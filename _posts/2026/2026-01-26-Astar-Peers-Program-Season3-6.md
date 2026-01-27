@@ -137,7 +137,31 @@ NAME          TYPE      SIZE USED PRIO
 ## swapfileの読み込みをunitファイル化する
 
 ```
+root@stardust:~# cat > /etc/systemd/system/enable-swapfile.service
+[Unit]
+Description=Enable /var/swapfile with priority 10 (keep zram enabled)
+After=dev-zram0.swap
+Wants=dev-zram0.swap
+ConditionPathExists=/var/swapfile
 
+[Service]
+Type=oneshot
+ExecStart=/sbin/swapon -p 10 /var/swapfile
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+^C
+root@stardust:~# sudo systemctl daemon-reload
+root@stardust:~# sudo systemctl enable --now enable-swapfile.service
+Created symlink '/etc/systemd/system/multi-user.target.wants/enable-swapfile.service' → '/etc/systemd/system/enable-swapfile.service'.
+root@stardust:~# swapon --show --output=NAME,TYPE,SIZE,PRIO
+swapon: option '--output-all' doesn't allow an argument
+Try 'swapon --help' for more information.
+root@stardust:~# swapon --show
+NAME          TYPE      SIZE USED PRIO
+/dev/zram0    partition   8G   0B  100
+/var/swapfile file        8G   0B   10
 ```
 
 ## 同期状況
