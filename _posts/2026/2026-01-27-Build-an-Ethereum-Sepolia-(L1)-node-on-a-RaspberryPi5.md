@@ -709,7 +709,7 @@ stardust✨stardust:~ $ sudo systemctl stop geth-sepolia && sudo systemctl stop 
 
 ### タイトル
 
- * ラズパイ5上でEthereum Sepolia（L1）を稼働させる
+ * ラズパイ5上でEthereum Sepolia（L1）ノードを構築する
 
 ### タグ
 
@@ -717,11 +717,11 @@ stardust✨stardust:~ $ sudo systemctl stop geth-sepolia && sudo systemctl stop 
 
 ### これはなんですか？
 
- * ラズパイ5上でEthereum Sepolia（L1）を稼働させた時の作業ログです。
+ * ラズパイ5上でEthereum Sepolia（L1）ノードを構築した時の作業ログです。
 
 ### なぜ重要ですか？
 
- * EVM学習のための基礎を固めます。
+ * EVM学習のための基礎を固めます。この知識はSoneiumやAstarにも応用できます。
 
 ### ブログポスト
 
