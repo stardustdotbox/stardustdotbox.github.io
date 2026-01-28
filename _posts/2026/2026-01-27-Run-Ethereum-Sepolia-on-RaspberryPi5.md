@@ -32,14 +32,6 @@ SepoliaはEthereum L1の公式テストネットであり、EVM・Execution Laye
 
 これは、RPCプロバイダ利用やL2のみの開発では得られないEthereumの基礎構造そのものの理解につながります。ヽ(´ー`)ノ
 
-## Execution / Consensus の役割分離
-
-Ethereum は The Merge 以降、ノードの役割が Execution Layer（実行） と Consensus Layer（合意） に明確に分離された。
-この分離は「性能のため」だけではなく、責務を分けて安全性・拡張性・クライアント多様性を確保するためのアーキテクチャである。
-
- * EL（Execution Layer） はこのトランザクションを実行したら、状態（state）はどう変わるか？を解く (EVM / トランザクション / state / ガス / ストレージ)
- * CL（Consensus Layer） は次のブロックはどれで、どの順番が正史（canonical）か？ を解く (PoS / フォーク選択 / finality / validator / ブロック提案)
-
 ## ラズパイ5(ノードマシン)のスペック紹介
 
 ラズパイ5(16GB)と4TBのUSB-SSDの構成になっているよヽ(´ー`)ノ
@@ -148,6 +140,14 @@ stardust.local (Raspberry Pi 5)
 └─ Consensus Layer (CL)
      └─ lighthouse (Beacon Node)
 ```
+
+## Execution / Consensus の役割分離
+
+Ethereum は The Merge 以降、ノードの役割が Execution Layer（実行） と Consensus Layer（合意） に明確に分離された。
+この分離は「性能のため」だけではなく、責務を分けて安全性・拡張性・クライアント多様性を確保するためのアーキテクチャである。
+
+ * EL（Execution Layer） はこのトランザクションを実行したら、状態（state）はどう変わるか？を解く (EVM / トランザクション / state / ガス / ストレージ)
+ * CL（Consensus Layer） は次のブロックはどれで、どの順番が正史（canonical）か？ を解く (PoS / フォーク選択 / finality / validator / ブロック提案)
 
 ## anyenvのインストール
 
