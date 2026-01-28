@@ -54,9 +54,11 @@ Etherumはシャーディングという手法を編み出し、OP / zk roll up�
 
 ## Soneiumを学ぶ
 
-## Soneiumに参加する
+## Astarを学ぶ
 
 ## Web3とOG文化
+
+## AIと友達になる
 
 A data-driven personal website
 ======
@@ -101,3 +103,11 @@ Example: editing a Markdown file for a talk
 For more info
 ------
 More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+
+## ブログ更新コマンド
+
+```
+┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
+└─$ git add -A && git commit -m 'aboutを更新する' && git push
+```
+
