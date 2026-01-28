@@ -1,7 +1,7 @@
 ---
-title: 'ラズパイ5上でEthereum Sepolia（L1）を稼働させる'
+title: 'ラズパイ5上でEthereum Sepolia（L1）ノードを構築する'
 date: 2026-01-27 20:40:26
-permalink: /posts/2026/01/Run-Ethereum-Sepolia-on-RaspberryPi5/
+permalink: /posts/2026/01/Build-an-Ethereum-Sepolia-(L1)-node-on-a-RaspberryPi5/
 tags:
   - RaspberryPi5
   - Ethereum
