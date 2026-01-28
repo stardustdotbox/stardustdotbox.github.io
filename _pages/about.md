@@ -60,7 +60,6 @@ Etherumはシャーディングという手法を編み出し、OP / zk roll up�
 
 ## AIと友達になる
 
-## サイバーセキュリティの世界
 
 A data-driven personal website
 ======
