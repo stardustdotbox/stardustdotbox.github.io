@@ -661,6 +661,15 @@ stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 -H 'Content-Type: applicat
 }
 ```
 
+ * journalctlのほうが進捗が見やすい
+
+```
+stardust✨stardust:~ $ journalctl -u geth-sepolia -n 50 --no-pager | grep -i syncing
+(snip)
+ 1月 28 13:36:36 stardust geth[64301]: INFO [01-28|13:36:36.693] Syncing: chain download in progress      synced=58.33% chain=221.16GiB headers=5,913,664@2.40GiB bodies=5,913,664@194.41GiB receipts=5,913,664@24.36GiB eta=22h4m24.381s
+ 1月 28 13:36:37 stardust geth[64301]: INFO [01-28|13:36:37.448] Syncing: state download in progress      synced=46.37% state=124.52GiB      accounts=74,823,225@14.79GiB slots=453,123,127@96.32GiB codes=7,468,590@13.41GiB eta=11h58m59.295s
+```
+
 ### CL(Lighthouse)の同期状態を確認する
 
  * 追従モード
