@@ -13,13 +13,6 @@ header:
 
 {% include toc %}
 
-### 記事作成コマンド
-
-```
-┌──(stardust✨stardust)-[~/stardustdotbox.github.io/_posts]
-└─$ cp 2000-01-01-template.md 2026/2026-01-27-Run-Ethereum-Sepolia-on-RaspberryPi5.md
-```
-
 ## はじめに
 
 SepoliaはEthereum L1の公式テストネットであり、EVM・Execution Layer（geth）・Consensus Layer（lighthouse）・RPC仕様はMainnetと同一です。
