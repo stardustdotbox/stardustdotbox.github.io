@@ -711,7 +711,6 @@ stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 -H 'Content-Type: applicat
 
 ```
 stardust✨stardust:~ $ sudo du -sch /var/lib/Sepolia/
-[sudo] stardust のパスワード:
 767G    /var/lib/Sepolia/
 767G    合計
 ```
