@@ -38,6 +38,7 @@ author_profile: true
  * [web-check.xyz](https://web-check.xyz/)
  * [新世界の株価](https://kabuka.seisakusho.jp/?mode=pcmax)
  * [asciiflow.com](https://asciiflow.com/)
+ * [Bash-Prompt-Generator.org](https://bash-prompt-generator.org/)
 
 ## ウォレット
 
