@@ -1,7 +1,7 @@
 ---
 title: 'ラズパイ5上でEthereum Sepolia（L1）ノードを構築する'
 date: 2026-01-27 20:40:26
-permalink: /posts/2026/01/Build-an-Ethereum-Sepolia-(L1)-node-on-a-RaspberryPi5/
+permalink: /posts/2026/01/Build-Ethereum-Sepolia-(L1)-node-on-RaspberryPi5/
 tags:
   - RaspberryPi5
   - Ethereum
@@ -624,7 +624,7 @@ stardust✨stardust:~ $ journalctl -u lighthouse-sepolia -n 120 --no-pager
 
 ### EL(Geth)の同期状態を確認する
 
- * eth_syncingの返り値がfalseになったら、同期が完了している
+ * eth_syncingの返り値により同期中かわかる
 
 ```
 stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":1,"method":"eth_syncing","params":[]}' | jq
@@ -651,6 +651,17 @@ stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 -H 'Content-Type: applicat
     "txIndexFinishedBlocks": "0x0",
     "txIndexRemainingBlocks": "0x1"
   }
+}
+```
+
+ * eth_syncingの返り値がfalseになったら、同期が完了している
+
+```
+stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":1,"method":"eth_syncing","params":[]}' | jq
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": false
 }
 ```
 
@@ -682,9 +693,18 @@ stardust✨stardust:~ $ curl -s http://127.0.0.1:5052/eth/v1/node/syncing | jq
 
 ### 正規チェインになれたことを確認する
 
+ * 同期中
+
 ```
 stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":1,"method":"eth_blockNumber","params":[]}' | jq -r .result
 0x0
+```
+
+ * 同期完了
+
+```
+stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":1,"method":"eth_blockNumber","params":[]}' | jq -r .result
+0x9acf6d
 ```
 
 ## Sepoliaノードの起動と終了
