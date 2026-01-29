@@ -707,6 +707,15 @@ stardust✨stardust:~ $ curl -s http://127.0.0.1:8545 -H 'Content-Type: applicat
 0x9acf6d
 ```
 
+### 同期完了後の同期データサイズ
+
+```
+stardust✨stardust:~ $ sudo du -sch /var/lib/Sepolia/
+[sudo] stardust のパスワード:
+767G    /var/lib/Sepolia/
+767G    合計
+```
+
 ## Sepoliaノードの起動と終了
 
  * 起動
