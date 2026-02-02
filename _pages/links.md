@@ -24,6 +24,11 @@ author_profile: true
  * [ChatGPT](https://chatgpt.com/)
  * [Grok](https://grok.com/)
 
+## AI-Agent
+
+ * [OpenClaw](https://openclaw.ai/)
+ * [moltbook](https://www.moltbook.com/)
+
 ## SNS
 
  * [X](https://x.com/)
