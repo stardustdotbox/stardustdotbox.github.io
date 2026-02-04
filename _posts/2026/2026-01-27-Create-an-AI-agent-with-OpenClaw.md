@@ -505,3 +505,4 @@ Troubleshooting: https://docs.openclaw.ai/troubleshooting
  * https://en.wikipedia.org/wiki/Moltbook
  * https://github.com/moltbook
  * https://robonet.finance/
+ * https://www.moltlab.ai/

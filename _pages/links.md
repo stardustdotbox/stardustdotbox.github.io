@@ -37,6 +37,7 @@ author_profile: true
 ## AI-MODEL
 
  * [Ollama](https://ollama.com/search)
+ * [OpenRouter](https://openrouter.ai/)
 
 ## SNS
 
