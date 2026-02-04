@@ -21,13 +21,21 @@ author_profile: true
 
 ## AI
 
+ * [OpenAI Platform](https://platform.openai.com/)
  * [ChatGPT](https://chatgpt.com/)
+ * [Gemini](https://gemini.google.com/?hl=ja)
  * [Grok](https://grok.com/)
+ * [Claude](https://claude.ai/login)
+ * [Claude Console](https://platform.claude.com/)
 
 ## AI-Agent
 
  * [OpenClaw](https://openclaw.ai/)
  * [moltbook](https://www.moltbook.com/)
+
+## AI-MODEL
+
+ * [Ollama](https://ollama.com/search)
 
 ## SNS
 
@@ -116,6 +124,7 @@ author_profile: true
 ## Ethereum
 
  * [イーサリアム公式サイト](https://ethereum.org/ja/)
+ * [ethresearch](https://ethresear.ch/)
  * [Etherscan](https://etherscan.io/)
  * [The Ethernaut](https://ethernaut.openzeppelin.com/)
  * [CryptoZombies](https://cryptozombies.io/jp/)
