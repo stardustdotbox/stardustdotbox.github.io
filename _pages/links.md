@@ -187,6 +187,10 @@ author_profile: true
 
  * [参政党](https://sanseito.jp/)
 
+## 個人ブログ
+
+ * [Made By Nathan](https://madebynathan.com/)
+
 ## ブログ更新コマンド
 
 ```
