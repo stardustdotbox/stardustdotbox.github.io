@@ -11,6 +11,7 @@ author_profile: true
  * [Xアナリティクス](https://analytics.x.com)
  * [Googleアナリティクス](https://analytics.google.com/)
  * [Markdown]({{site.uerl}}/markdown/)
+ * [commit](https://github.com/stardustdotbox/stardustdotbox.github.io/commits/master/)
  * [Pastebin_2025](https://github.com/stardustdotbox/stardustdotbox.github.io/wiki/Pastebin_2025)
  * [Pastebin_2026](https://github.com/stardustdotbox/stardustdotbox.github.io/wiki/Pastebin_2026)
 

@@ -486,7 +486,7 @@ Troubleshooting: https://docs.openclaw.ai/troubleshooting
 
 ```
 ┌──(stardust✨stardust)-[~/stardustdotbox.github.io]
-└─$ git add -A && git commit -m 'Startale App調査レポートの更新' && git push
+└─$ git add -A && git commit -m 'OpenClawでAIエージェントを作成する' && git push
 ```
 
 ## 参考文献
