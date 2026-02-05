@@ -195,6 +195,7 @@ author_profile: true
 
  * [テクノロジーとか哲学とか歴史とか](https://note.com/sota_watanabe)
  * [Made By Nathan](https://madebynathan.com/)
+ * [jhcoder](https://zenn.dev/json_hardcoder)
 
 ## ブログ更新コマンド
 
