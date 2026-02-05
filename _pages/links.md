@@ -193,6 +193,7 @@ author_profile: true
 
 ## 個人ブログ
 
+ * [テクノロジーとか哲学とか歴史とか](https://note.com/sota_watanabe)
  * [Made By Nathan](https://madebynathan.com/)
 
 ## ブログ更新コマンド
