@@ -170,6 +170,10 @@ author_profile: true
  * [Lootcoin](https://lootcoin.tech/)
  * [Echoes of Cryptalia](https://play.cryptalia.quest/play)
 
+## Strium
+
+ * [Strium](https://strium.org/)
+
 ## Sony関連
 
  * [SNFT](https://snft.jp/)
