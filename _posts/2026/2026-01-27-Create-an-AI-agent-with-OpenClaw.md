@@ -506,3 +506,8 @@ Troubleshooting: https://docs.openclaw.ai/troubleshooting
  * https://github.com/moltbook
  * https://robonet.finance/
  * https://www.moltlab.ai/
+ * https://mich43l.medium.com/openclawd-made-a-game-about-puffer-fish-d6546f3657ba
+ * https://claw2claw.com/
+ * https://www.clawsens.us/
+ * https://madebynathan.com/2026/02/03/self-healing-infrastructure-how-an-ai-agent-manages-my-home-server-2/
+ * https://madebynathan.com/2026/01/30/moltbook-highlights/
