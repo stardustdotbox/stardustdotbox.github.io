@@ -66,6 +66,32 @@ sudo -u astar /usr/local/bin/astar-collator \
     --name AstarNode \
     --chain astar \
     --base-path /var/lib/Astar \
+    --db-cache 2048 \
+    --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+    -- \
+    --state-pruning 100 \
+    --blocks-pruning 100 
+```
+
+
+### rocskdbからparitydbに切り替える
+
+ * データベースを再構築
+
+```
+stardust✨stardust:~ $ sudo rm -fr /var/lib/astar
+stardust✨stardust:~ $ sudo mkdir -p /var/lib/astar
+stardust✨stardust:~ $ sudo chown -R astar:astar /var/lib/astar
+```
+
+```
+sudo -u astar /usr/local/bin/astar-collator \
+    --state-pruning archive \
+    --blocks-pruning archive \
+    --name AstarNode \
+    --chain astar \
+    --base-path /var/lib/astar \
+    --database paritydb \
     --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
     -- \
     --state-pruning 100 \
