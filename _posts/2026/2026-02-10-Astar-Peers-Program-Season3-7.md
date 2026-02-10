@@ -79,14 +79,6 @@ sudo -u astar /usr/local/bin/astar-collator \
 stardust✨stardust:~ $ axel -c https://snapshots.stakecraft.com/astar_2026-02-10.tar
 ```
 
-### 本当にラズパイ5でAstar Archiveノードを現状運用できるのか？
-
- * https://telemetry.polkadot.io/#stats/0x9eb76c5184c4ab8679d2d5d819fdf90b9c001403e9e17da2e14b6d8aec4029c6
-
-<img width="378" height="125" alt="image" src="https://github.com/user-attachments/assets/fa3352f1-06f0-40dc-bcf5-b80f76aee20c" />
-
-ラズパイを実行しているのは、たった一人しかいないけど、どうなっているの？
-確かに過去はぎりぎり実行できていたみたいだけど、現状は、メモリ16GBとzram8GBとswap file 8GBをすぐに上限まで使って、watch dogに殺される。
 
 ## ブログ更新コマンド
 
