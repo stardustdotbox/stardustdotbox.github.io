@@ -51,11 +51,13 @@ stardust✨stardust:~ $ dmesg | grep -i -E "uas|usb-storage"
 [    1.933404] scsi host0: usb-storage 2-1.1:1.0
 ```
 
-### ノードが同期されるとメモリが逼迫されてノードが落ちる
+### GUIを落とす
 
- * https://docs.astar.network/docs/build/nodes/rpi-cheat-sheet/
+```
+stardust✨stardust:~ $ sudo systemctl isolate multi-user.target
+```
 
-様々なオプションを利用してみたが、一貫して同期完了後メモリ逼迫により、15分以内にastar-collatorノードが落ちる。
+### 手動起動で安定稼働を確認する
 
 ```
 sudo -u astar /usr/local/bin/astar-collator \
@@ -67,12 +69,12 @@ sudo -u astar /usr/local/bin/astar-collator \
     --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
     -- \
     --state-pruning 100 \
-    --blocks-pruning 100 \
-    --sync warp
+    --blocks-pruning 100 
 ```
 
 ### スナップショットデータを取得する
 
+ * https://snapshots.stakecraft.com/
  * https://services.stakecraft.com/docs/snapshots/substrate-astar-snapshot
 
 ```
