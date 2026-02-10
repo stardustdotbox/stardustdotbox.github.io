@@ -98,6 +98,36 @@ sudo -u astar /usr/local/bin/astar-collator \
     --blocks-pruning 100 
 ```
 
+ * systemdのユニットファイルを書き換える
+
+```
+stardust✨stardust:~ $ cat /etc/systemd/system/astar.service
+[Unit]
+Description=Astar Archive node
+
+[Service]
+User=astar
+Group=astar
+
+ExecStart=/usr/local/bin/astar-collator \
+  --state-pruning archive \
+  --blocks-pruning archive \
+  --name AstarNode \
+  --chain astar \
+  --base-path /var/lib/astar \
+  --database paritydb \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  -- \
+  --state-pruning 100 \
+  --blocks-pruning 100 
+
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+```
+
 ### スナップショットデータを取得する
 
  * https://snapshots.stakecraft.com/
@@ -106,7 +136,6 @@ sudo -u astar /usr/local/bin/astar-collator \
 ```
 stardust✨stardust:~ $ axel -c https://snapshots.stakecraft.com/astar_2026-02-10.tar
 ```
-
 
 ## ブログ更新コマンド
 
