@@ -59,14 +59,37 @@ stardust✨stardust:~ $ dmesg | grep -i -E "uas|usb-storage"
 
 ### ノードが同期されるとメモリが逼迫されてノードが落ちる
 
+様々なオプションを利用してみたが、一貫して、同期後、15分以内にastar-collatorノードが落ちる。
+
 ```
-stardust✨stardust:~ $ sudo -u astar /usr/local/bin/astar-collator \
-  --pruning archive \
-  --chain astar \
-  --base-path /var/lib/Astar \
-  --name AstarNode \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --rpc-cors all
+sudo -u astar /usr/local/bin/astar-collator \
+    --state-pruning archive \
+    --blocks-pruning archive \
+    --name AstarNode \
+    --chain astar \
+    --base-path /var/lib/Astar \
+    --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+    -- \
+    --state-pruning 100 \
+    --blocks-pruning 100 \
+    --sync warp
+```
+
+### 本当にラズパイノードでAstar Archiveノードを運用できるのか？
+
+ * https://telemetry.polkadot.io/#stats/0x9eb76c5184c4ab8679d2d5d819fdf90b9c001403e9e17da2e14b6d8aec4029c6
+
+<img width="378" height="125" alt="image" src="https://github.com/user-attachments/assets/fa3352f1-06f0-40dc-bcf5-b80f76aee20c" />
+
+ラズパイを実行しているのは、たった一人しかいないけど、どうなっているの？
+
+
+### スナップショットデータを取得する
+
+ * https://services.stakecraft.com/docs/snapshots/substrate-astar-snapshot
+
+```
+stardust✨stardust:~ $ axel -c https://snapshots.stakecraft.com/astar_2026-02-10.tar
 ```
 
 ## ブログ更新コマンド
@@ -85,3 +108,12 @@ stardust✨stardust:~ $ sudo -u astar /usr/local/bin/astar-collator \
  * https://www.stardust.box/posts/2026/01/Astar-Peers-Program-Season3-5/
  * https://www.stardust.box/posts/2026/01/Astar-Peers-Program-Season3-6/
  * https://telemetry.polkadot.io/
+ * https://peers.sun-t-sarah.work/
+ * https://docs.astar.network/docs/build/nodes/snapshots
+ * https://all4nodes.io/
+ * https://docs.astar.network/docs/build/nodes/archive-node/
+ * https://docs.astar.network/docs/build/nodes/rpi-cheat-sheet
+ * https://snapshots.stakecraft.com/
+ * https://github.com/bld75/Plasm-RPI/blob/main/astar-rpi-cheatsheet.md
+ * https://medium.com/@sequaja.marco/astar-peers-program-troubleshooting-guide-and-faq-a6958a76d021
+ * https://docs.astar.network/docs/build/nodes/collator/spinup_collator/#identity
