@@ -59,7 +59,7 @@ stardust✨stardust:~ $ dmesg | grep -i -E "uas|usb-storage"
 
 ### ノードが同期されるとメモリが逼迫されてノードが落ちる
 
-様々なオプションを利用してみたが、一貫して、同期後、15分以内にastar-collatorノードが落ちる。
+様々なオプションを利用してみたが、一貫して、同期完了後、15分以内にastar-collatorノードが落ちる。
 
 ```
 sudo -u astar /usr/local/bin/astar-collator \
