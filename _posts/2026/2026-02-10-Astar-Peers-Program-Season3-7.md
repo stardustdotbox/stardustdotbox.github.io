@@ -153,7 +153,6 @@ stardust✨stardust:~ $ axel -c https://snapshots.stakecraft.com/astar_2026-02-1
  * https://www.stardust.box/posts/2026/01/Astar-Peers-Program-Season3-5/
  * https://www.stardust.box/posts/2026/01/Astar-Peers-Program-Season3-6/
  * https://telemetry.polkadot.io/
- * https://peers.sun-t-sarah.work/
  * https://docs.astar.network/docs/build/nodes/snapshots
  * https://all4nodes.io/
  * https://docs.astar.network/docs/build/nodes/archive-node/
@@ -162,4 +161,3 @@ stardust✨stardust:~ $ axel -c https://snapshots.stakecraft.com/astar_2026-02-1
  * https://github.com/bld75/Plasm-RPI/blob/main/astar-rpi-cheatsheet.md
  * https://medium.com/@sequaja.marco/astar-peers-program-troubleshooting-guide-and-faq-a6958a76d021
  * https://docs.astar.network/docs/build/nodes/collator/spinup_collator/#identity
- * https://note.com/tksarahweb3/n/nded443d0e3ff
