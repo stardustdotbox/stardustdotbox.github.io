@@ -20,14 +20,8 @@ SanDisk Extreme のUASが有効化されていると、 高I/O時にOSがハン�
  * デバイス確認
 
 ```
-stardust✨stardust:~ $ lsusb
-Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-Bus 001 Device 002: ID 2109:2817 VIA Labs, Inc. USB2.0 Hub             
-Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
-Bus 002 Device 002: ID 2109:0817 VIA Labs, Inc. USB3.0 Hub             
+stardust✨stardust:~ $ lsusb             
 Bus 002 Device 003: ID 0781:55dd SanDisk Corp. Extreme 55DD
-Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-Bus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 ```
 
  * bootコマンドを編集(usb-storage.quirks=0781:55dd:uを追加)
