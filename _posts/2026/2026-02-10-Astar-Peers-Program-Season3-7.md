@@ -69,15 +69,6 @@ sudo -u astar /usr/local/bin/astar-collator \
     --sync warp
 ```
 
-### 本当にラズパイ5でAstar Archiveノードを運用できるのか？
-
- * https://telemetry.polkadot.io/#stats/0x9eb76c5184c4ab8679d2d5d819fdf90b9c001403e9e17da2e14b6d8aec4029c6
-
-<img width="378" height="125" alt="image" src="https://github.com/user-attachments/assets/fa3352f1-06f0-40dc-bcf5-b80f76aee20c" />
-
-ラズパイを実行しているのは、たった一人しかいないけど、どうなっているの？
-確かに過去はぎりぎり実行できていたみたいだけど、現状は、メモリ16GBとzram8GBとswap file 8GBをすぐに上限まで使って、watch dogに殺される。
-
 ### スナップショットデータを取得する
 
  * https://services.stakecraft.com/docs/snapshots/substrate-astar-snapshot
@@ -85,6 +76,15 @@ sudo -u astar /usr/local/bin/astar-collator \
 ```
 stardust✨stardust:~ $ axel -c https://snapshots.stakecraft.com/astar_2026-02-10.tar
 ```
+
+### 本当にラズパイ5でAstar Archiveノードを現状運用できるのか？
+
+ * https://telemetry.polkadot.io/#stats/0x9eb76c5184c4ab8679d2d5d819fdf90b9c001403e9e17da2e14b6d8aec4029c6
+
+<img width="378" height="125" alt="image" src="https://github.com/user-attachments/assets/fa3352f1-06f0-40dc-bcf5-b80f76aee20c" />
+
+ラズパイを実行しているのは、たった一人しかいないけど、どうなっているの？
+確かに過去はぎりぎり実行できていたみたいだけど、現状は、メモリ16GBとzram8GBとswap file 8GBをすぐに上限まで使って、watch dogに殺される。
 
 ## ブログ更新コマンド
 
@@ -111,3 +111,4 @@ stardust✨stardust:~ $ axel -c https://snapshots.stakecraft.com/astar_2026-02-1
  * https://github.com/bld75/Plasm-RPI/blob/main/astar-rpi-cheatsheet.md
  * https://medium.com/@sequaja.marco/astar-peers-program-troubleshooting-guide-and-faq-a6958a76d021
  * https://docs.astar.network/docs/build/nodes/collator/spinup_collator/#identity
+
