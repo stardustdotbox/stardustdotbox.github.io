@@ -53,7 +53,9 @@ stardust✨stardust:~ $ dmesg | grep -i -E "uas|usb-storage"
 
 ### ノードが同期されるとメモリが逼迫されてノードが落ちる
 
-様々なオプションを利用してみたが、一貫して、同期完了後、15分以内にastar-collatorノードが落ちる。
+ * https://docs.astar.network/docs/build/nodes/rpi-cheat-sheet/
+
+様々なオプションを利用してみたが、一貫して同期完了後メモリ逼迫により、15分以内にastar-collatorノードが落ちる。
 
 ```
 sudo -u astar /usr/local/bin/astar-collator \
@@ -111,4 +113,4 @@ stardust✨stardust:~ $ axel -c https://snapshots.stakecraft.com/astar_2026-02-1
  * https://github.com/bld75/Plasm-RPI/blob/main/astar-rpi-cheatsheet.md
  * https://medium.com/@sequaja.marco/astar-peers-program-troubleshooting-guide-and-faq-a6958a76d021
  * https://docs.astar.network/docs/build/nodes/collator/spinup_collator/#identity
-
+ * https://note.com/tksarahweb3/n/nded443d0e3ff
