@@ -137,6 +137,14 @@ WantedBy=multi-user.target
 stardust✨stardust:~ $ axel -c https://snapshots.stakecraft.com/astar_2026-02-10.tar
 ```
 
+### Astarフォーラムの状況
+
+ * https://forum.astar.network/t/peers-program-season-3-empower-astar-together-applications-open/9283/22
+
+うーん。一生懸命Astarアーカイブノード構築したけど、選考に漏れたみたい。一体どういったノードが今回のプログラムでいくつ立ち上がるんだろう。
+ノード建てたけど、多分無駄だったぽいな。（ ´ー｀）y―┛~~
+Astarとはとことん、相性が悪いらしい。。。
+
 ## ブログ更新コマンド
 
 ```
