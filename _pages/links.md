@@ -28,6 +28,7 @@ author_profile: true
  * [Grok](https://grok.com/)
  * [Claude](https://claude.ai/login)
  * [Claude Console](https://platform.claude.com/)
+ * [Shizuku AI](https://shizuku.ai/)
 
 ## AI-Agent
 
