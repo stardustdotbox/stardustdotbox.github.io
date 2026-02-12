@@ -161,3 +161,4 @@ stardust✨stardust:~ $ axel -c https://snapshots.stakecraft.com/astar_2026-02-1
  * https://github.com/bld75/Plasm-RPI/blob/main/astar-rpi-cheatsheet.md
  * https://medium.com/@sequaja.marco/astar-peers-program-troubleshooting-guide-and-faq-a6958a76d021
  * https://docs.astar.network/docs/build/nodes/collator/spinup_collator/#identity
+ * https://github.com/paritytech/substrate/issues/11503
