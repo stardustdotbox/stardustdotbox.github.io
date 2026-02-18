@@ -128,6 +128,52 @@ RestartSec=10
 WantedBy=multi-user.target
 ```
 
+### 同期失敗
+
+起動から8日後、同期データが350GBに達する時にこんな感じで同期データが壊れた。
+
+```
+Thread 'tokio-runtime-worker' panicked at 'Externalities not allowed to fail within runtime: "Trie lookup error: Database missing expected key: 0x248b102f247eef0aea46da479b8b3de89072abda81dea5a1338a2d1979a3d76b"', /home/stardust/.cargo/git/checkouts/polkadot-sdk-dee0edd6eefa0594/dc937dd/substrate/primitives/state-machine/src/ext.rs:175
+```
+
+### TRIMサービスを停止する
+
+```
+stardust✨stardust:~ $ sudo systemctl status fstrim.timer
+● fstrim.timer - Discard unused filesystem blocks once a week
+     Loaded: loaded (/usr/lib/systemd/system/fstrim.timer; enabled; preset: enabled)
+     Active: active (waiting) since Thu 2026-02-12 13:24:48 JST; 6 days ago
+ Invocation: 98d25b800c7d4470ab635908fdd6d826
+    Trigger: Mon 2026-02-23 01:25:37 JST; 4 days left
+   Triggers: ● fstrim.service
+       Docs: man:fstrim
+tarted fstrim.timer - Discard unused filesystem blocks once a week.
+stardust✨stardust:~ $ sudo systemctl disable fstrim.timer
+Removed '/etc/systemd/system/timers.target.wants/fstrim.timer'.
+stardust✨stardust:~ $ sudo systemctl stop fstrim.timer
+```
+
+### 同期データ再作成
+
+```
+sudo systemctl stop astar
+sudo rm -rf /var/lib/astar
+sudo mkdir /var/lib/astar
+sudo chown -R astar:astar /var/lib/astar
+```
+
+### 実行コマンドシンプル化
+
+```
+sudo -u astar /usr/local/bin/astar-collator \
+    --pruning archive \
+    --chain astar \
+    --base-path /var/lib/astar \
+    --database paritydb \
+    --name AstarNode \
+    --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
+```
+
 ### スナップショットデータを取得する
 
  * https://snapshots.stakecraft.com/
