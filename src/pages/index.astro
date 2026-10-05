@@ -1,17 +1,99 @@
 ---
 import Base from '../layouts/Base.astro';
 import NoteList from '../components/NoteList.astro';
+import { Image } from 'astro:assets';
 import { getPublishedNotes } from '../lib/notes';
+import avatar from '../assets/avatar.jpg';
 
 const latest = (await getPublishedNotes()).slice(0, 5);
+
+const profile = {
+  name: 'Stardust✨',
+  bio: 'NeoTokyoPunks / Soneian Scout / Startale OG Star',
+  location: '日本',
+  links: [
+    { label: 'GitHub', href: 'https://github.com/stardustdotbox' },
+    { label: 'X', href: 'https://x.com/stardustdotbox' },
+  ],
+};
 ---
 
 <Base title="stardust.box">
   <h1>stardustdotbox</h1>
-  <p>Web3 を、少し離れたところから観察しています。</p>
-  <p>（自己紹介はこれから書きます）</p>
+
+  <p>
+    ようこそ！ようこそ！ゆっくりしていってね！<br />
+    此処は僕がWeb3を中心に学んだことや体験したことをおもしろおかしく記録していく個人ホームページです。<br />
+    どうぞ、末永くよろしくおねがいします。ヽ(´ー`)ノ
+  </p>
+
+  <section class="manifesto">
+    <p>
+      本日2025年12月27日、Web3の世界が徐々にですが確実に拡大しているのを感じます。私たちは一度は奪われたインターネットを我々の手に取り戻すチャンスを突如手に入れました。このまたとない機会を逃してはいけないとひしひしと感じるのです。そうでしょ？アングラの諸兄達。僕はまだ此処にいるよ。（ ´ー｀）y―┛~~
+    </p>
+    <p>
+      あなたは<a href="https://thehidden-wiki.org/wiki/index.php?title=The_Matrix" rel="noopener">The Matrix</a>という映画を見たことがありますか？<br />
+      あの映画は現実社会に実在するバビロンシステムを抽象化し、比喩的な表現の結果として生まれた作品です。<br />
+      多くの人はMatrixに囚われて人生の大半の時間を費やしており、気づくことなく人生を終えることも少なくありません。<br />
+      インターネットは黎明期（Web1時代）には意外なことに分散化されており、Matrixに囚われていなかったと記憶しています。<br />
+      Web2時代にはインターネットの表層が企業に支配されましたが、Web3ではWeb2で育んだ技術をブロックチェインと連携させ、インターネットは再び分散化を目指します。
+    </p>
+    <p>
+      <a href="https://museum.scenecritique.com/categories/library/defcon0/1st.htm" rel="noopener">長きに渡って続いた自由への戦い</a>はWeb3時代を迎え、ついに我々の勝利という形で終結を迎えるはずだ。<br />
+      インターネットの片隅からMatrixに抗うことを此処に誓う。((*´∀`))ｹﾗｹﾗ
+    </p>
+  </section>
+
+  <section class="profile">
+    <Image src={avatar} alt="Stardust✨ のアバター" width={96} height={96} densities={[1, 2]} class="avatar" />
+    <div>
+    <p class="name">{profile.name}</p>
+    <p class="bio">{profile.bio}</p>
+    <p class="meta">
+      {profile.location}
+      {profile.links.map((link) => (
+        <>
+          {' · '}
+          <a href={link.href} rel="me">{link.label}</a>
+        </>
+      ))}
+    </p>
+    </div>
+  </section>
 
   <h2>最近の Notes</h2>
   <NoteList notes={latest} />
   <p><a href="/notes/">すべての Notes →</a></p>
 </Base>
+
+<style>
+  .profile {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border: 1px solid color-mix(in srgb, var(--muted) 30%, transparent);
+    border-radius: 0.5rem;
+  }
+  .profile p {
+    margin: 0;
+  }
+  .profile .avatar {
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: none;
+  }
+  .manifesto {
+    padding-left: 1rem;
+    border-left: 3px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  }
+  .name {
+    font-weight: bold;
+  }
+  .bio,
+  .meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+</style>
