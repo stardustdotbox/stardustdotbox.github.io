@@ -17,7 +17,13 @@ const { Content } = await render(note);
 const { title, description, pubDate, updatedDate, tags, draft } = note.data;
 ---
 
-<Base title={title} description={description} type="article" publishedTime={pubDate}>
+<Base
+  title={title}
+  description={description}
+  type="article"
+  publishedTime={pubDate}
+  ogImage={`/og/notes/${note.id}.png`}
+>
   <article>
     <h1>{title}</h1>
     <p class="meta">
