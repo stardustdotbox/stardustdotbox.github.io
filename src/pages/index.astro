@@ -21,11 +21,22 @@ const profile = {
 <Base title="stardust.box">
   <h1>stardustdotbox</h1>
 
-  <p>
-    ようこそ！ようこそ！ゆっくりしていってね！<br />
-    此処は僕がWeb3を中心に学んだことや体験したことをおもしろおかしく記録していく個人ホームページです。<br />
-    どうぞ、末永くよろしくおねがいします。ヽ(´ー`)ノ
-  </p>
+  <section class="profile">
+    <Image src={avatar} alt="Stardust✨ のアバター" width={96} height={96} densities={[1, 2]} class="avatar" />
+    <div>
+    <p class="name">{profile.name}</p>
+    <p class="bio">{profile.bio}</p>
+    <p class="meta">
+      {profile.location}
+      {profile.links.map((link) => (
+        <>
+          {' · '}
+          <a href={link.href} rel="me">{link.label}</a>
+        </>
+      ))}
+    </p>
+    </div>
+  </section>
 
   <section class="manifesto">
     <p>
@@ -42,23 +53,6 @@ const profile = {
       <a href="https://museum.scenecritique.com/categories/library/defcon0/1st.htm" rel="noopener">長きに渡って続いた自由への戦い</a>はWeb3時代を迎え、ついに我々の勝利という形で終結を迎えるはずだ。<br />
       インターネットの片隅からMatrixに抗うことを此処に誓う。((*´∀`))ｹﾗｹﾗ
     </p>
-  </section>
-
-  <section class="profile">
-    <Image src={avatar} alt="Stardust✨ のアバター" width={96} height={96} densities={[1, 2]} class="avatar" />
-    <div>
-    <p class="name">{profile.name}</p>
-    <p class="bio">{profile.bio}</p>
-    <p class="meta">
-      {profile.location}
-      {profile.links.map((link) => (
-        <>
-          {' · '}
-          <a href={link.href} rel="me">{link.label}</a>
-        </>
-      ))}
-    </p>
-    </div>
   </section>
 
   <h2>最近の Notes</h2>
