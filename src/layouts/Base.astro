@@ -1,0 +1,103 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Stardust✨ が Web3 を観察する場所' } = Astro.props;
+const siteName = 'stardust.box';
+const pageTitle = title === siteName ? title : `${title} | ${siteName}`;
+
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/notes/', label: 'Notes' },
+  { href: '/projects/', label: 'Projects' },
+  { href: '/onchain/', label: 'Onchain' },
+  { href: '/lab/', label: 'Lab' },
+];
+const current = Astro.url.pathname;
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <header>
+      <a class="site-name" href="/">{siteName}</a>
+      <nav>
+        {nav.map((item) => (
+          <a href={item.href} aria-current={current === item.href ? 'page' : undefined}>
+            {item.label}
+          </a>
+        ))}
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>&copy; {new Date().getFullYear()} Stardust✨</p>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --fg: #1a1a1a;
+    --bg: #ffffff;
+    --muted: #666666;
+    --accent: #5b3cc4;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fg: #e8e8e8;
+      --bg: #111111;
+      --muted: #999999;
+      --accent: #a58bff;
+    }
+  }
+  body {
+    margin: 0 auto;
+    max-width: 42rem;
+    padding: 1.5rem 1rem;
+    font-family: system-ui, sans-serif;
+    line-height: 1.7;
+    color: var(--fg);
+    background: var(--bg);
+  }
+  a {
+    color: var(--accent);
+  }
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    align-items: baseline;
+    margin-bottom: 2rem;
+  }
+  .site-name {
+    font-weight: bold;
+    text-decoration: none;
+  }
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+  nav a[aria-current='page'] {
+    font-weight: bold;
+    text-decoration: none;
+  }
+  footer {
+    margin-top: 3rem;
+    color: var(--muted);
+    font-size: 0.875rem;
+  }
+</style>
