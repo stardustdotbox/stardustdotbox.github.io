@@ -9,7 +9,10 @@ const notes = defineCollection({
     title: z.string(),
     description: z.string().optional(),
     pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
     tags: z.array(z.string()).default([]),
+    // true の記事は本番のビルドに出さない（npm run dev では表示する）
+    draft: z.boolean().default(false),
   }),
 });
 

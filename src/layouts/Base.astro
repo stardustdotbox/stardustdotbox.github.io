@@ -2,11 +2,20 @@
 interface Props {
   title: string;
   description?: string;
+  // 記事のページは 'article'、それ以外は 'website'
+  type?: 'website' | 'article';
+  publishedTime?: Date;
 }
 
-const { title, description = 'Stardust✨ が Web3 を観察する場所' } = Astro.props;
+const {
+  title,
+  description = 'Stardust✨ が Web3 を観察する場所',
+  type = 'website',
+  publishedTime,
+} = Astro.props;
 const siteName = 'stardust.box';
 const pageTitle = title === siteName ? title : `${title} | ${siteName}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
 
 const nav = [
   { href: '/', label: 'Home' },
@@ -16,6 +25,8 @@ const nav = [
   { href: '/lab/', label: 'Lab' },
 ];
 const current = Astro.url.pathname;
+const isCurrent = (href: string) =>
+  href === '/' ? current === '/' : current.startsWith(href);
 ---
 
 <html lang="ja">
@@ -27,13 +38,27 @@ const current = Astro.url.pathname;
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{pageTitle}</title>
+    <link rel="canonical" href={canonical} />
+
+    <!-- OGP（X・Discord などで共有したときの表示） -->
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="ja_JP" />
+    {publishedTime && <meta property="article:published_time" content={publishedTime.toISOString()} />}
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="alternate" type="application/rss+xml" title={siteName} href={new URL('rss.xml', Astro.site)} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body>
     <header>
       <a class="site-name" href="/">{siteName}</a>
       <nav>
         {nav.map((item) => (
-          <a href={item.href} aria-current={current === item.href ? 'page' : undefined}>
+          <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
             {item.label}
           </a>
         ))}
@@ -43,7 +68,7 @@ const current = Astro.url.pathname;
       <slot />
     </main>
     <footer>
-      <p>&copy; {new Date().getFullYear()} Stardust✨</p>
+      <p>&copy; {new Date().getFullYear()} Stardust✨ · <a href="/tags/">Tags</a> · <a href="/rss.xml">RSS</a></p>
     </footer>
   </body>
 </html>
@@ -75,6 +100,12 @@ const current = Astro.url.pathname;
   }
   a {
     color: var(--accent);
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid color-mix(in srgb, var(--muted) 30%, transparent);
+    border-radius: 0.5rem;
   }
   header {
     display: flex;

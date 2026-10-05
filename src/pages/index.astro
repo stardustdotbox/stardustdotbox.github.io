@@ -1,9 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
+import NoteList from '../components/NoteList.astro';
+import { getPublishedNotes } from '../lib/notes';
+
+const latest = (await getPublishedNotes()).slice(0, 5);
 ---
 
 <Base title="stardust.box">
   <h1>Stardust✨</h1>
   <p>Web3 を、少し離れたところから観察しています。</p>
   <p>（自己紹介はこれから書きます）</p>
+
+  <h2>最近の Notes</h2>
+  <NoteList notes={latest} />
+  <p><a href="/notes/">すべての Notes →</a></p>
 </Base>

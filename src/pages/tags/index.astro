@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import { countTags, getPublishedNotes } from '../../lib/notes';
+
+const tags = countTags(await getPublishedNotes());
+---
+
+<Base title="Tags" description="タグの一覧">
+  <h1>Tags</h1>
+  {tags.length === 0 ? (
+    <p>まだタグはありません。</p>
+  ) : (
+    <ul>
+      {tags.map(([tag, count]) => (
+        <li><a href={`/tags/${tag}/`}>#{tag}</a>（{count}）</li>
+      ))}
+    </ul>
+  )}
+</Base>

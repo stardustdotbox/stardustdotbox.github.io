@@ -1,0 +1,47 @@
+---
+import { formatDate, type Note } from '../lib/notes';
+
+interface Props {
+  notes: Note[];
+}
+
+const { notes } = Astro.props;
+---
+
+{notes.length === 0 ? (
+  <p>まだ記事はありません。</p>
+) : (
+  <ul class="note-list">
+    {notes.map((note) => (
+      <li>
+        <time datetime={note.data.pubDate.toISOString()}>{formatDate(note.data.pubDate)}</time>
+        <a href={`/notes/${note.id}/`}>{note.data.title}</a>
+        {note.data.draft && <span class="draft">下書き</span>}
+      </li>
+    ))}
+  </ul>
+)}
+
+<style>
+  .note-list {
+    list-style: none;
+    padding: 0;
+  }
+  .note-list li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  time {
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
+  }
+  .draft {
+    font-size: 0.75rem;
+    color: var(--muted);
+    border: 1px solid var(--muted);
+    border-radius: 0.25rem;
+    padding: 0 0.25rem;
+  }
+</style>

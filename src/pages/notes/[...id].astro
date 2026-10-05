@@ -1,9 +1,11 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import TagList from '../../components/TagList.astro';
+import { formatDate, getPublishedNotes } from '../../lib/notes';
 
 export async function getStaticPaths() {
-  const notes = await getCollection('notes');
+  const notes = await getPublishedNotes();
   return notes.map((note) => ({
     params: { id: note.id },
     props: { note },
@@ -12,17 +14,26 @@ export async function getStaticPaths() {
 
 const { note } = Astro.props;
 const { Content } = await render(note);
+const { title, description, pubDate, updatedDate, tags, draft } = note.data;
 ---
 
-<Base title={note.data.title} description={note.data.description}>
+<Base title={title} description={description} type="article" publishedTime={pubDate}>
   <article>
-    <h1>{note.data.title}</h1>
-    <p>
-      <time datetime={note.data.pubDate.toISOString()}>
-        {note.data.pubDate.toISOString().slice(0, 10)}
-      </time>
+    <h1>{title}</h1>
+    <p class="meta">
+      <time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time>
+      {updatedDate && <span>（更新 <time datetime={updatedDate.toISOString()}>{formatDate(updatedDate)}</time>）</span>}
+      {draft && <strong> 下書き</strong>}
     </p>
+    <TagList tags={tags} />
     <Content />
   </article>
   <p><a href="/notes/">← Notes</a></p>
 </Base>
+
+<style>
+  .meta {
+    color: var(--muted);
+    margin-bottom: 0.25rem;
+  }
+</style>

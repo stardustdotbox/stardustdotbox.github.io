@@ -1,0 +1,21 @@
+---
+import Base from '../../layouts/Base.astro';
+import NoteList from '../../components/NoteList.astro';
+import { countTags, getPublishedNotes } from '../../lib/notes';
+
+export async function getStaticPaths() {
+  const notes = await getPublishedNotes();
+  return countTags(notes).map(([tag]) => ({
+    params: { tag },
+    props: { tag, notes: notes.filter((note) => note.data.tags.includes(tag)) },
+  }));
+}
+
+const { tag, notes } = Astro.props;
+---
+
+<Base title={`#${tag}`} description={`タグ「${tag}」の記事`}>
+  <h1>#{tag}</h1>
+  <NoteList notes={notes} />
+  <p><a href="/tags/">← Tags</a></p>
+</Base>
