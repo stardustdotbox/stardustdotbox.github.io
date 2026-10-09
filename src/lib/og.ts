@@ -47,7 +47,7 @@ function titleSize(title: string): number {
 
 export async function renderOgImage({ title, kicker = '' }: OgOptions): Promise<Buffer> {
   const siteName = 'stardust.box';
-  const tagline = 'Web3 を、少し離れたところから観察する';
+  const tagline = '少し離れたところから観察して、詰め込む箱';
 
   // サイト共通の見た目（#166）: 白地に墨、シアンとピンクは文字だけ。書体は M PLUS 1 Code
   const ink = '#0f172a';

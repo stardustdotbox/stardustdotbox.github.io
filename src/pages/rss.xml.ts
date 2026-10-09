@@ -6,7 +6,7 @@ export async function GET(context: APIContext) {
   const notes = await getPublishedNotes();
   return rss({
     title: 'Stardust✨のおもちゃ箱',
-    description: 'Stardust✨ が Web3 を観察する場所',
+    description: 'Web3・AI・セキュリティを少し離れたところから観察して、見つけたものと作ったものを詰め込む箱',
     site: context.site!,
     items: notes.map((note) => ({
       title: note.data.title,
