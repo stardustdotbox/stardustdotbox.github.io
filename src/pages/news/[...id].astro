@@ -1,0 +1,325 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import NewsFont from '../../components/NewsFont.astro';
+import { formatNewsDate, formatWareki, getPublishedNews } from '../../lib/news';
+
+export async function getStaticPaths() {
+  const news = await getPublishedNews();
+  return news.map((item, i) => ({
+    params: { id: item.id },
+    // 前の日・次の日へのリンク用（news は新しい順）。号数は古い順に 1 から数える
+    props: { item, newer: news[i - 1], older: news[i + 1], number: news.length - i },
+  }));
+}
+
+const { item, newer, older, number } = Astro.props;
+const { Content, headings } = await render(item);
+const { title, date, summary, draft } = item.data;
+
+// 見出しの目次: h2 = 欄（トップ・Crypto など）、h3 = 記事。記事には 01 から番号を振る
+// 目次は欄ごとにまとめる（欄の名前は 1 回だけ出す）。記事のない欄（今日の選び方）は出さない
+const toc: { section: string; items: { slug: string; text: string; no: string }[] }[] = [];
+let count = 0;
+for (const h of headings) {
+  if (h.depth === 2) toc.push({ section: h.text, items: [] });
+  if (h.depth === 3 && toc.length) toc.at(-1)!.items.push({ slug: h.slug, text: h.text, no: String(++count).padStart(2, '0') });
+}
+const tocGroups = toc.filter((g) => g.items.length);
+const issue = String(number).padStart(3, '0');
+---
+
+<Base title={title} description={summary} type="article" publishedTime={date} ogImage={`/og/news/${item.id}.png`}>
+  <NewsFont slot="head" />
+  <article class="shinpo">
+    <div class="masthead">
+      <p class="eyebrow">CRYPTO ・ AI ・ SECURITY ・ JAPAN</p>
+      <p class="title">STARDUST.BOX <span>NEWS</span></p>
+      <p class="subtitle">星屑新報</p>
+      <p class="dateline">
+        <span>第{issue}号</span>
+        <span class="sep">/</span>
+        <time datetime={date.toISOString().slice(0, 10)}>{formatWareki(date)}</time>
+        <span class="sep">/</span>
+        <span>{formatNewsDate(date)}</span>
+        {draft && <><span class="sep">/</span><strong>下書き</strong></>}
+      </p>
+    </div>
+
+    <p class="lead">{summary}</p>
+
+    <nav class="headlines" aria-label="今日の見出し">
+      <p class="label">HEADLINES</p>
+      <div class="groups">
+        {tocGroups.map((g) => (
+          <div class="group">
+            <p class="group-name">{g.section}</p>
+            <ol>
+              {g.items.map((t) => (
+                <li>
+                  <span class="no">{t.no}</span>
+                  <a href={`#${t.slug}`}>{t.text}</a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        ))}
+      </div>
+    </nav>
+
+    <div class="stories">
+      <Content />
+    </div>
+  </article>
+
+  <nav class="pager">
+    {older ? <a href={`/news/${older.id}/`}>‹ 前の号</a> : <span></span>}
+    <a href="/news/">一覧</a>
+    {newer ? <a href={`/news/${newer.id}/`}>次の号 ›</a> : <span></span>}
+  </nav>
+</Base>
+
+<style>
+  /* 星屑新報: 書体は M PLUS 1 Code だけ。色は墨とシアン、ピンク（makimono と同じ）。
+     色は文字にだけ使う。シアン = 主な色（NEWS・番号・リンク）、ピンク = 見出し役の小さな文字と「なぜ大事か」 */
+  .shinpo {
+    --cyan: #0891b2;
+    --pink: #db2777;
+    --ink: var(--fg);
+    --line: color-mix(in srgb, var(--muted) 35%, transparent);
+    --code: 'M PLUS 1 Code', ui-monospace, Menlo, Consolas, monospace;
+    font-family: var(--code);
+    letter-spacing: 0.02em;
+  }
+  @media (prefers-color-scheme: dark) {
+    .shinpo {
+      --cyan: #22d3ee;
+      --pink: #f472b6;
+    }
+  }
+
+  /* ---- 題字 ---- */
+  .masthead {
+    text-align: center;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 1.25rem;
+  }
+  .eyebrow {
+    margin: 0;
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    color: var(--pink);
+  }
+  .title {
+    margin: 0.4rem 0 0;
+    font-size: clamp(1.5rem, 6.5vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    line-height: 1.2;
+  }
+  .title span {
+    color: var(--cyan);
+  }
+  /* 星屑新報: 題字の次に目立たせる */
+  .subtitle {
+    margin: 0.3rem 0 0.7rem;
+    font-size: clamp(1.15rem, 3.6vw, 1.6rem);
+    font-weight: 700;
+    letter-spacing: 0.5em;
+    padding-left: 0.5em; /* 字間の分だけ中央をそろえる */
+  }
+  .dateline {
+    margin: 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+  .dateline .sep {
+    margin: 0 0.5em;
+  }
+  .dateline strong {
+    color: var(--pink);
+  }
+
+  /* ---- リード ---- */
+  .lead {
+    font-weight: 700;
+    border-left: 3px solid var(--cyan);
+    padding-left: 0.75rem;
+  }
+
+  /* ---- 見出しの目次 ---- */
+  .headlines {
+    display: block;
+    margin: 1.5rem 0 2rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .label {
+    margin: 0 0 0.25rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--pink);
+  }
+  .headlines ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  /* 欄のまとまり。段の途中で分かれないようにする */
+  .group {
+    break-inside: avoid;
+    padding: 0.25rem 0 0.5rem;
+  }
+  .group-name {
+    margin: 0;
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
+    color: var(--pink);
+  }
+  /* 番号の幅を固定して、見出しの書き始めをそろえる */
+  .headlines li {
+    display: grid;
+    grid-template-columns: 2ch 1fr;
+    gap: 0.6rem;
+    align-items: baseline;
+    padding: 0.2rem 0;
+    font-size: 0.9rem;
+  }
+  /* トップの記事だけ太く */
+  .group:first-child li a {
+    font-weight: 700;
+  }
+  .headlines a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .headlines a:hover {
+    color: var(--cyan);
+  }
+  .no {
+    color: var(--cyan);
+    font-weight: 700;
+  }
+
+  /* ---- 記事 ---- */
+  .stories {
+    counter-reset: story;
+  }
+  .stories :global(a) {
+    color: var(--cyan);
+  }
+  /* 欄の見出し（トップ・Crypto など） */
+  .stories :global(h2) {
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--pink);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.15rem;
+    margin: 2.5rem 0 0.5rem;
+  }
+  /* 記事の見出し。目次と同じ番号を付ける */
+  .stories :global(h3) {
+    counter-increment: story;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    margin: 1rem 0 0.25rem;
+    scroll-margin-top: 1rem;
+  }
+  .stories :global(h3)::before {
+    content: counter(story, decimal-leading-zero) '  ';
+    white-space: pre;
+    color: var(--cyan);
+  }
+  /* トップの記事だけ大きくする（最初の欄の記事） */
+  .stories :global(.desk:first-child h3) {
+    font-size: 1.45rem;
+  }
+  .stories :global(p) {
+    font-size: 0.92rem;
+    line-height: 1.85;
+  }
+  /* 「なぜ大事か」 */
+  .stories :global(strong) {
+    color: var(--pink);
+  }
+  /* 画像と、その下の出典・ライセンスの行 */
+  .stories :global(img) {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    margin: 0.5rem 0 0.25rem;
+  }
+  .stories :global(p:has(img) em),
+  .stories :global(p > em:only-child) {
+    display: block;
+    font-size: 0.68rem;
+    font-style: normal;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  .stories :global(.story + .story) {
+    border-top: 1px dashed var(--line);
+  }
+  .stories :global(.desk) {
+    min-width: 0;
+  }
+
+  /* ---- 紙面の段組み（広い画面だけ） ----
+     トップと「今日の選び方」は全幅、4 つの欄は 2 段に並べる。
+     1 段の本文は 1 行 30〜40 文字に収まる */
+  @media (min-width: 900px) {
+    /* 目次は 2 段。左の段を上から下まで読んでから右の段へ（新聞の組み方） */
+    .groups {
+      columns: 2;
+      column-gap: 2.5rem;
+    }
+    .stories {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2.5rem;
+      align-items: start;
+    }
+    .stories :global(.desk:first-child),
+    .stories :global(.desk:last-child) {
+      grid-column: 1 / -1;
+    }
+    /* トップの記事は、見出しを全幅にして本文を 2 段に流す（新聞の組み方） */
+    .stories :global(.desk:first-child .story) {
+      columns: 2;
+      column-gap: 2.5rem;
+    }
+    .stories :global(.desk:first-child .story h3),
+    .stories :global(.desk:first-child .story p:has(img)) {
+      column-span: all;
+    }
+    /* トップの画像は全幅にするので、高さを抑える */
+    .stories :global(.desk:first-child .story img) {
+      max-height: 26rem;
+      object-fit: contain;
+    }
+  }
+
+  /* ---- 前後のリンク ---- */
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    padding-top: 0.5rem;
+    border-top: 2px solid var(--fg);
+    font-family: 'M PLUS 1 Code', ui-monospace, monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+  }
+</style>
+
+<style is:global>
+  /* News の紙面のときだけ、サイト全体の幅（42rem）を広げる */
+  body:has(.shinpo) {
+    max-width: 72rem;
+  }
+</style>

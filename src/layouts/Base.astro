@@ -24,6 +24,7 @@ const ogImageUrl = new URL(ogImage, Astro.site);
 const nav = [
   { href: '/', label: 'Home' },
   { href: '/notes/', label: 'Notes' },
+  { href: '/news/', label: 'News' },
   { href: '/projects/', label: 'Projects' },
   { href: '/onchain/', label: 'Onchain' },
   { href: '/lab/', label: 'Lab' },
@@ -60,6 +61,8 @@ const isCurrent = (href: string) =>
 
     <link rel="alternate" type="application/rss+xml" title={siteName} href={new URL('rss.xml', Astro.site)} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <!-- ページごとに head に足すもの（フォントなど） -->
+    <slot name="head" />
   </head>
   <body>
     <header>

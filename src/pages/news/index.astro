@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import { formatNewsDate, getPublishedNews } from '../../lib/news';
+
+const news = await getPublishedNews();
+---
+
+<Base title="News" description="毎日の一面。Crypto・AI・セキュリティ・日本の社会と経済から、これだけは押さえておくべきニュース">
+  <h1>News</h1>
+  <p>
+    毎日の一面。Crypto・AI・セキュリティ・日本の社会と経済から、これだけは押さえておくべきニュースを最大 10 本選びます。
+  </p>
+  <ul class="issues">
+    {news.map((item) => (
+      <li>
+        <a href={`/news/${item.id}/`}>
+          <time datetime={item.data.date.toISOString().slice(0, 10)}>{formatNewsDate(item.data.date)}</time>
+        </a>
+        {item.data.draft && <strong> 下書き</strong>}
+        <p>{item.data.summary}</p>
+      </li>
+    ))}
+  </ul>
+</Base>
+
+<style>
+  .issues {
+    list-style: none;
+    padding: 0;
+  }
+  .issues li {
+    margin-bottom: 1.25rem;
+  }
+  .issues p {
+    margin: 0.25rem 0 0;
+    color: var(--muted);
+  }
+</style>
