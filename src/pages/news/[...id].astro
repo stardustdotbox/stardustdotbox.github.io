@@ -180,7 +180,7 @@ const issue = String(number).padStart(3, '0');
   /* 番号の幅を固定して、見出しの書き始めをそろえる */
   .headlines li {
     display: grid;
-    grid-template-columns: 2ch 1fr;
+    grid-template-columns: auto 1fr;
     gap: 0.6rem;
     align-items: baseline;
     padding: 0.2rem 0;
@@ -197,9 +197,12 @@ const issue = String(number).padStart(3, '0');
   .headlines a:hover {
     color: var(--cyan);
   }
+  /* 番号は折り返さない（サイト共通の overflow-wrap: anywhere で「01」が割れたため） */
   .no {
     color: var(--cyan);
     font-weight: 700;
+    white-space: nowrap;
+    overflow-wrap: normal;
   }
 
   /* ---- 記事 ---- */
@@ -245,9 +248,11 @@ const issue = String(number).padStart(3, '0');
     color: var(--pink);
   }
   /* 画像と、その下の出典・ライセンスの行 */
+  /* 図（SVG）は背景が透明で文字が墨色なので、ダークモードでも読めるように白い地を付ける */
   .stories :global(img) {
     display: block;
     width: 100%;
+    background: #ffffff;
     border: 1px solid var(--line);
     border-radius: 2px;
     margin: 0.5rem 0 0.25rem;

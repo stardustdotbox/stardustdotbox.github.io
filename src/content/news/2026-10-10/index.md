@@ -81,7 +81,7 @@ Anthropicは10月8日に利用方針の改定を公表し、11月12日から適�
 
 ### 国内の漏えい、管理システムと内部への侵入も点検対象に
 ![サーバー室の参考写真。今回の被害組織や攻撃現場を写したものではない](./images/server-room.webp)
-*画像: 「Server Room」Carl Lender（[Flickr](https://www.flickr.com/photos/clender/22397102849/)）・Wikimedia Commons / [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)（https://commons.wikimedia.org/wiki/File:Server_Room_%2822397102849%29.jpg）（加工: 星屑新報）*
+*画像: 「Server Room」Carl Lender（[Flickr](https://www.flickr.com/photos/clender/22397102849/)）・Wikimedia Commons / [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)（[ファイルのページ](https://commons.wikimedia.org/wiki/File:Server_Room_%2822397102849%29.jpg)）（加工: 星屑新報）*
 
 JPCERT/CCは10月9日、国内で相次ぐ不正アクセスへの注意喚起を更新した。公開Webサーバーから接続できる別のサーバーに、攻撃者が遠隔操作するための「Webシェル」を置く事例を追加した。従業員向けの管理システムも含め、不要な外部公開の停止、更新の適用、侵入後に別の機器へ被害を広げさせない対策を求めている。
 

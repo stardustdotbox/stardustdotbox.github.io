@@ -39,6 +39,14 @@ const isCurrent = (href: string) =>
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
+    <!-- ライト・ダークの切り替え: 選んだモードを、色が出る前に当てる（一瞬違う色が出ないように）。
+         選んでいなければ印を付けず、端末の設定に従う -->
+    <script is:inline>
+      try {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+      } catch {}
+    </script>
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
@@ -76,6 +84,7 @@ const isCurrent = (href: string) =>
             {item.label}
           </a>
         ))}
+        <button class="theme-toggle" type="button"></button>
       </nav>
     </header>
     <main>
@@ -84,6 +93,30 @@ const isCurrent = (href: string) =>
     <footer>
       <p>&copy; {new Date().getFullYear()} Stardust✨ · <a href="/tags/">Tags</a> · <a href="/rss.xml">RSS</a></p>
     </footer>
+    <script is:inline>
+      // ライト・ダークの切り替えのボタン。押すと反対のモードにして、ブラウザに覚えさせる
+      (() => {
+        const root = document.documentElement;
+        const button = document.querySelector('.theme-toggle');
+        const dark = matchMedia('(prefers-color-scheme: dark)');
+        const current = () => root.dataset.theme || (dark.matches ? 'dark' : 'light');
+        const render = () => {
+          const next = current() === 'dark' ? 'light' : 'dark';
+          button.textContent = next === 'dark' ? '☾ DARK' : '☀ LIGHT';
+          button.setAttribute('aria-label', next === 'dark' ? 'ダークモードにする' : 'ライトモードにする');
+        };
+        button.addEventListener('click', () => {
+          const next = current() === 'dark' ? 'light' : 'dark';
+          root.dataset.theme = next;
+          try {
+            localStorage.setItem('theme', next);
+          } catch {}
+          render();
+        });
+        dark.addEventListener('change', render);
+        render();
+      })();
+    </script>
   </body>
 </html>
 
@@ -100,15 +133,26 @@ const isCurrent = (href: string) =>
     --pink: #db2777;
     --accent: var(--cyan);
     --font: 'M PLUS 1 Code', ui-monospace, Menlo, Consolas, monospace;
-    color-scheme: light dark;
+    color-scheme: light;
+  }
+  /* ダークモード: ボタンで選んだとき（data-theme="dark"）と、
+     選んでいなくて端末がダークのとき（ライトを選んだときは除く）。色の中身は同じ */
+  :root[data-theme='dark'] {
+    --fg: #e2e8f0;
+    --bg: #0b1120;
+    --muted: #94a3b8;
+    --cyan: #22d3ee;
+    --pink: #f472b6;
+    color-scheme: dark;
   }
   @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme='light']) {
       --fg: #e2e8f0;
       --bg: #0b1120;
       --muted: #94a3b8;
       --cyan: #22d3ee;
       --pink: #f472b6;
+      color-scheme: dark;
     }
   }
   body {
@@ -118,6 +162,8 @@ const isCurrent = (href: string) =>
     font-family: var(--font);
     letter-spacing: 0.02em;
     line-height: 1.85;
+    /* 長い URL などは、画面の端で折り返す（スマホではみ出さないように） */
+    overflow-wrap: anywhere;
     color: var(--fg);
     background: var(--bg);
   }
@@ -220,6 +266,21 @@ const isCurrent = (href: string) =>
   }
   header nav a:hover {
     color: var(--cyan);
+  }
+  /* ライト・ダークの切り替えのボタン（メニューと同じ文字の形） */
+  .theme-toggle {
+    padding: 0 0.4rem;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    background: none;
+    color: var(--muted);
+    font: inherit;
+    letter-spacing: inherit;
+    cursor: pointer;
+  }
+  .theme-toggle:hover {
+    color: var(--cyan);
+    border-color: var(--cyan);
   }
   header nav a[aria-current='page'] {
     color: var(--cyan);
