@@ -39,6 +39,11 @@ export async function renderOgImage({ title, kicker = '' }: OgOptions): Promise<
   const siteName = 'stardust.box';
   const tagline = 'Web3 を、少し離れたところから観察する';
 
+  // サイト共通の見た目（#166）: 白地に墨、シアンとピンクは文字だけ。書体は M PLUS 1 Code
+  const ink = '#0f172a';
+  const cyan = '#0891b2';
+  const pink = '#db2777';
+  const muted = '#64748b';
   const tree = h(
     'div',
     {
@@ -47,34 +52,36 @@ export async function renderOgImage({ title, kicker = '' }: OgOptions): Promise<
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
-      padding: '72px 80px',
-      backgroundColor: '#111111',
-      backgroundImage: 'linear-gradient(135deg, #111111 0%, #1d1538 100%)',
-      color: '#e8e8e8',
-      fontFamily: 'Noto Sans JP',
+      padding: '64px 72px',
+      backgroundColor: '#ffffff',
+      color: ink,
+      fontFamily: 'M PLUS 1 Code',
     },
     [
-      h('div', { display: 'flex', fontSize: 30, color: '#a58bff' }, kicker || ' '),
+      h('div', { display: 'flex', fontSize: 26, letterSpacing: 6, color: pink }, kicker || ' '),
       h(
         'div',
-        { display: 'flex', fontSize: titleSize(title), fontWeight: 700, lineHeight: 1.3 },
+        { display: 'flex', fontSize: titleSize(title), fontWeight: 700, lineHeight: 1.35, letterSpacing: 2 },
         title,
       ),
-      h('div', { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }, [
-        h('div', { display: 'flex', fontSize: 40, fontWeight: 700 }, siteName),
-        h('div', { display: 'flex', fontSize: 26, color: '#999999' }, tagline),
+      h('div', { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', paddingTop: 20, borderTop: `4px solid ${ink}` }, [
+        h('div', { display: 'flex', fontSize: 40, fontWeight: 700, letterSpacing: 6 }, [
+          h('span', {}, 'STARDUST'),
+          h('span', { color: cyan }, '.BOX'),
+        ]),
+        h('div', { display: 'flex', fontSize: 24, color: muted }, tagline),
       ]),
     ],
   );
 
-  const regularText = kicker + tagline;
-  const boldText = title + siteName;
+  const text = kicker + tagline + title + 'STARDUST.BOX' + siteName;
+  const family = 'M+PLUS+1+Code';
   const svg = await satori(tree as never, {
     width: OG_WIDTH,
     height: OG_HEIGHT,
     fonts: [
-      { name: 'Noto Sans JP', data: await loadFont(regularText, 400), weight: 400, style: 'normal' },
-      { name: 'Noto Sans JP', data: await loadFont(boldText, 700), weight: 700, style: 'normal' },
+      { name: 'M PLUS 1 Code', data: await loadFont(text, 400, family), weight: 400, style: 'normal' },
+      { name: 'M PLUS 1 Code', data: await loadFont(text, 700, family), weight: 700, style: 'normal' },
     ],
   });
   return sharp(Buffer.from(svg)).png().toBuffer();

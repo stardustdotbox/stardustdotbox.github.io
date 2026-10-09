@@ -1,38 +1,104 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { formatNewsDate, getPublishedNews } from '../../lib/news';
+import { formatNewsDate, formatWareki, getPublishedNews } from '../../lib/news';
 
 const news = await getPublishedNews();
 ---
 
-<Base title="News" description="毎日の一面。Crypto・AI・セキュリティ・日本の社会と経済から、これだけは押さえておくべきニュース">
-  <h1>News</h1>
-  <p>
-    毎日の一面。Crypto・AI・セキュリティ・日本の社会と経済から、これだけは押さえておくべきニュースを最大 10 本選びます。
-  </p>
-  <ul class="issues">
-    {news.map((item) => (
+<Base title="News" description="星屑新報（STARDUST.BOX NEWS）。Crypto・AI・セキュリティ・日本の社会と経済から、これだけは押さえておくべきニュースを毎日選ぶ">
+  <div class="masthead">
+    <p class="eyebrow">CRYPTO ・ AI ・ SECURITY ・ JAPAN</p>
+    <h1 class="title">STARDUST.BOX <span>NEWS</span></h1>
+    <p class="subtitle">星屑新報</p>
+    <p class="about">Crypto・AI・セキュリティ・日本の社会と経済から、これだけは押さえておくべきニュースを毎日最大 10 本選びます。</p>
+  </div>
+
+  <h2 class="label">バックナンバー</h2>
+  <ol class="issues">
+    {news.map((item, i) => (
       <li>
         <a href={`/news/${item.id}/`}>
-          <time datetime={item.data.date.toISOString().slice(0, 10)}>{formatNewsDate(item.data.date)}</time>
+          <span class="no">第{String(news.length - i).padStart(3, '0')}号</span>
+          <span class="date">
+            <time datetime={item.data.date.toISOString().slice(0, 10)}>{formatWareki(item.data.date)}</time>
+            {' / '}{formatNewsDate(item.data.date)}
+            {item.data.draft && <strong> 下書き</strong>}
+          </span>
+          <span class="summary">{item.data.summary}</span>
         </a>
-        {item.data.draft && <strong> 下書き</strong>}
-        <p>{item.data.summary}</p>
       </li>
     ))}
-  </ul>
+  </ol>
 </Base>
 
 <style>
+  /* 題字は紙面（[...id].astro）と同じ形を小さめに */
+  .masthead {
+    text-align: center;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--fg);
+  }
+  .eyebrow {
+    margin: 0;
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    color: var(--pink);
+  }
+  .title {
+    margin: 0.35rem 0 0;
+    font-size: clamp(1.4rem, 6vw, 2.1rem);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+  }
+  .title span {
+    color: var(--cyan);
+  }
+  .subtitle {
+    margin: 0.2rem 0 0.5rem;
+    font-size: clamp(1.05rem, 3.2vw, 1.35rem);
+    font-weight: 700;
+    letter-spacing: 0.5em;
+    padding-left: 0.5em;
+  }
+  .about {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
   .issues {
     list-style: none;
+    margin: 0;
     padding: 0;
   }
-  .issues li {
-    margin-bottom: 1.25rem;
+  .issues li + li {
+    border-top: 1px dashed var(--line);
   }
-  .issues p {
-    margin: 0.25rem 0 0;
+  .issues a {
+    display: block;
+    padding: 0.75rem 0;
+    color: var(--fg);
+    text-decoration: none;
+  }
+  .issues a > span {
+    display: block;
+  }
+  .no {
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 0.08em;
+  }
+  .date {
+    font-size: 0.75rem;
     color: var(--muted);
+  }
+  .date strong {
+    color: var(--pink);
+  }
+  .summary {
+    margin-top: 0.2rem;
+    font-size: 0.92rem;
+  }
+  .issues a:hover .summary {
+    color: var(--cyan);
   }
 </style>

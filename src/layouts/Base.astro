@@ -1,4 +1,6 @@
 ---
+import SiteFont from '../components/SiteFont.astro';
+
 interface Props {
   title: string;
   description?: string;
@@ -23,8 +25,8 @@ const ogImageUrl = new URL(ogImage, Astro.site);
 
 const nav = [
   { href: '/', label: 'Home' },
-  { href: '/notes/', label: 'Notes' },
   { href: '/news/', label: 'News' },
+  { href: '/notes/', label: 'Notes' },
   { href: '/projects/', label: 'Projects' },
   { href: '/onchain/', label: 'Onchain' },
   { href: '/lab/', label: 'Lab' },
@@ -61,12 +63,13 @@ const isCurrent = (href: string) =>
 
     <link rel="alternate" type="application/rss+xml" title={siteName} href={new URL('rss.xml', Astro.site)} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <SiteFont />
     <!-- ページごとに head に足すもの（フォントなど） -->
     <slot name="head" />
   </head>
   <body>
     <header>
-      <a class="site-name" href="/">{siteName}</a>
+      <a class="site-name" href="/">STARDUST<span>.BOX</span></a>
       <nav>
         {nav.map((item) => (
           <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
@@ -85,61 +88,151 @@ const isCurrent = (href: string) =>
 </html>
 
 <style is:global>
+  /* サイト全体のデザイン（#166）。星屑新報（#163・#165）と同じ和風サイバーの決まり:
+     書体は M PLUS 1 Code だけ。色は墨・シアン・ピンクを文字にだけ使い、枠・背景の飾りには使わない。
+     シアン = 主な色（リンク・強調・今いるページ）、ピンク = 見出し役の小さな文字・補助の強調 */
   :root {
-    --fg: #1a1a1a;
+    --fg: #0f172a; /* 墨 */
     --bg: #ffffff;
-    --muted: #666666;
-    --accent: #5b3cc4;
+    --muted: #64748b;
+    --line: color-mix(in srgb, var(--muted) 35%, transparent);
+    --cyan: #0891b2;
+    --pink: #db2777;
+    --accent: var(--cyan);
+    --font: 'M PLUS 1 Code', ui-monospace, Menlo, Consolas, monospace;
     color-scheme: light dark;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --fg: #e8e8e8;
-      --bg: #111111;
-      --muted: #999999;
-      --accent: #a58bff;
+      --fg: #e2e8f0;
+      --bg: #0b1120;
+      --muted: #94a3b8;
+      --cyan: #22d3ee;
+      --pink: #f472b6;
     }
   }
   body {
     margin: 0 auto;
     max-width: 42rem;
     padding: 1.5rem 1rem;
-    font-family: system-ui, sans-serif;
-    line-height: 1.7;
+    font-family: var(--font);
+    letter-spacing: 0.02em;
+    line-height: 1.85;
     color: var(--fg);
     background: var(--bg);
   }
   a {
-    color: var(--accent);
+    color: var(--cyan);
+    text-underline-offset: 0.2em;
+  }
+  h1,
+  h2,
+  h3 {
+    line-height: 1.45;
+    letter-spacing: 0.04em;
+  }
+  h1 {
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+  }
+  /* 見出し役の小さな文字（ピンク）。<h2 class="label"> などに付ける */
+  .label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    color: var(--pink);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.15rem;
+    margin: 2.5rem 0 0.75rem;
   }
   img {
     max-width: 100%;
     height: auto;
-    border: 1px solid color-mix(in srgb, var(--muted) 30%, transparent);
-    border-radius: 0.5rem;
+    border: 1px solid var(--line);
+    border-radius: 2px;
   }
+  code {
+    font-family: var(--font);
+    font-size: 0.9em;
+    color: var(--pink);
+  }
+  hr {
+    border: none;
+    border-top: 1px solid var(--line);
+  }
+  /* 表と引用は makimono と同じ形（細い線、見出しの行に薄いシアン） */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    margin: 1rem 0;
+  }
+  th,
+  td {
+    border: 1px solid var(--line);
+    padding: 0.4rem 0.6rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: color-mix(in srgb, var(--cyan) 8%, transparent);
+    letter-spacing: 0.06em;
+  }
+  blockquote {
+    margin: 1rem 0;
+    padding: 0.25rem 1rem;
+    border-left: 3px solid var(--cyan);
+    color: var(--muted);
+  }
+
+  /* ---- ヘッダー（星屑新報の題字に合わせた小さな題字） ---- */
   header {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem 1.5rem;
     align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--fg);
     margin-bottom: 2rem;
   }
   .site-name {
-    font-weight: bold;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--fg);
     text-decoration: none;
   }
-  nav {
+  .site-name span {
+    color: var(--cyan);
+  }
+  /* メニューだけ（ページの中の nav には効かせない） */
+  header nav {
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
   }
-  nav a[aria-current='page'] {
-    font-weight: bold;
+  header nav a {
+    color: var(--muted);
     text-decoration: none;
   }
+  header nav a:hover {
+    color: var(--cyan);
+  }
+  header nav a[aria-current='page'] {
+    color: var(--cyan);
+    font-weight: 700;
+  }
+
+  /* ---- フッター ---- */
   footer {
     margin-top: 3rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--line);
     color: var(--muted);
-    font-size: 0.875rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
   }
 </style>

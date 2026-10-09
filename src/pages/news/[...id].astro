@@ -1,7 +1,6 @@
 ---
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import NewsFont from '../../components/NewsFont.astro';
 import { formatNewsDate, formatWareki, getPublishedNews } from '../../lib/news';
 
 export async function getStaticPaths() {
@@ -30,7 +29,6 @@ const issue = String(number).padStart(3, '0');
 ---
 
 <Base title={title} description={summary} type="article" publishedTime={date} ogImage={`/og/news/${item.id}.png`}>
-  <NewsFont slot="head" />
   <article class="shinpo">
     <div class="masthead">
       <p class="eyebrow">CRYPTO ・ AI ・ SECURITY ・ JAPAN</p>
@@ -80,22 +78,10 @@ const issue = String(number).padStart(3, '0');
 </Base>
 
 <style>
-  /* 星屑新報: 書体は M PLUS 1 Code だけ。色は墨とシアン、ピンク（makimono と同じ）。
-     色は文字にだけ使う。シアン = 主な色（NEWS・番号・リンク）、ピンク = 見出し役の小さな文字と「なぜ大事か」 */
+  /* 星屑新報。色と書体はサイト共通（Base.astro の :root。#166）。ここでは名前だけ付け直す */
   .shinpo {
-    --cyan: #0891b2;
-    --pink: #db2777;
     --ink: var(--fg);
-    --line: color-mix(in srgb, var(--muted) 35%, transparent);
-    --code: 'M PLUS 1 Code', ui-monospace, Menlo, Consolas, monospace;
-    font-family: var(--code);
-    letter-spacing: 0.02em;
-  }
-  @media (prefers-color-scheme: dark) {
-    .shinpo {
-      --cyan: #22d3ee;
-      --pink: #f472b6;
-    }
+    --code: var(--font);
   }
 
   /* ---- 題字 ---- */
