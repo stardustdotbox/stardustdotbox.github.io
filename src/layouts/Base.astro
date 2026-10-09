@@ -1,5 +1,6 @@
 ---
 import SiteFont from '../components/SiteFont.astro';
+import Sparkles from '../components/Sparkles.astro';
 
 interface Props {
   title: string;
@@ -18,7 +19,8 @@ const {
   publishedTime,
   ogImage = '/og/site.png',
 } = Astro.props;
-const siteName = 'stardust.box';
+// サイトの名前（#168）。ヘッダーの題字は見た目として STARDUST.BOX のまま
+const siteName = 'Stardust✨のおもちゃ箱';
 const pageTitle = title === siteName ? title : `${title} | ${siteName}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImageUrl = new URL(ogImage, Astro.site);
@@ -91,7 +93,8 @@ const isCurrent = (href: string) =>
       <slot />
     </main>
     <footer>
-      <p>&copy; {new Date().getFullYear()} Stardust✨ · <a href="/tags/">Tags</a> · <a href="/rss.xml">RSS</a></p>
+      <p>&copy; {new Date().getFullYear()} Stardust<Sparkles />のおもちゃ箱 · <a href="/tags/">Tags</a> · <a href="/rss.xml">RSS</a></p>
+      <p class="credit">絵文字 <Sparkles />: <a href="https://github.com/jdecked/twemoji" rel="noopener">Twemoji</a>（<a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a>）</p>
     </footer>
     <script is:inline>
       // ライト・ダークの切り替えのボタン。押すと反対のモードにして、ブラウザに覚えさせる
@@ -231,6 +234,15 @@ const isCurrent = (href: string) =>
     color: var(--muted);
   }
 
+  /* 輝く ✨ の絵（Sparkles.astro と、星屑新報の Markdown に差し込んだもの）。文字と同じ大きさで並べる */
+  svg.sparkles {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin: 0 0.05em;
+    vertical-align: -0.1em;
+  }
+
   /* ---- ヘッダー（星屑新報の題字に合わせた小さな題字） ---- */
   header {
     display: flex;
@@ -288,6 +300,10 @@ const isCurrent = (href: string) =>
   }
 
   /* ---- フッター ---- */
+  footer .credit {
+    margin: 0.25rem 0 0;
+    font-size: 0.65rem;
+  }
   footer {
     margin-top: 3rem;
     padding-top: 0.5rem;

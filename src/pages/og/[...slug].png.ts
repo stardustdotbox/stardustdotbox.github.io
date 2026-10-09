@@ -33,7 +33,7 @@ export async function GET({ props }: APIContext<Props>) {
       kicker: [formatDate(note.data.pubDate), ...note.data.tags.map((t) => `#${t}`)].join('  '),
     });
   } else {
-    png = await renderOgImage({ title: 'stardustdotbox', kicker: 'Notes · Projects · Onchain · Lab' });
+    png = await renderOgImage({ title: 'Stardust✨のおもちゃ箱', kicker: 'News · Notes · Projects · Onchain · Lab' });
   }
   return new Response(new Uint8Array(png), { headers: { 'Content-Type': 'image/png' } });
 }

@@ -15,6 +15,16 @@ async function loadFont(text: string, weight: 400 | 700, family = 'Noto+Sans+JP'
   return res.arrayBuffer();
 }
 
+// 絵文字（✨ など）は書体に入っていないので、satori が絵文字に出会ったら Twemoji（X が公開している絵文字。CC BY 4.0）の
+// SVG を取ってきて差し込む（ビルドのときだけ動く）
+async function loadEmoji(code: string, segment: string): Promise<string> {
+  if (code !== 'emoji') return '';
+  const hex = [...segment].map((c) => c.codePointAt(0)!.toString(16)).filter((h) => h !== 'fe0f').join('-');
+  const res = await fetch(`https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/${hex}.svg`);
+  if (!res.ok) return '';
+  return `data:image/svg+xml;base64,${Buffer.from(await res.text()).toString('base64')}`;
+}
+
 // satori に渡す要素（React を使わずに書く）
 type Node = { type: string; props: Record<string, unknown> & { children?: unknown } };
 const h = (type: string, style: Record<string, unknown>, children?: unknown): Node => ({
@@ -79,6 +89,7 @@ export async function renderOgImage({ title, kicker = '' }: OgOptions): Promise<
   const svg = await satori(tree as never, {
     width: OG_WIDTH,
     height: OG_HEIGHT,
+    loadAdditionalAsset: loadEmoji,
     fonts: [
       { name: 'M PLUS 1 Code', data: await loadFont(text, 400, family), weight: 400, style: 'normal' },
       { name: 'M PLUS 1 Code', data: await loadFont(text, 700, family), weight: 700, style: 'normal' },
@@ -139,6 +150,7 @@ export async function renderNewsOgImage({ dateline, headlines }: NewsOgOptions):
   const svg = await satori(tree as never, {
     width: OG_WIDTH,
     height: OG_HEIGHT,
+    loadAdditionalAsset: loadEmoji,
     fonts: [
       { name: 'M PLUS 1 Code', data: await loadFont(text, 400, family), weight: 400, style: 'normal' },
       { name: 'M PLUS 1 Code', data: await loadFont(text, 700, family), weight: 700, style: 'normal' },

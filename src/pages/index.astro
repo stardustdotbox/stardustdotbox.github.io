@@ -5,6 +5,7 @@ import { Image } from 'astro:assets';
 import { getPublishedNotes } from '../lib/notes';
 import { formatNewsDate, formatWareki, getPublishedNews } from '../lib/news';
 import avatar from '../assets/avatar.jpg';
+import Sparkles from '../components/Sparkles.astro';
 
 const latest = (await getPublishedNotes()).slice(0, 5);
 // 最新の星屑新報（号数は古い順に 1 から）
@@ -12,7 +13,7 @@ const news = await getPublishedNews();
 const latestNews = news[0];
 
 const profile = {
-  name: 'Stardust✨',
+  name: 'Stardust',
   bio: 'NeoTokyoPunks / Soneian Scout / Startale OG Star',
   location: '日本',
   links: [
@@ -22,15 +23,15 @@ const profile = {
 };
 ---
 
-<Base title="stardust.box">
+<Base title="Stardust✨のおもちゃ箱">
   <!-- 顔文字だけは、等幅だと記号の幅がそろってずれるので、同じ系統で幅が変わる M PLUS 1 にする（使う文字だけ読み込む） -->
   <link slot="head" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400&text=%20%28%29%2A%60y~%C2%B4%E2%80%95%E2%88%80%E2%94%9B%E3%83%BC%EF%BC%88%EF%BC%89%EF%BD%80%EF%BD%B9%EF%BE%97&display=swap" />
-  <h1>stardustdotbox</h1>
+  <h1>Stardust<Sparkles />のおもちゃ箱</h1>
 
   <section class="profile">
     <Image src={avatar} alt="Stardust✨ のアバター" width={96} height={96} densities={[1, 2]} class="avatar" />
     <div>
-    <p class="name">{profile.name}</p>
+    <p class="name">{profile.name}<Sparkles /></p>
     <p class="bio">{profile.bio}</p>
     <p class="meta">
       {profile.location}

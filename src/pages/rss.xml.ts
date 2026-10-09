@@ -5,7 +5,7 @@ import { getPublishedNotes } from '../lib/notes';
 export async function GET(context: APIContext) {
   const notes = await getPublishedNotes();
   return rss({
-    title: 'stardust.box',
+    title: 'Stardust✨のおもちゃ箱',
     description: 'Stardust✨ が Web3 を観察する場所',
     site: context.site!,
     items: notes.map((note) => ({
