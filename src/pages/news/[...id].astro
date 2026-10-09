@@ -47,7 +47,11 @@ const issue = String(number).padStart(3, '0');
     <p class="lead">{summary}</p>
 
     <nav class="headlines" aria-label="今日の見出し">
-      <p class="headlines-label">HEADLINES</p>
+      <p class="headlines-head">
+        <span class="hl-title">HEADLINES</span>
+        <span class="hl-sub">今日の見出し</span>
+        <span class="hl-count">{count}本</span>
+      </p>
       <div class="groups">
         {tocGroups.map((g) => (
           <div class="group">
@@ -138,17 +142,34 @@ const issue = String(number).padStart(3, '0');
   /* ---- 見出しの目次 ---- */
   .headlines {
     display: block;
-    margin: 1.5rem 0 2rem;
-    padding: 0.5rem 0;
-    border-top: 1px solid var(--line);
+    margin: 2rem 0 2rem;
+    padding: 0 0 0.5rem;
     border-bottom: 1px solid var(--line);
   }
-  /* サイト共通の .label（下線あり）とは別の名前にする（#166 で線が二重になったため） */
-  .headlines-label {
-    margin: 0 0 0.25rem;
-    font-size: 0.65rem;
+  /* 目次の見出しの帯。欄の名前（ピンクの小さな文字）より 1 段上の見出しにする。
+     サイト共通の .label とは別の名前にする（#166 で線が二重になったため） */
+  .headlines-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin: 0 0 0.5rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--fg);
+  }
+  .hl-title {
+    font-size: 0.95rem;
+    font-weight: 700;
     letter-spacing: 0.3em;
+  }
+  .hl-sub {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
     color: var(--pink);
+  }
+  .hl-count {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: var(--muted);
   }
   .headlines ol {
     list-style: none;
