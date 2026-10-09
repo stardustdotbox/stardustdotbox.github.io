@@ -47,7 +47,7 @@ const issue = String(number).padStart(3, '0');
     <p class="lead">{summary}</p>
 
     <nav class="headlines" aria-label="今日の見出し">
-      <p class="label">HEADLINES</p>
+      <p class="headlines-label">HEADLINES</p>
       <div class="groups">
         {tocGroups.map((g) => (
           <div class="group">
@@ -143,7 +143,8 @@ const issue = String(number).padStart(3, '0');
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
   }
-  .label {
+  /* サイト共通の .label（下線あり）とは別の名前にする（#166 で線が二重になったため） */
+  .headlines-label {
     margin: 0 0 0.25rem;
     font-size: 0.65rem;
     letter-spacing: 0.3em;
