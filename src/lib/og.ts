@@ -117,11 +117,8 @@ export async function renderNewsOgImage({ dateline, headlines }: NewsOgOptions):
     },
     [
       h('div', { display: 'flex', justifyContent: 'center', fontSize: 20, letterSpacing: 8, color: pink }, eyebrow),
-      h('div', { display: 'flex', justifyContent: 'center', marginTop: 12, fontSize: 76, fontWeight: 700, letterSpacing: 10 }, [
-        h('span', {}, 'STARDUST.BOX\u00a0'),
-        h('span', { color: cyan }, 'NEWS'),
-      ]),
-      h('div', { display: 'flex', justifyContent: 'center', marginTop: 4, fontSize: 40, fontWeight: 700, letterSpacing: 20 }, '星屑新報'),
+      // 題字は「星屑新報」の漢字 4 文字だけ（ページと同じ）
+      h('div', { display: 'flex', justifyContent: 'center', marginTop: 8, paddingLeft: 36, fontSize: 104, fontWeight: 700, letterSpacing: 36 }, '星屑新報'),
       h('div', { display: 'flex', justifyContent: 'center', marginTop: 12, paddingBottom: 18, borderBottom: `4px solid ${ink}`, fontSize: 22, color: muted }, dateline),
       h(
         'div',
@@ -137,7 +134,7 @@ export async function renderNewsOgImage({ dateline, headlines }: NewsOgOptions):
     ],
   );
 
-  const text = eyebrow + 'STARDUST.BOX NEWS星屑新報0123456789stardust.box/news' + dateline + top.join('') + '…';
+  const text = eyebrow + '星屑新報0123456789stardust.box/news' + dateline + top.join('') + '…';
   const family = 'M+PLUS+1+Code';
   const svg = await satori(tree as never, {
     width: OG_WIDTH,

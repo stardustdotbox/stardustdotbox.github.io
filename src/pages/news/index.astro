@@ -8,8 +8,7 @@ const news = await getPublishedNews();
 <Base title="News" description="星屑新報（STARDUST.BOX NEWS）。Crypto・AI・セキュリティ・日本の社会と経済から、これだけは押さえておくべきニュースを毎日選ぶ">
   <div class="masthead">
     <p class="eyebrow">CRYPTO ・ AI ・ SECURITY ・ JAPAN</p>
-    <h1 class="title">STARDUST.BOX <span>NEWS</span></h1>
-    <p class="subtitle">星屑新報</p>
+    <h1 class="title">星屑新報</h1>
     <p class="about">Crypto・AI・セキュリティ・日本の社会と経済から、これだけは押さえておくべきニュースを毎日最大 10 本選びます。</p>
   </div>
 
@@ -45,20 +44,12 @@ const news = await getPublishedNews();
     color: var(--pink);
   }
   .title {
-    margin: 0.35rem 0 0;
-    font-size: clamp(1.4rem, 6vw, 2.1rem);
+    margin: 0.3rem 0 0.5rem;
+    font-size: clamp(2rem, 9vw, 3.2rem);
     font-weight: 700;
-    letter-spacing: 0.14em;
-  }
-  .title span {
-    color: var(--cyan);
-  }
-  .subtitle {
-    margin: 0.2rem 0 0.5rem;
-    font-size: clamp(1.05rem, 3.2vw, 1.35rem);
-    font-weight: 700;
-    letter-spacing: 0.5em;
-    padding-left: 0.5em;
+    letter-spacing: 0.35em;
+    padding-left: 0.35em;
+    line-height: 1.15;
   }
   .about {
     margin: 0;

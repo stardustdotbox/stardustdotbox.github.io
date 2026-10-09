@@ -32,8 +32,7 @@ const issue = String(number).padStart(3, '0');
   <article class="shinpo">
     <div class="masthead">
       <p class="eyebrow">CRYPTO ・ AI ・ SECURITY ・ JAPAN</p>
-      <p class="title">STARDUST.BOX <span>NEWS</span></p>
-      <p class="subtitle">星屑新報</p>
+      <p class="title">星屑新報</p>
       <p class="dateline">
         <span>第{issue}号</span>
         <span class="sep">/</span>
@@ -101,23 +100,14 @@ const issue = String(number).padStart(3, '0');
     letter-spacing: 0.4em;
     color: var(--pink);
   }
+  /* 題字は「星屑新報」の漢字 4 文字だけ。日本の新聞の題字のように大きく */
   .title {
-    margin: 0.4rem 0 0;
-    font-size: clamp(1.5rem, 6.5vw, 2.5rem);
+    margin: 0.3rem 0 0.5rem;
+    font-size: clamp(2.4rem, 11vw, 4.2rem);
     font-weight: 700;
-    letter-spacing: 0.16em;
-    line-height: 1.2;
-  }
-  .title span {
-    color: var(--cyan);
-  }
-  /* 星屑新報: 題字の次に目立たせる */
-  .subtitle {
-    margin: 0.3rem 0 0.7rem;
-    font-size: clamp(1.15rem, 3.6vw, 1.6rem);
-    font-weight: 700;
-    letter-spacing: 0.5em;
-    padding-left: 0.5em; /* 字間の分だけ中央をそろえる */
+    letter-spacing: 0.35em;
+    padding-left: 0.35em; /* 字間の分だけ中央をそろえる */
+    line-height: 1.15;
   }
   .dateline {
     margin: 0;
